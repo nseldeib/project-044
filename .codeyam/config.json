@@ -1,0 +1,122 @@
+{
+  "projectSlug": "project-044",
+  "packageManager": "npm",
+  "webapps": [],
+  "environmentVariables": [],
+  "createdAt": "2026-04-04T15:15:24.835Z",
+  "provider": "claude",
+  "handoff": {
+    "summary": "Building VECTOR — a multi-modal real-time movement tracker. 7 pages: Command Center (/), Air Traffic (/air), City Bikes (/bikes), Subway (/transit), Flight Detail (/flights/[callsign]), Airport Hub (/airport/[code]), Watchlist (/watchlist). Data: OpenSky Network (aircraft), Citi Bike GBFS (bikes), MTA GTFS-RT (subway). Design: shadcn/ui + custom Mission Control design system (dark cockpit, amber HUD accents, monospace data). Stack: Next.js 15, Prisma, SQLite, Leaflet.js, Tailwind CSS 4. 8 scenarios planned covering rush hour, ghost city, storm chaos, event day, airport live board, single flight, empty/full watchlist. Screen sizes: Desktop 1440x900, Mobile 390x844.",
+    "lastProvider": "claude",
+    "lastUpdated": "2026-04-04T15:58:13.623Z",
+    "lastStep": 2,
+    "stepHistory": [
+      {
+        "step": 2,
+        "label": "Prepare",
+        "timestamp": "2026-04-04T15:58:13.622Z",
+        "scenarioCount": 0,
+        "glossaryComponentCount": 0,
+        "glossaryFunctionCount": 0,
+        "uncommittedFileCount": 0,
+        "journalEntryCount": 0
+      }
+    ]
+  },
+  "branchId": "051324f9-bc31-42be-9c59-d63ee8327db7",
+  "defaultScreenSize": {
+    "name": "Desktop",
+    "width": 1440,
+    "height": 900
+  },
+  "screenSizes": {
+    "Desktop": {
+      "width": 1440,
+      "height": 900
+    },
+    "Mobile": {
+      "width": 390,
+      "height": 844
+    }
+  },
+  "projectTitle": "VECTOR",
+  "projectDescription": "Real-time global movement intelligence — track aircraft, city bikes, and subway trains on a single tactical command platform",
+  "techStack": {
+    "languages": [
+      {
+        "name": "TypeScript",
+        "url": "https://typescriptlang.org",
+        "description": "Statically typed JavaScript superset",
+        "version": "5"
+      }
+    ],
+    "frameworks": [
+      {
+        "name": "Next.js",
+        "url": "https://nextjs.org",
+        "description": "Full-stack React framework with App Router, SSR, and API routes",
+        "version": "15"
+      },
+      {
+        "name": "React",
+        "url": "https://react.dev",
+        "description": "UI component library",
+        "version": "19"
+      }
+    ],
+    "databases": [
+      {
+        "name": "SQLite",
+        "url": "https://sqlite.org",
+        "description": "Embedded local relational database"
+      },
+      {
+        "name": "Prisma",
+        "url": "https://prisma.io",
+        "description": "Type-safe ORM for database access",
+        "version": "7"
+      }
+    ],
+    "libraries": [
+      {
+        "name": "shadcn/ui",
+        "url": "https://ui.shadcn.com",
+        "description": "Accessible component library built on Radix UI"
+      },
+      {
+        "name": "Tailwind CSS",
+        "url": "https://tailwindcss.com",
+        "description": "Utility-first CSS framework",
+        "version": "4"
+      },
+      {
+        "name": "Leaflet.js",
+        "url": "https://leafletjs.com",
+        "description": "Interactive map library for live flight/bike/transit visualization"
+      },
+      {
+        "name": "Lucide React",
+        "url": "https://lucide.dev",
+        "description": "Thin-line icon library"
+      }
+    ],
+    "services": [
+      {
+        "name": "OpenSky Network",
+        "url": "https://opensky-network.org",
+        "description": "Free real-time aircraft position API — no auth required for basic queries"
+      },
+      {
+        "name": "Citi Bike GBFS",
+        "url": "https://gbfs.citibikenyc.com",
+        "description": "Free NYC bikeshare station status and availability feed"
+      },
+      {
+        "name": "MTA GTFS-RT",
+        "url": "https://api.mta.info",
+        "description": "NYC subway real-time train positions (free API key)"
+      }
+    ],
+    "infrastructure": []
+  }
+}

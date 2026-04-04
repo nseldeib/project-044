@@ -1,0 +1,65 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files
+.env*.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# database
+dev.db
+dev.db-journal
+
+# CodeYam - local only (not shared)
+.codeyam/db.sqlite3
+.codeyam/db.sqlite3-wal
+.codeyam/db.sqlite3-shm
+.codeyam/secrets.json
+.codeyam/server.json
+.codeyam/server-state.json
+.codeyam/queue.json
+.codeyam/active-scenario.json
+.codeyam/editor-step.json
+.codeyam/editor-user-prompt.txt
+.codeyam/editor-mode-context.md
+.codeyam/dev-mode-context.md
+.codeyam/handoff-context.md
+.codeyam/logs/
+.codeyam/llm-calls/
+.codeyam/captures/
+.codeyam/results/
+.codeyam/tmp/
+.codeyam/rules/
+.codeyam/bin/

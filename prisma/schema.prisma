@@ -1,0 +1,27 @@
+// Prisma 7 with SQLite via better-sqlite3 driver adapter.
+//
+// IMPORTANT: Use "prisma-client-js" (NOT "prisma-client").
+// The "prisma-client" generator requires a custom output path which
+// breaks Turbopack import resolution and seed script imports.
+// "prisma-client-js" outputs to node_modules/@prisma/client which
+// works everywhere with standard imports.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+// ──────────────────────────────────────────────
+// Replace these placeholder models with your own.
+// After editing, run: npx prisma db push
+// ──────────────────────────────────────────────
+
+model Todo {
+  id        Int      @id @default(autoincrement())
+  title     String
+  completed Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
