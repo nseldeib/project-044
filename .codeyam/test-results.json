@@ -1,0 +1,884 @@
+{
+  "version": 1,
+  "results": {
+    "app/lib/formatters.test.ts": {
+      "testFilePath": "app/lib/formatters.test.ts",
+      "status": "passed",
+      "testCases": [
+        {
+          "title": "returns \"just now\" for < 60 seconds",
+          "fullName": "timeAgo > returns \"just now\" for < 60 seconds",
+          "status": "passed",
+          "duration": 1.665958000000046
+        },
+        {
+          "title": "returns minutes for 1-59 minutes",
+          "fullName": "timeAgo > returns minutes for 1-59 minutes",
+          "status": "passed",
+          "duration": 0.6845420000000786
+        },
+        {
+          "title": "returns hours for 1-23 hours",
+          "fullName": "timeAgo > returns hours for 1-23 hours",
+          "status": "passed",
+          "duration": 0.1410000000000764
+        },
+        {
+          "title": "returns days for >= 24 hours",
+          "fullName": "timeAgo > returns days for >= 24 hours",
+          "status": "passed",
+          "duration": 0.09779100000002927
+        },
+        {
+          "title": "accepts string input",
+          "fullName": "timeAgo > accepts string input",
+          "status": "passed",
+          "duration": 0.8316250000000309
+        },
+        {
+          "title": "returns \"unknown\" for undefined",
+          "fullName": "timeAgo > returns \"unknown\" for undefined",
+          "status": "passed",
+          "duration": 0.10154199999999491
+        },
+        {
+          "title": "returns \"just now\" for future dates",
+          "fullName": "timeAgo > returns \"just now\" for future dates",
+          "status": "passed",
+          "duration": 0.08037500000000364
+        },
+        {
+          "title": "returns \"1m ago\" for exactly 60 seconds",
+          "fullName": "timeAgo > returns \"1m ago\" for exactly 60 seconds",
+          "status": "passed",
+          "duration": 0.0638330000000451
+        },
+        {
+          "title": "returns \"—\" for null",
+          "fullName": "formatTime > returns \"—\" for null",
+          "status": "passed",
+          "duration": 0.3472080000000233
+        },
+        {
+          "title": "returns \"—\" for undefined",
+          "fullName": "formatTime > returns \"—\" for undefined",
+          "status": "passed",
+          "duration": 0.10058299999991505
+        },
+        {
+          "title": "formats a date in 24h UTC format",
+          "fullName": "formatTime > formats a date in 24h UTC format",
+          "status": "passed",
+          "duration": 41.448125000000005
+        },
+        {
+          "title": "accepts a string date",
+          "fullName": "formatTime > accepts a string date",
+          "status": "passed",
+          "duration": 0.2976250000000391
+        },
+        {
+          "title": "pads hours and minutes with zeros",
+          "fullName": "formatTime > pads hours and minutes with zeros",
+          "status": "passed",
+          "duration": 0.15504199999998036
+        },
+        {
+          "title": "formats hours and minutes",
+          "fullName": "formatDuration > formats hours and minutes",
+          "status": "passed",
+          "duration": 0.10195899999996527
+        },
+        {
+          "title": "formats minutes only",
+          "fullName": "formatDuration > formats minutes only",
+          "status": "passed",
+          "duration": 0.051000000000044565
+        },
+        {
+          "title": "returns \"0m\" for zero",
+          "fullName": "formatDuration > returns \"0m\" for zero",
+          "status": "passed",
+          "duration": 0.047791999999958534
+        },
+        {
+          "title": "formats exactly 1 hour",
+          "fullName": "formatDuration > formats exactly 1 hour",
+          "status": "passed",
+          "duration": 0.04695800000001782
+        },
+        {
+          "title": "formats 2 hours 30 minutes",
+          "fullName": "formatDuration > formats 2 hours 30 minutes",
+          "status": "passed",
+          "duration": 0.04825000000005275
+        },
+        {
+          "title": "formats positive lat/lon as N/E",
+          "fullName": "formatDMS > formats positive lat/lon as N/E",
+          "status": "passed",
+          "duration": 0.21470899999997073
+        },
+        {
+          "title": "formats negative lat/lon as S/W",
+          "fullName": "formatDMS > formats negative lat/lon as S/W",
+          "status": "passed",
+          "duration": 0.0714580000000069
+        },
+        {
+          "title": "formats JFK coordinates with correct degree values",
+          "fullName": "formatDMS > formats JFK coordinates with correct degree values",
+          "status": "passed",
+          "duration": 0.13312500000006366
+        },
+        {
+          "title": "handles zero coordinates",
+          "fullName": "formatDMS > handles zero coordinates",
+          "status": "passed",
+          "duration": 0.08287500000005821
+        },
+        {
+          "title": "formats with commas and ft suffix",
+          "fullName": "formatAltitude > formats with commas and ft suffix",
+          "status": "passed",
+          "duration": 4.650082999999995
+        },
+        {
+          "title": "formats 0 feet",
+          "fullName": "formatAltitude > formats 0 feet",
+          "status": "passed",
+          "duration": 0.16070799999999963
+        },
+        {
+          "title": "formats large altitude",
+          "fullName": "formatAltitude > formats large altitude",
+          "status": "passed",
+          "duration": 0.09158400000001166
+        },
+        {
+          "title": "formats small altitude without comma",
+          "fullName": "formatAltitude > formats small altitude without comma",
+          "status": "passed",
+          "duration": 0.056709000000068954
+        },
+        {
+          "title": "formats knots with kt suffix",
+          "fullName": "formatSpeed > formats knots with kt suffix",
+          "status": "passed",
+          "duration": 0.07658300000002782
+        },
+        {
+          "title": "formats zero knots",
+          "fullName": "formatSpeed > formats zero knots",
+          "status": "passed",
+          "duration": 0.04808299999990595
+        },
+        {
+          "title": "formats decimal knots as integer",
+          "fullName": "formatSpeed > formats decimal knots as integer",
+          "status": "passed",
+          "duration": 0.053500000000099135
+        },
+        {
+          "title": "returns \"On Time\" for zero delay",
+          "fullName": "formatDelay > returns \"On Time\" for zero delay",
+          "status": "passed",
+          "duration": 0.06749999999999545
+        },
+        {
+          "title": "returns \"+N min\" for positive delay",
+          "fullName": "formatDelay > returns \"+N min\" for positive delay",
+          "status": "passed",
+          "duration": 0.05004199999996217
+        },
+        {
+          "title": "returns negative minutes for early arrivals",
+          "fullName": "formatDelay > returns negative minutes for early arrivals",
+          "status": "passed",
+          "duration": 0.048874999999952706
+        },
+        {
+          "title": "formats 1 minute delay",
+          "fullName": "formatDelay > formats 1 minute delay",
+          "status": "passed",
+          "duration": 0.046875
+        },
+        {
+          "title": "formats large delay",
+          "fullName": "formatDelay > formats large delay",
+          "status": "passed",
+          "duration": 0.7872079999999642
+        }
+      ],
+      "sourceHash": "b92405f7bd260713019b7a6f189026a3cea8158180bdd7b7d416774021631f1a",
+      "testHash": "49e8012c1751462198bf1bea636faeeec5dc8bff4e232599ce40b0016b271b7b",
+      "timestamp": "2026-04-06T19:15:13.576Z"
+    },
+    "app/lib/variants.test.ts": {
+      "testFilePath": "app/lib/variants.test.ts",
+      "status": "passed",
+      "testCases": [
+        {
+          "title": "EN_ROUTE → nominal",
+          "fullName": "flightStatusVariant > EN_ROUTE → nominal",
+          "status": "passed",
+          "duration": 1.6414999999999509
+        },
+        {
+          "title": "BOARDING → blue",
+          "fullName": "flightStatusVariant > BOARDING → blue",
+          "status": "passed",
+          "duration": 0.25091699999995853
+        },
+        {
+          "title": "DELAYED → warning",
+          "fullName": "flightStatusVariant > DELAYED → warning",
+          "status": "passed",
+          "duration": 0.109833999999978
+        },
+        {
+          "title": "DIVERTED → warning",
+          "fullName": "flightStatusVariant > DIVERTED → warning",
+          "status": "passed",
+          "duration": 0.08083299999998417
+        },
+        {
+          "title": "CANCELLED → critical",
+          "fullName": "flightStatusVariant > CANCELLED → critical",
+          "status": "passed",
+          "duration": 0.15333399999997255
+        },
+        {
+          "title": "LANDED → neutral",
+          "fullName": "flightStatusVariant > LANDED → neutral",
+          "status": "passed",
+          "duration": 0.09079100000008111
+        },
+        {
+          "title": "unknown → neutral",
+          "fullName": "flightStatusVariant > unknown → neutral",
+          "status": "passed",
+          "duration": 0.06779200000005403
+        },
+        {
+          "title": "empty string → neutral",
+          "fullName": "flightStatusVariant > empty string → neutral",
+          "status": "passed",
+          "duration": 0.05666699999994762
+        },
+        {
+          "title": "CRITICAL → critical",
+          "fullName": "alertSeverityVariant > CRITICAL → critical",
+          "status": "passed",
+          "duration": 0.3223329999999578
+        },
+        {
+          "title": "WARNING → warning",
+          "fullName": "alertSeverityVariant > WARNING → warning",
+          "status": "passed",
+          "duration": 0.09841600000004291
+        },
+        {
+          "title": "INFO → info",
+          "fullName": "alertSeverityVariant > INFO → info",
+          "status": "passed",
+          "duration": 0.13020800000003874
+        },
+        {
+          "title": "unknown → neutral",
+          "fullName": "alertSeverityVariant > unknown → neutral",
+          "status": "passed",
+          "duration": 0.0504999999999427
+        },
+        {
+          "title": "empty string → neutral",
+          "fullName": "alertSeverityVariant > empty string → neutral",
+          "status": "passed",
+          "duration": 0.04662499999994907
+        },
+        {
+          "title": "GOOD_SERVICE → nominal",
+          "fullName": "subwayStatusVariant > GOOD_SERVICE → nominal",
+          "status": "passed",
+          "duration": 0.06845799999996416
+        },
+        {
+          "title": "DELAYS → warning",
+          "fullName": "subwayStatusVariant > DELAYS → warning",
+          "status": "passed",
+          "duration": 0.04529200000001765
+        },
+        {
+          "title": "PLANNED_WORK → info",
+          "fullName": "subwayStatusVariant > PLANNED_WORK → info",
+          "status": "passed",
+          "duration": 0.04750000000001364
+        },
+        {
+          "title": "SUSPENDED → critical",
+          "fullName": "subwayStatusVariant > SUSPENDED → critical",
+          "status": "passed",
+          "duration": 0.04391700000007859
+        },
+        {
+          "title": "SERVICE_CHANGE → warning",
+          "fullName": "subwayStatusVariant > SERVICE_CHANGE → warning",
+          "status": "passed",
+          "duration": 0.043209000000047126
+        },
+        {
+          "title": "unknown → neutral",
+          "fullName": "subwayStatusVariant > unknown → neutral",
+          "status": "passed",
+          "duration": 0.04295799999999872
+        },
+        {
+          "title": "returns offline if !isInstalled",
+          "fullName": "bikeStationStatus > returns offline if !isInstalled",
+          "status": "passed",
+          "duration": 0.06600000000003092
+        },
+        {
+          "title": "returns offline if !isRenting",
+          "fullName": "bikeStationStatus > returns offline if !isRenting",
+          "status": "passed",
+          "duration": 0.044125000000008185
+        },
+        {
+          "title": "returns empty if bikesAvailable === 0",
+          "fullName": "bikeStationStatus > returns empty if bikesAvailable === 0",
+          "status": "passed",
+          "duration": 0.043083000000024185
+        },
+        {
+          "title": "returns low if bikesAvailable < 5",
+          "fullName": "bikeStationStatus > returns low if bikesAvailable < 5",
+          "status": "passed",
+          "duration": 0.043207999999935964
+        },
+        {
+          "title": "returns low for exactly 4",
+          "fullName": "bikeStationStatus > returns low for exactly 4",
+          "status": "passed",
+          "duration": 0.2474170000000413
+        },
+        {
+          "title": "returns available if bikesAvailable >= 5",
+          "fullName": "bikeStationStatus > returns available if bikesAvailable >= 5",
+          "status": "passed",
+          "duration": 0.4192910000000438
+        },
+        {
+          "title": "returns available for high count",
+          "fullName": "bikeStationStatus > returns available for high count",
+          "status": "passed",
+          "duration": 0.08758299999999508
+        },
+        {
+          "title": "available → nominal",
+          "fullName": "bikeStationVariant > available → nominal",
+          "status": "passed",
+          "duration": 0.08625000000006366
+        },
+        {
+          "title": "low → warning",
+          "fullName": "bikeStationVariant > low → warning",
+          "status": "passed",
+          "duration": 0.16287499999998545
+        },
+        {
+          "title": "empty → critical",
+          "fullName": "bikeStationVariant > empty → critical",
+          "status": "passed",
+          "duration": 0.08195800000009967
+        },
+        {
+          "title": "offline → neutral",
+          "fullName": "bikeStationVariant > offline → neutral",
+          "status": "passed",
+          "duration": 0.056750000000079126
+        },
+        {
+          "title": "FLIGHT → blue",
+          "fullName": "watchlistTypeVariant > FLIGHT → blue",
+          "status": "passed",
+          "duration": 0.07741700000008223
+        },
+        {
+          "title": "BIKE_STATION → nominal",
+          "fullName": "watchlistTypeVariant > BIKE_STATION → nominal",
+          "status": "passed",
+          "duration": 0.05062499999996817
+        },
+        {
+          "title": "SUBWAY_LINE → info",
+          "fullName": "watchlistTypeVariant > SUBWAY_LINE → info",
+          "status": "passed",
+          "duration": 0.04766699999993307
+        },
+        {
+          "title": "AIRPORT → warning",
+          "fullName": "watchlistTypeVariant > AIRPORT → warning",
+          "status": "passed",
+          "duration": 0.04795799999999417
+        },
+        {
+          "title": "unknown → neutral",
+          "fullName": "watchlistTypeVariant > unknown → neutral",
+          "status": "passed",
+          "duration": 0.1060419999998885
+        },
+        {
+          "title": "empty string → neutral",
+          "fullName": "watchlistTypeVariant > empty string → neutral",
+          "status": "passed",
+          "duration": 0.05483300000003055
+        },
+        {
+          "title": "SUSPENDED → var(--status-critical)",
+          "fullName": "subwayLineTextColor > SUSPENDED → var(--status-critical)",
+          "status": "passed",
+          "duration": 0.26025000000004184
+        },
+        {
+          "title": "DELAYS → var(--status-warning)",
+          "fullName": "subwayLineTextColor > DELAYS → var(--status-warning)",
+          "status": "passed",
+          "duration": 0.10987499999998818
+        },
+        {
+          "title": "PLANNED_WORK → var(--status-info)",
+          "fullName": "subwayLineTextColor > PLANNED_WORK → var(--status-info)",
+          "status": "passed",
+          "duration": 0.09649999999999181
+        },
+        {
+          "title": "SERVICE_CHANGE → var(--status-warning)",
+          "fullName": "subwayLineTextColor > SERVICE_CHANGE → var(--status-warning)",
+          "status": "passed",
+          "duration": 0.10016599999994469
+        },
+        {
+          "title": "GOOD_SERVICE → var(--status-nominal)",
+          "fullName": "subwayLineTextColor > GOOD_SERVICE → var(--status-nominal)",
+          "status": "passed",
+          "duration": 0.08991600000001654
+        },
+        {
+          "title": "unknown → var(--status-nominal)",
+          "fullName": "subwayLineTextColor > unknown → var(--status-nominal)",
+          "status": "passed",
+          "duration": 0.08708400000000438
+        }
+      ],
+      "sourceHash": "4ba56c599548f85d22e6e56a433da3fc64b90defb69d5c8607899bbd6c9e77d5",
+      "testHash": "a35e6932f932224c9ddd0d57f0596b500680230734a4b0055a013db54f9051aa",
+      "timestamp": "2026-04-06T19:15:13.576Z"
+    },
+    "app/lib/calculations.test.ts": {
+      "testFilePath": "app/lib/calculations.test.ts",
+      "status": "passed",
+      "testCases": [
+        {
+          "title": "returns 0 when capacity is 0",
+          "fullName": "bikeAvailabilityPercent > returns 0 when capacity is 0",
+          "status": "passed",
+          "duration": 0.96774999999991
+        },
+        {
+          "title": "returns 100 for full capacity",
+          "fullName": "bikeAvailabilityPercent > returns 100 for full capacity",
+          "status": "passed",
+          "duration": 0.379415999999992
+        },
+        {
+          "title": "returns 50 for half capacity",
+          "fullName": "bikeAvailabilityPercent > returns 50 for half capacity",
+          "status": "passed",
+          "duration": 0.3204160000000229
+        },
+        {
+          "title": "returns 0 when no bikes available",
+          "fullName": "bikeAvailabilityPercent > returns 0 when no bikes available",
+          "status": "passed",
+          "duration": 0.14583299999992505
+        },
+        {
+          "title": "clamps to 100 when available > capacity",
+          "fullName": "bikeAvailabilityPercent > clamps to 100 when available > capacity",
+          "status": "passed",
+          "duration": 0.19858299999998508
+        },
+        {
+          "title": "clamps to 0 for negative values",
+          "fullName": "bikeAvailabilityPercent > clamps to 0 for negative values",
+          "status": "passed",
+          "duration": 0.30274999999994634
+        },
+        {
+          "title": "rounds to integer",
+          "fullName": "bikeAvailabilityPercent > rounds to integer",
+          "status": "passed",
+          "duration": 0.16791599999999107
+        },
+        {
+          "title": "returns 0 when at origin",
+          "fullName": "flightProgressPercent > returns 0 when at origin",
+          "status": "passed",
+          "duration": 0.21108300000003055
+        },
+        {
+          "title": "returns 100 when at destination",
+          "fullName": "flightProgressPercent > returns 100 when at destination",
+          "status": "passed",
+          "duration": 0.34129200000006676
+        },
+        {
+          "title": "returns ~50 at midpoint",
+          "fullName": "flightProgressPercent > returns ~50 at midpoint",
+          "status": "passed",
+          "duration": 0.1638749999999618
+        },
+        {
+          "title": "clamps to 0 when behind origin",
+          "fullName": "flightProgressPercent > clamps to 0 when behind origin",
+          "status": "passed",
+          "duration": 0.1474590000000262
+        },
+        {
+          "title": "clamps to 100 when past destination",
+          "fullName": "flightProgressPercent > clamps to 100 when past destination",
+          "status": "passed",
+          "duration": 0.05870900000002166
+        },
+        {
+          "title": "returns 50 when same origin and destination",
+          "fullName": "flightProgressPercent > returns 50 when same origin and destination",
+          "status": "passed",
+          "duration": 0.055041999999957625
+        },
+        {
+          "title": "returns 0 for same point",
+          "fullName": "haversineKm > returns 0 for same point",
+          "status": "passed",
+          "duration": 0.09779100000002927
+        },
+        {
+          "title": "returns ~5570 km for JFK to LHR (approx)",
+          "fullName": "haversineKm > returns ~5570 km for JFK to LHR (approx)",
+          "status": "passed",
+          "duration": 0.14445900000009715
+        },
+        {
+          "title": "is symmetric",
+          "fullName": "haversineKm > is symmetric",
+          "status": "passed",
+          "duration": 0.06345899999996618
+        },
+        {
+          "title": "returns a positive number for different points",
+          "fullName": "haversineKm > returns a positive number for different points",
+          "status": "passed",
+          "duration": 0.05079200000000128
+        },
+        {
+          "title": "formats positive lat/lon as N/E",
+          "fullName": "latLonToString > formats positive lat/lon as N/E",
+          "status": "passed",
+          "duration": 0.07504200000005312
+        },
+        {
+          "title": "formats negative lat as S",
+          "fullName": "latLonToString > formats negative lat as S",
+          "status": "passed",
+          "duration": 0.050540999999952874
+        },
+        {
+          "title": "formats negative lon as W",
+          "fullName": "latLonToString > formats negative lon as W",
+          "status": "passed",
+          "duration": 0.0464999999999236
+        },
+        {
+          "title": "formats both negative as S/W",
+          "fullName": "latLonToString > formats both negative as S/W",
+          "status": "passed",
+          "duration": 0.045291000000020176
+        },
+        {
+          "title": "handles zero coordinates",
+          "fullName": "latLonToString > handles zero coordinates",
+          "status": "passed",
+          "duration": 0.04537500000003547
+        }
+      ],
+      "sourceHash": "100e19c649750828bac3c82d4771ff94ec3714d7a04d77c62c52c5f9b7da5a50",
+      "testHash": "421002686600a950797f76e9a61dd54813e3aed5302b570b711cfd028171059f",
+      "timestamp": "2026-04-06T19:15:13.576Z"
+    },
+    "app/hooks/useClock.test.ts": {
+      "testFilePath": "app/hooks/useClock.test.ts",
+      "status": "passed",
+      "testCases": [
+        {
+          "title": "formats noon UTC correctly",
+          "fullName": "useClock — clock formatting logic > formats noon UTC correctly",
+          "status": "passed",
+          "duration": 6.675625000000309
+        },
+        {
+          "title": "pads single-digit hours",
+          "fullName": "useClock — clock formatting logic > pads single-digit hours",
+          "status": "passed",
+          "duration": 3.912916999999652
+        },
+        {
+          "title": "pads single-digit minutes",
+          "fullName": "useClock — clock formatting logic > pads single-digit minutes",
+          "status": "passed",
+          "duration": 0.8493749999997817
+        },
+        {
+          "title": "pads single-digit seconds",
+          "fullName": "useClock — clock formatting logic > pads single-digit seconds",
+          "status": "passed",
+          "duration": 0.6025839999997515
+        },
+        {
+          "title": "handles midnight UTC",
+          "fullName": "useClock — clock formatting logic > handles midnight UTC",
+          "status": "passed",
+          "duration": 0.21495800000002419
+        },
+        {
+          "title": "handles end of day UTC",
+          "fullName": "useClock — clock formatting logic > handles end of day UTC",
+          "status": "passed",
+          "duration": 0.291957999999795
+        },
+        {
+          "title": "setInterval fires every 1000ms",
+          "fullName": "useClock — clock formatting logic > setInterval fires every 1000ms",
+          "status": "passed",
+          "duration": 10.51062499999989
+        }
+      ],
+      "sourceHash": "5b3e37e651478c25fa023a6480e4fbe73e5997eb2654a6d3048b174bbccfcfa1",
+      "testHash": "621834360f3912f2e76891caf77d48994d91a782aebf4a31c856c7c3d63fb898",
+      "timestamp": "2026-04-06T19:19:16.898Z"
+    },
+    "app/hooks/useAlertCount.test.ts": {
+      "testFilePath": "app/hooks/useAlertCount.test.ts",
+      "status": "passed",
+      "testCases": [
+        {
+          "title": "returns unreadCount from API response",
+          "fullName": "useAlertCount — fetch logic > returns unreadCount from API response",
+          "status": "passed",
+          "duration": 3.771458000000166
+        },
+        {
+          "title": "defaults unreadCount to 0 when field missing",
+          "fullName": "useAlertCount — fetch logic > defaults unreadCount to 0 when field missing",
+          "status": "passed",
+          "duration": 2.0157500000000255
+        },
+        {
+          "title": "returns error=true on fetch rejection",
+          "fullName": "useAlertCount — fetch logic > returns error=true on fetch rejection",
+          "status": "passed",
+          "duration": 3.2669160000000375
+        },
+        {
+          "title": "handles unreadCount of 0 explicitly",
+          "fullName": "useAlertCount — fetch logic > handles unreadCount of 0 explicitly",
+          "status": "passed",
+          "duration": 1.2886670000002596
+        }
+      ],
+      "sourceHash": "6219ff95342b51663af9da1b4b42388bf518502f19ec27ab63656d538f394654",
+      "testHash": "fa591af97947c8777806c6b54ed4e255436b4fa2ac0495cbaa5bdff87677a458",
+      "timestamp": "2026-04-06T19:19:16.898Z"
+    },
+    "app/hooks/useFlights.test.ts": {
+      "testFilePath": "app/hooks/useFlights.test.ts",
+      "status": "passed",
+      "testCases": [
+        {
+          "title": "returns flights array on success",
+          "fullName": "useFlights — fetch logic > returns flights array on success",
+          "status": "passed",
+          "duration": 7.316125000000284
+        },
+        {
+          "title": "returns empty array when response is not an array",
+          "fullName": "useFlights — fetch logic > returns empty array when response is not an array",
+          "status": "passed",
+          "duration": 9.643625000000156
+        },
+        {
+          "title": "sets error on non-ok HTTP response",
+          "fullName": "useFlights — fetch logic > sets error on non-ok HTTP response",
+          "status": "passed",
+          "duration": 1.3234159999997246
+        },
+        {
+          "title": "sets error on network failure",
+          "fullName": "useFlights — fetch logic > sets error on network failure",
+          "status": "passed",
+          "duration": 2.024417000000085
+        },
+        {
+          "title": "handles multiple flights",
+          "fullName": "useFlights — fetch logic > handles multiple flights",
+          "status": "passed",
+          "duration": 15.463332999999693
+        }
+      ],
+      "sourceHash": "fe712e5ca61afe15b736c885a6bcd1477fff4e231009bd0dec46a71bdfc81e2c",
+      "testHash": "c9d0109c8fa0cecb12507e20e116690100da1e31940f7b8f0ad7ab969dc19e57",
+      "timestamp": "2026-04-06T19:19:16.898Z"
+    },
+    "app/hooks/useBikeStations.test.ts": {
+      "testFilePath": "app/hooks/useBikeStations.test.ts",
+      "status": "passed",
+      "testCases": [
+        {
+          "title": "returns stations and summary on success",
+          "fullName": "useBikeStations — fetch logic > returns stations and summary on success",
+          "status": "passed",
+          "duration": 8.919124999999894
+        },
+        {
+          "title": "handles missing stations/summary fields",
+          "fullName": "useBikeStations — fetch logic > handles missing stations/summary fields",
+          "status": "passed",
+          "duration": 5.700207999999748
+        },
+        {
+          "title": "sets error on HTTP error",
+          "fullName": "useBikeStations — fetch logic > sets error on HTTP error",
+          "status": "passed",
+          "duration": 1.8527920000001359
+        },
+        {
+          "title": "sets error on network failure",
+          "fullName": "useBikeStations — fetch logic > sets error on network failure",
+          "status": "passed",
+          "duration": 8.50958300000002
+        },
+        {
+          "title": "returns stations array with correct shape",
+          "fullName": "useBikeStations — fetch logic > returns stations array with correct shape",
+          "status": "passed",
+          "duration": 2.5051250000001346
+        }
+      ],
+      "sourceHash": "630b771b3fa0b15c5a5f29d52d1fe75720129c1143eda208364bcc655cbc3913",
+      "testHash": "f2d5a6b3df1d60ea00636b9cd037d7f2ae12a7655d2d9fad272f63e77ee8ccb8",
+      "timestamp": "2026-04-06T19:19:16.898Z"
+    },
+    "app/hooks/useWatchlist.test.ts": {
+      "testFilePath": "app/hooks/useWatchlist.test.ts",
+      "status": "passed",
+      "testCases": [
+        {
+          "title": "returns items on success",
+          "fullName": "useWatchlist — fetch logic > returns items on success",
+          "status": "passed",
+          "duration": 11.63287500000024
+        },
+        {
+          "title": "returns empty array when response is not an array",
+          "fullName": "useWatchlist — fetch logic > returns empty array when response is not an array",
+          "status": "passed",
+          "duration": 3.078457999999955
+        },
+        {
+          "title": "sets error on HTTP error",
+          "fullName": "useWatchlist — fetch logic > sets error on HTTP error",
+          "status": "passed",
+          "duration": 1.3024580000001151
+        },
+        {
+          "title": "sets error on network failure",
+          "fullName": "useWatchlist — fetch logic > sets error on network failure",
+          "status": "passed",
+          "duration": 1.7850829999997586
+        },
+        {
+          "title": "returns true on successful delete",
+          "fullName": "useWatchlist — deleteItem logic > returns true on successful delete",
+          "status": "passed",
+          "duration": 2.565958999999566
+        },
+        {
+          "title": "returns false on HTTP error",
+          "fullName": "useWatchlist — deleteItem logic > returns false on HTTP error",
+          "status": "passed",
+          "duration": 0.45600000000013097
+        },
+        {
+          "title": "returns false on network error",
+          "fullName": "useWatchlist — deleteItem logic > returns false on network error",
+          "status": "passed",
+          "duration": 1.5096670000002632
+        }
+      ],
+      "sourceHash": "f68ae2dba89b8cc19b09ae50a8640f8a2dde7f120f7dd4e65105205f0e56fd53",
+      "testHash": "6b8b3899cada200eadfa4ef4108c33dcdafcd8f5fed3ad6b1c545bd0c23e6cba",
+      "timestamp": "2026-04-06T19:19:16.898Z"
+    },
+    "app/hooks/useAlerts.test.ts": {
+      "testFilePath": "app/hooks/useAlerts.test.ts",
+      "status": "passed",
+      "testCases": [
+        {
+          "title": "returns alerts and unreadCount from API",
+          "fullName": "useAlerts — fetch logic > returns alerts and unreadCount from API",
+          "status": "passed",
+          "duration": 19.838832999999795
+        },
+        {
+          "title": "computes unreadCount from alerts when field missing",
+          "fullName": "useAlerts — fetch logic > computes unreadCount from alerts when field missing",
+          "status": "passed",
+          "duration": 0.9559170000002268
+        },
+        {
+          "title": "handles empty alerts array",
+          "fullName": "useAlerts — fetch logic > handles empty alerts array",
+          "status": "passed",
+          "duration": 4.052124999999705
+        },
+        {
+          "title": "handles missing alerts field",
+          "fullName": "useAlerts — fetch logic > handles missing alerts field",
+          "status": "passed",
+          "duration": 1.0052909999999429
+        },
+        {
+          "title": "sets error on HTTP error",
+          "fullName": "useAlerts — fetch logic > sets error on HTTP error",
+          "status": "passed",
+          "duration": 1.855583999999908
+        },
+        {
+          "title": "sets error on network failure",
+          "fullName": "useAlerts — fetch logic > sets error on network failure",
+          "status": "passed",
+          "duration": 14.650874999999814
+        },
+        {
+          "title": "counts all unread alerts correctly",
+          "fullName": "useAlerts — fetch logic > counts all unread alerts correctly",
+          "status": "passed",
+          "duration": 0.9276669999999285
+        }
+      ],
+      "sourceHash": "c55e2e1e43d07e4af4b209497af6d2d7a25f854e7a1e0159725a51f5ea5bda40",
+      "testHash": "f7207a3534f7eae41851713db26a3f15acec84dd200ff07c244fba3c8aa3470f",
+      "timestamp": "2026-04-06T19:19:16.898Z"
+    }
+  }
+}

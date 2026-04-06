@@ -3,9 +3,17 @@
     "name": "timeAgo",
     "filePath": "app/lib/formatters.ts",
     "description": "Returns a human-readable relative time string (e.g. '2m ago', '1h ago', 'just now') from a Date or ISO string",
-    "parameters": [{ "name": "date", "type": "Date | string | undefined" }],
+    "parameters": [
+      {
+        "name": "date",
+        "type": "Date | string | undefined"
+      }
+    ],
     "returnType": "string",
-    "tags": ["formatting", "time"],
+    "tags": [
+      "formatting",
+      "time"
+    ],
     "testFile": "app/lib/formatters.test.ts",
     "feature": "Flight Tracker",
     "createdAt": "2026-04-04T17:00:00.000Z"
@@ -13,10 +21,22 @@
   {
     "name": "formatTime",
     "filePath": "app/lib/formatters.ts",
-    "description": "Formats a Date/string to HH:MM in 24h format, returns '—' for null/undefined",
-    "parameters": [{ "name": "date", "type": "Date | string | null | undefined" }, { "name": "timezone", "type": "string | undefined" }],
+    "description": "Formats a Date/string to HH:MM in 24h format, returns '\u2014' for null/undefined",
+    "parameters": [
+      {
+        "name": "date",
+        "type": "Date | string | null | undefined"
+      },
+      {
+        "name": "timezone",
+        "type": "string | undefined"
+      }
+    ],
     "returnType": "string",
-    "tags": ["formatting", "time"],
+    "tags": [
+      "formatting",
+      "time"
+    ],
     "testFile": "app/lib/formatters.test.ts",
     "feature": "Flight Tracker",
     "createdAt": "2026-04-04T17:00:00.000Z"
@@ -25,9 +45,17 @@
     "name": "formatDuration",
     "filePath": "app/lib/formatters.ts",
     "description": "Converts minutes to human-readable duration string like '1h 25m' or '45m'",
-    "parameters": [{ "name": "minutes", "type": "number" }],
+    "parameters": [
+      {
+        "name": "minutes",
+        "type": "number"
+      }
+    ],
     "returnType": "string",
-    "tags": ["formatting", "time"],
+    "tags": [
+      "formatting",
+      "time"
+    ],
     "testFile": "app/lib/formatters.test.ts",
     "feature": "Flight Tracker",
     "createdAt": "2026-04-04T17:00:00.000Z"
@@ -35,10 +63,22 @@
   {
     "name": "formatDMS",
     "filePath": "app/lib/formatters.ts",
-    "description": "Converts decimal lat/lon to DMS notation like '40°38'29\"N 73°46'41\"W'",
-    "parameters": [{ "name": "lat", "type": "number" }, { "name": "lon", "type": "number" }],
+    "description": "Converts decimal lat/lon to DMS notation like '40\u00b038'29\"N 73\u00b046'41\"W'",
+    "parameters": [
+      {
+        "name": "lat",
+        "type": "number"
+      },
+      {
+        "name": "lon",
+        "type": "number"
+      }
+    ],
     "returnType": "string",
-    "tags": ["formatting", "geography"],
+    "tags": [
+      "formatting",
+      "geography"
+    ],
     "testFile": "app/lib/formatters.test.ts",
     "feature": "Flight Tracker",
     "createdAt": "2026-04-04T17:00:00.000Z"
@@ -47,9 +87,17 @@
     "name": "formatAltitude",
     "filePath": "app/lib/formatters.ts",
     "description": "Formats altitude in feet with thousands separator: '38,000 ft'",
-    "parameters": [{ "name": "feet", "type": "number" }],
+    "parameters": [
+      {
+        "name": "feet",
+        "type": "number"
+      }
+    ],
     "returnType": "string",
-    "tags": ["formatting", "aviation"],
+    "tags": [
+      "formatting",
+      "aviation"
+    ],
     "testFile": "app/lib/formatters.test.ts",
     "feature": "Flight Tracker",
     "createdAt": "2026-04-04T17:00:00.000Z"
@@ -58,9 +106,17 @@
     "name": "formatSpeed",
     "filePath": "app/lib/formatters.ts",
     "description": "Formats ground speed in knots: '520 kt'",
-    "parameters": [{ "name": "knots", "type": "number" }],
+    "parameters": [
+      {
+        "name": "knots",
+        "type": "number"
+      }
+    ],
     "returnType": "string",
-    "tags": ["formatting", "aviation"],
+    "tags": [
+      "formatting",
+      "aviation"
+    ],
     "testFile": "app/lib/formatters.test.ts",
     "feature": "Flight Tracker",
     "createdAt": "2026-04-04T17:00:00.000Z"
@@ -69,9 +125,17 @@
     "name": "formatDelay",
     "filePath": "app/lib/formatters.ts",
     "description": "Formats delay minutes as '+25 min', 'On Time' (0), or '-5 min' (early)",
-    "parameters": [{ "name": "minutes", "type": "number" }],
+    "parameters": [
+      {
+        "name": "minutes",
+        "type": "number"
+      }
+    ],
     "returnType": "string",
-    "tags": ["formatting", "aviation"],
+    "tags": [
+      "formatting",
+      "aviation"
+    ],
     "testFile": "app/lib/formatters.test.ts",
     "feature": "Flight Tracker",
     "createdAt": "2026-04-04T17:00:00.000Z"
@@ -79,10 +143,19 @@
   {
     "name": "flightStatusVariant",
     "filePath": "app/lib/variants.ts",
-    "description": "Maps flight status string to a badge variant. EN_ROUTE→nominal, BOARDING→blue, DELAYED/DIVERTED→warning, CANCELLED→critical, LANDED→neutral",
-    "parameters": [{ "name": "status", "type": "string" }],
+    "description": "Maps flight status string to a badge variant. EN_ROUTE\u2192nominal, BOARDING\u2192blue, DELAYED/DIVERTED\u2192warning, CANCELLED\u2192critical, LANDED\u2192neutral",
+    "parameters": [
+      {
+        "name": "status",
+        "type": "string"
+      }
+    ],
     "returnType": "BadgeVariant",
-    "tags": ["variants", "aviation", "ui"],
+    "tags": [
+      "variants",
+      "aviation",
+      "ui"
+    ],
     "testFile": "app/lib/variants.test.ts",
     "feature": "Flight Tracker",
     "createdAt": "2026-04-04T17:00:00.000Z"
@@ -91,9 +164,18 @@
     "name": "alertSeverityVariant",
     "filePath": "app/lib/variants.ts",
     "description": "Maps alert severity (CRITICAL/WARNING/INFO) to badge variant",
-    "parameters": [{ "name": "severity", "type": "string" }],
+    "parameters": [
+      {
+        "name": "severity",
+        "type": "string"
+      }
+    ],
     "returnType": "BadgeVariant",
-    "tags": ["variants", "alerts", "ui"],
+    "tags": [
+      "variants",
+      "alerts",
+      "ui"
+    ],
     "testFile": "app/lib/variants.test.ts",
     "feature": "Flight Tracker",
     "createdAt": "2026-04-04T17:00:00.000Z"
@@ -101,10 +183,19 @@
   {
     "name": "subwayStatusVariant",
     "filePath": "app/lib/variants.ts",
-    "description": "Maps MTA subway status to badge variant. GOOD_SERVICE→nominal, DELAYS→warning, PLANNED_WORK→info, SUSPENDED→critical, SERVICE_CHANGE→warning",
-    "parameters": [{ "name": "status", "type": "string" }],
+    "description": "Maps MTA subway status to badge variant. GOOD_SERVICE\u2192nominal, DELAYS\u2192warning, PLANNED_WORK\u2192info, SUSPENDED\u2192critical, SERVICE_CHANGE\u2192warning",
+    "parameters": [
+      {
+        "name": "status",
+        "type": "string"
+      }
+    ],
     "returnType": "BadgeVariant",
-    "tags": ["variants", "transit", "ui"],
+    "tags": [
+      "variants",
+      "transit",
+      "ui"
+    ],
     "testFile": "app/lib/variants.test.ts",
     "feature": "Flight Tracker",
     "createdAt": "2026-04-04T17:00:00.000Z"
@@ -113,9 +204,26 @@
     "name": "bikeStationStatus",
     "filePath": "app/lib/variants.ts",
     "description": "Derives bike station status from availability and operational flags. Returns 'offline', 'empty', 'low', or 'available'",
-    "parameters": [{ "name": "bikesAvailable", "type": "number" }, { "name": "isRenting", "type": "boolean" }, { "name": "isInstalled", "type": "boolean" }],
+    "parameters": [
+      {
+        "name": "bikesAvailable",
+        "type": "number"
+      },
+      {
+        "name": "isRenting",
+        "type": "boolean"
+      },
+      {
+        "name": "isInstalled",
+        "type": "boolean"
+      }
+    ],
     "returnType": "'available' | 'low' | 'empty' | 'offline'",
-    "tags": ["variants", "bikes", "ui"],
+    "tags": [
+      "variants",
+      "bikes",
+      "ui"
+    ],
     "testFile": "app/lib/variants.test.ts",
     "feature": "Flight Tracker",
     "createdAt": "2026-04-04T17:00:00.000Z"
@@ -124,9 +232,18 @@
     "name": "bikeStationVariant",
     "filePath": "app/lib/variants.ts",
     "description": "Maps bike station status string to badge variant",
-    "parameters": [{ "name": "status", "type": "'available' | 'low' | 'empty' | 'offline'" }],
+    "parameters": [
+      {
+        "name": "status",
+        "type": "'available' | 'low' | 'empty' | 'offline'"
+      }
+    ],
     "returnType": "BadgeVariant",
-    "tags": ["variants", "bikes", "ui"],
+    "tags": [
+      "variants",
+      "bikes",
+      "ui"
+    ],
     "testFile": "app/lib/variants.test.ts",
     "feature": "Flight Tracker",
     "createdAt": "2026-04-04T17:00:00.000Z"
@@ -135,9 +252,18 @@
     "name": "watchlistTypeVariant",
     "filePath": "app/lib/variants.ts",
     "description": "Maps watchlist item type (FLIGHT/BIKE_STATION/SUBWAY_LINE/AIRPORT) to badge variant",
-    "parameters": [{ "name": "type", "type": "string" }],
+    "parameters": [
+      {
+        "name": "type",
+        "type": "string"
+      }
+    ],
     "returnType": "BadgeVariant",
-    "tags": ["variants", "watchlist", "ui"],
+    "tags": [
+      "variants",
+      "watchlist",
+      "ui"
+    ],
     "testFile": "app/lib/variants.test.ts",
     "feature": "Flight Tracker",
     "createdAt": "2026-04-04T17:00:00.000Z"
@@ -146,9 +272,18 @@
     "name": "subwayLineTextColor",
     "filePath": "app/lib/variants.ts",
     "description": "Returns a CSS variable string for subway line status text color (e.g. 'var(--status-critical)' for SUSPENDED)",
-    "parameters": [{ "name": "status", "type": "string" }],
+    "parameters": [
+      {
+        "name": "status",
+        "type": "string"
+      }
+    ],
     "returnType": "string",
-    "tags": ["variants", "transit", "ui"],
+    "tags": [
+      "variants",
+      "transit",
+      "ui"
+    ],
     "testFile": "app/lib/variants.test.ts",
     "feature": "Flight Tracker",
     "createdAt": "2026-04-04T17:00:00.000Z"
@@ -157,9 +292,21 @@
     "name": "bikeAvailabilityPercent",
     "filePath": "app/lib/calculations.ts",
     "description": "Calculates bike availability as percentage of capacity. Returns 0 if capacity is 0. Clamped to [0, 100].",
-    "parameters": [{ "name": "available", "type": "number" }, { "name": "capacity", "type": "number" }],
+    "parameters": [
+      {
+        "name": "available",
+        "type": "number"
+      },
+      {
+        "name": "capacity",
+        "type": "number"
+      }
+    ],
     "returnType": "number",
-    "tags": ["calculations", "bikes"],
+    "tags": [
+      "calculations",
+      "bikes"
+    ],
     "testFile": "app/lib/calculations.test.ts",
     "feature": "Flight Tracker",
     "createdAt": "2026-04-04T17:00:00.000Z"
@@ -169,12 +316,24 @@
     "filePath": "app/lib/calculations.ts",
     "description": "Estimates flight progress (0-100) based on current position relative to origin and destination using Euclidean distance. Clamped to [0, 100].",
     "parameters": [
-      { "name": "origin", "type": "{ lat: number; lon: number }" },
-      { "name": "current", "type": "{ lat: number; lon: number }" },
-      { "name": "destination", "type": "{ lat: number; lon: number }" }
+      {
+        "name": "origin",
+        "type": "{ lat: number; lon: number }"
+      },
+      {
+        "name": "current",
+        "type": "{ lat: number; lon: number }"
+      },
+      {
+        "name": "destination",
+        "type": "{ lat: number; lon: number }"
+      }
     ],
     "returnType": "number",
-    "tags": ["calculations", "aviation"],
+    "tags": [
+      "calculations",
+      "aviation"
+    ],
     "testFile": "app/lib/calculations.test.ts",
     "feature": "Flight Tracker",
     "createdAt": "2026-04-04T17:00:00.000Z"
@@ -183,9 +342,29 @@
     "name": "haversineKm",
     "filePath": "app/lib/calculations.ts",
     "description": "Calculates great-circle distance in kilometers between two lat/lon coordinates using the Haversine formula",
-    "parameters": [{ "name": "lat1", "type": "number" }, { "name": "lon1", "type": "number" }, { "name": "lat2", "type": "number" }, { "name": "lon2", "type": "number" }],
+    "parameters": [
+      {
+        "name": "lat1",
+        "type": "number"
+      },
+      {
+        "name": "lon1",
+        "type": "number"
+      },
+      {
+        "name": "lat2",
+        "type": "number"
+      },
+      {
+        "name": "lon2",
+        "type": "number"
+      }
+    ],
     "returnType": "number",
-    "tags": ["calculations", "geography"],
+    "tags": [
+      "calculations",
+      "geography"
+    ],
     "testFile": "app/lib/calculations.test.ts",
     "feature": "Flight Tracker",
     "createdAt": "2026-04-04T17:00:00.000Z"
@@ -193,10 +372,22 @@
   {
     "name": "latLonToString",
     "filePath": "app/lib/calculations.ts",
-    "description": "Formats lat/lon as '40.6413°N, 73.7781°W' with N/S/E/W suffixes",
-    "parameters": [{ "name": "lat", "type": "number" }, { "name": "lon", "type": "number" }],
+    "description": "Formats lat/lon as '40.6413\u00b0N, 73.7781\u00b0W' with N/S/E/W suffixes",
+    "parameters": [
+      {
+        "name": "lat",
+        "type": "number"
+      },
+      {
+        "name": "lon",
+        "type": "number"
+      }
+    ],
     "returnType": "string",
-    "tags": ["formatting", "geography"],
+    "tags": [
+      "formatting",
+      "geography"
+    ],
     "testFile": "app/lib/calculations.test.ts",
     "feature": "Flight Tracker",
     "createdAt": "2026-04-04T17:00:00.000Z"
@@ -205,9 +396,18 @@
     "name": "StatCard",
     "filePath": "app/components/StatCard.tsx",
     "description": "Metric display card with large number, label, optional unit, and optional amber left accent border. Used in Command Center dashboard.",
-    "parameters": [{ "name": "props", "type": "{ label: string; value: string | number; unit?: string; variant?: 'amber' | 'red' | 'green' | 'blue' | 'default'; accentLeft?: boolean }" }],
+    "parameters": [
+      {
+        "name": "props",
+        "type": "{ label: string; value: string | number; unit?: string; variant?: 'amber' | 'red' | 'green' | 'blue' | 'default'; accentLeft?: boolean }"
+      }
+    ],
     "returnType": "JSX.Element",
-    "tags": ["component", "dashboard", "ui"],
+    "tags": [
+      "component",
+      "dashboard",
+      "ui"
+    ],
     "feature": "Flight Tracker",
     "createdAt": "2026-04-04T17:00:00.000Z"
   },
@@ -215,19 +415,37 @@
     "name": "PanelHeader",
     "filePath": "app/components/PanelHeader.tsx",
     "description": "Section header with monospace all-caps title, optional subtitle, and optional right-aligned actions slot",
-    "parameters": [{ "name": "props", "type": "{ title: string; subtitle?: string; actions?: React.ReactNode }" }],
+    "parameters": [
+      {
+        "name": "props",
+        "type": "{ title: string; subtitle?: string; actions?: React.ReactNode }"
+      }
+    ],
     "returnType": "JSX.Element",
-    "tags": ["component", "layout", "ui"],
+    "tags": [
+      "component",
+      "layout",
+      "ui"
+    ],
     "feature": "Flight Tracker",
     "createdAt": "2026-04-04T17:00:00.000Z"
   },
   {
     "name": "FlightTableRow",
     "filePath": "app/components/FlightTableRow.tsx",
-    "description": "Single flight row: callsign (monospace amber), airline, route (ORIGIN→DEST), status badge, altitude and speed in monospace",
-    "parameters": [{ "name": "props", "type": "{ flight: Flight; showRoute?: boolean }" }],
+    "description": "Single flight row: callsign (monospace amber), airline, route (ORIGIN\u2192DEST), status badge, altitude and speed in monospace",
+    "parameters": [
+      {
+        "name": "props",
+        "type": "{ flight: Flight; showRoute?: boolean }"
+      }
+    ],
     "returnType": "JSX.Element",
-    "tags": ["component", "aviation", "table"],
+    "tags": [
+      "component",
+      "aviation",
+      "table"
+    ],
     "feature": "Flight Tracker",
     "createdAt": "2026-04-04T17:00:00.000Z"
   },
@@ -235,9 +453,18 @@
     "name": "FlightTable",
     "filePath": "app/components/FlightTable.tsx",
     "description": "Full flight table with column headers and FlightTableRow for each flight. Shows empty state message when no flights.",
-    "parameters": [{ "name": "props", "type": "{ flights: Flight[]; showRoute?: boolean; emptyMessage?: string }" }],
+    "parameters": [
+      {
+        "name": "props",
+        "type": "{ flights: Flight[]; showRoute?: boolean; emptyMessage?: string }"
+      }
+    ],
     "returnType": "JSX.Element",
-    "tags": ["component", "aviation", "table"],
+    "tags": [
+      "component",
+      "aviation",
+      "table"
+    ],
     "feature": "Flight Tracker",
     "createdAt": "2026-04-04T17:00:00.000Z"
   },
@@ -245,9 +472,18 @@
     "name": "SubwayLineBadge",
     "filePath": "app/components/SubwayLineBadge.tsx",
     "description": "Colored circular badge with the MTA line letter/number inside. Sizes: sm=20px, md=28px, lg=36px.",
-    "parameters": [{ "name": "props", "type": "{ lineId: string; color: string; size?: 'sm' | 'md' | 'lg' }" }],
+    "parameters": [
+      {
+        "name": "props",
+        "type": "{ lineId: string; color: string; size?: 'sm' | 'md' | 'lg' }"
+      }
+    ],
     "returnType": "JSX.Element",
-    "tags": ["component", "transit", "badge"],
+    "tags": [
+      "component",
+      "transit",
+      "badge"
+    ],
     "feature": "Flight Tracker",
     "createdAt": "2026-04-04T17:00:00.000Z"
   },
@@ -255,9 +491,18 @@
     "name": "SubwayLineCard",
     "filePath": "app/components/SubwayLineCard.tsx",
     "description": "Card for a single MTA subway line: colored badge, name, status badge, status text. Red background when SUSPENDED.",
-    "parameters": [{ "name": "props", "type": "{ line: SubwayLine }" }],
+    "parameters": [
+      {
+        "name": "props",
+        "type": "{ line: SubwayLine }"
+      }
+    ],
     "returnType": "JSX.Element",
-    "tags": ["component", "transit", "card"],
+    "tags": [
+      "component",
+      "transit",
+      "card"
+    ],
     "feature": "Flight Tracker",
     "createdAt": "2026-04-04T17:00:00.000Z"
   },
@@ -265,9 +510,18 @@
     "name": "BikeStationCard",
     "filePath": "app/components/BikeStationCard.tsx",
     "description": "Compact station card with name, availability bar (filled to bikeAvailabilityPercent), bikes/docks counts, and status badge",
-    "parameters": [{ "name": "props", "type": "{ station: BikeStation; onClick?: () => void }" }],
+    "parameters": [
+      {
+        "name": "props",
+        "type": "{ station: BikeStation; onClick?: () => void }"
+      }
+    ],
     "returnType": "JSX.Element",
-    "tags": ["component", "bikes", "card"],
+    "tags": [
+      "component",
+      "bikes",
+      "card"
+    ],
     "feature": "Flight Tracker",
     "createdAt": "2026-04-04T17:00:00.000Z"
   },
@@ -275,9 +529,18 @@
     "name": "EmptyState",
     "filePath": "app/components/EmptyState.tsx",
     "description": "Centered empty state with optional icon, title, description, and action slot. Used in watchlist and other list views.",
-    "parameters": [{ "name": "props", "type": "{ icon?: React.ReactNode; title: string; description?: string; action?: React.ReactNode }" }],
+    "parameters": [
+      {
+        "name": "props",
+        "type": "{ icon?: React.ReactNode; title: string; description?: string; action?: React.ReactNode }"
+      }
+    ],
     "returnType": "JSX.Element",
-    "tags": ["component", "ui", "empty-state"],
+    "tags": [
+      "component",
+      "ui",
+      "empty-state"
+    ],
     "feature": "Flight Tracker",
     "createdAt": "2026-04-04T17:00:00.000Z"
   },
@@ -285,9 +548,18 @@
     "name": "WatchlistItemCard",
     "filePath": "app/components/WatchlistItemCard.tsx",
     "description": "Watchlist item card showing type badge, label, refId in monospace, notes, and delete button",
-    "parameters": [{ "name": "props", "type": "{ item: WatchlistItem; onDelete: (id: number) => void }" }],
+    "parameters": [
+      {
+        "name": "props",
+        "type": "{ item: WatchlistItem; onDelete: (id: number) => void }"
+      }
+    ],
     "returnType": "JSX.Element",
-    "tags": ["component", "watchlist", "card"],
+    "tags": [
+      "component",
+      "watchlist",
+      "card"
+    ],
     "feature": "Flight Tracker",
     "createdAt": "2026-04-04T17:00:00.000Z"
   },
@@ -295,9 +567,18 @@
     "name": "AlertPanel",
     "filePath": "app/components/AlertPanel.tsx",
     "description": "Panel listing alerts with severity badge, title, truncated body, time ago, and read indicator",
-    "parameters": [{ "name": "props", "type": "{ alerts: Alert[] }" }],
+    "parameters": [
+      {
+        "name": "props",
+        "type": "{ alerts: Alert[] }"
+      }
+    ],
     "returnType": "JSX.Element",
-    "tags": ["component", "alerts", "panel"],
+    "tags": [
+      "component",
+      "alerts",
+      "panel"
+    ],
     "feature": "Flight Tracker",
     "createdAt": "2026-04-04T17:00:00.000Z"
   },
@@ -305,9 +586,18 @@
     "name": "DataRow",
     "filePath": "app/components/DataRow.tsx",
     "description": "Labeled data row with label on left (muted, small) and value on right. Optional monospace font and highlight color for the value.",
-    "parameters": [{ "name": "props", "type": "{ label: string; value: string | number; mono?: boolean; highlight?: string }" }],
+    "parameters": [
+      {
+        "name": "props",
+        "type": "{ label: string; value: string | number; mono?: boolean; highlight?: string }"
+      }
+    ],
     "returnType": "JSX.Element",
-    "tags": ["component", "ui", "data-display"],
+    "tags": [
+      "component",
+      "ui",
+      "data-display"
+    ],
     "feature": "Flight Tracker",
     "createdAt": "2026-04-04T17:00:00.000Z"
   },
@@ -315,9 +605,18 @@
     "name": "RouteProgressArc",
     "filePath": "app/components/RouteProgressArc.tsx",
     "description": "SVG arc visualization showing a flight route from origin to destination with a plane icon positioned at the progress percentage",
-    "parameters": [{ "name": "props", "type": "{ origin: Airport; destination: Airport; current: { lat: number; lon: number }; progress: number }" }],
+    "parameters": [
+      {
+        "name": "props",
+        "type": "{ origin: Airport; destination: Airport; current: { lat: number; lon: number }; progress: number }"
+      }
+    ],
     "returnType": "JSX.Element",
-    "tags": ["component", "aviation", "visualization"],
+    "tags": [
+      "component",
+      "aviation",
+      "visualization"
+    ],
     "feature": "Flight Tracker",
     "createdAt": "2026-04-04T17:00:00.000Z"
   },
@@ -327,9 +626,14 @@
     "description": "Returns current UTC time as 'HH:MM:SSZ' string, updates every second via setInterval",
     "parameters": [],
     "returnType": "string",
-    "tags": ["hook", "time", "ui"],
+    "tags": [
+      "hook",
+      "time",
+      "ui"
+    ],
     "feature": "Flight Tracker",
-    "createdAt": "2026-04-04T17:00:00.000Z"
+    "createdAt": "2026-04-04T17:00:00.000Z",
+    "testFile": "app/hooks/useClock.test.ts"
   },
   {
     "name": "useAlertCount",
@@ -337,9 +641,13 @@
     "description": "Fetches /api/alerts and returns { unreadCount, loading }",
     "parameters": [],
     "returnType": "{ unreadCount: number; loading: boolean }",
-    "tags": ["hook", "alerts"],
+    "tags": [
+      "hook",
+      "alerts"
+    ],
     "feature": "Flight Tracker",
-    "createdAt": "2026-04-04T17:00:00.000Z"
+    "createdAt": "2026-04-04T17:00:00.000Z",
+    "testFile": "app/hooks/useAlertCount.test.ts"
   },
   {
     "name": "useFlights",
@@ -347,9 +655,13 @@
     "description": "Fetches /api/flights and returns { flights, loading, error }. Exports the Flight type.",
     "parameters": [],
     "returnType": "{ flights: Flight[]; loading: boolean; error: string | null }",
-    "tags": ["hook", "aviation"],
+    "tags": [
+      "hook",
+      "aviation"
+    ],
     "feature": "Flight Tracker",
-    "createdAt": "2026-04-04T17:00:00.000Z"
+    "createdAt": "2026-04-04T17:00:00.000Z",
+    "testFile": "app/hooks/useFlights.test.ts"
   },
   {
     "name": "useBikeStations",
@@ -357,9 +669,13 @@
     "description": "Fetches /api/bikes and returns { stations, summary, loading, error }",
     "parameters": [],
     "returnType": "{ stations: BikeStation[]; summary: BikeSummary; loading: boolean; error: string | null }",
-    "tags": ["hook", "bikes"],
+    "tags": [
+      "hook",
+      "bikes"
+    ],
     "feature": "Flight Tracker",
-    "createdAt": "2026-04-04T17:00:00.000Z"
+    "createdAt": "2026-04-04T17:00:00.000Z",
+    "testFile": "app/hooks/useBikeStations.test.ts"
   },
   {
     "name": "useWatchlist",
@@ -367,9 +683,13 @@
     "description": "Fetches /api/watchlist, provides deleteItem(id) function. Returns { items, loading, error, deleteItem }.",
     "parameters": [],
     "returnType": "{ items: WatchlistItem[]; loading: boolean; error: string | null; deleteItem: (id: number) => Promise<void> }",
-    "tags": ["hook", "watchlist"],
+    "tags": [
+      "hook",
+      "watchlist"
+    ],
     "feature": "Flight Tracker",
-    "createdAt": "2026-04-04T17:00:00.000Z"
+    "createdAt": "2026-04-04T17:00:00.000Z",
+    "testFile": "app/hooks/useWatchlist.test.ts"
   },
   {
     "name": "useAlerts",
@@ -377,9 +697,13 @@
     "description": "Fetches /api/alerts and returns { alerts, unreadCount, loading, error }",
     "parameters": [],
     "returnType": "{ alerts: Alert[]; unreadCount: number; loading: boolean; error: string | null }",
-    "tags": ["hook", "alerts"],
+    "tags": [
+      "hook",
+      "alerts"
+    ],
     "feature": "Flight Tracker",
-    "createdAt": "2026-04-04T17:00:00.000Z"
+    "createdAt": "2026-04-04T17:00:00.000Z",
+    "testFile": "app/hooks/useAlerts.test.ts"
   },
   {
     "name": "CommandCenter",
