@@ -1,0 +1,170 @@
+[
+  {
+    "name": "Airport",
+    "description": "Reference data for airports: IATA/ICAO codes, name, city, country, lat/lon, timezone, elevation. Used for flight origin/destination lookups and the Airport Hub page.",
+    "category": "datastore",
+    "order": 1,
+    "fields": [
+      { "name": "id",        "type": "number",  "isId": true, "required": true },
+      { "name": "iata",      "type": "string",  "required": true },
+      { "name": "icao",      "type": "string",  "required": true },
+      { "name": "name",      "type": "string",  "required": true },
+      { "name": "city",      "type": "string",  "required": true },
+      { "name": "country",   "type": "string",  "required": true },
+      { "name": "lat",       "type": "number",  "required": true },
+      { "name": "lon",       "type": "number",  "required": true },
+      { "name": "timezone",  "type": "string",  "required": true },
+      { "name": "elevation", "type": "number",  "required": false }
+    ]
+  },
+  {
+    "name": "Flight",
+    "description": "Live flight records with status, route, schedule, and real-time position (lat/lon/altitude/speed/heading). Populated from OpenSky Network and enriched with airline/aircraft data.",
+    "category": "datastore",
+    "order": 2,
+    "fields": [
+      { "name": "id",           "type": "number",  "isId": true, "required": true },
+      { "name": "callsign",     "type": "string",  "required": true },
+      { "name": "airline",      "type": "string",  "required": true },
+      { "name": "flightNumber", "type": "string",  "required": true },
+      { "name": "aircraftType", "type": "string",  "required": true },
+      { "name": "registration", "type": "string",  "required": true },
+      { "name": "originId",     "type": "number",  "required": true },
+      { "name": "destinationId","type": "number",  "required": true },
+      { "name": "status",       "type": "string",  "required": true },
+      { "name": "departureTime","type": "datetime","required": true },
+      { "name": "arrivalTime",  "type": "datetime","required": true },
+      { "name": "actualDep",    "type": "datetime","required": false },
+      { "name": "actualArr",    "type": "datetime","required": false },
+      { "name": "delayMinutes", "type": "number",  "required": false },
+      { "name": "gate",         "type": "string",  "required": false },
+      { "name": "terminal",     "type": "string",  "required": false },
+      { "name": "lat",          "type": "number",  "required": true },
+      { "name": "lon",          "type": "number",  "required": true },
+      { "name": "altitude",     "type": "number",  "required": true },
+      { "name": "groundSpeed",  "type": "number",  "required": true },
+      { "name": "heading",      "type": "number",  "required": true },
+      { "name": "verticalRate", "type": "number",  "required": false },
+      { "name": "squawk",       "type": "string",  "required": false },
+      { "name": "onGround",     "type": "boolean", "required": false }
+    ]
+  },
+  {
+    "name": "BikeStation",
+    "description": "Citi Bike NYC station data: location, capacity, bikes/docks available, operational status. Refreshed from GBFS feed.",
+    "category": "datastore",
+    "order": 3,
+    "fields": [
+      { "name": "id",             "type": "number",  "isId": true, "required": true },
+      { "name": "stationId",      "type": "string",  "required": true },
+      { "name": "name",           "type": "string",  "required": true },
+      { "name": "lat",            "type": "number",  "required": true },
+      { "name": "lon",            "type": "number",  "required": true },
+      { "name": "capacity",       "type": "number",  "required": true },
+      { "name": "bikesAvailable", "type": "number",  "required": true },
+      { "name": "docksAvailable", "type": "number",  "required": true },
+      { "name": "isInstalled",    "type": "boolean", "required": false },
+      { "name": "isRenting",      "type": "boolean", "required": false },
+      { "name": "isReturning",    "type": "boolean", "required": false },
+      { "name": "lastUpdated",    "type": "datetime","required": false }
+    ]
+  },
+  {
+    "name": "SubwayLine",
+    "description": "MTA NYC subway line status: service state (good/delays/suspended), affected times, and status message.",
+    "category": "datastore",
+    "order": 4,
+    "fields": [
+      { "name": "id",           "type": "number",  "isId": true, "required": true },
+      { "name": "lineId",       "type": "string",  "required": true },
+      { "name": "name",         "type": "string",  "required": true },
+      { "name": "color",        "type": "string",  "required": true },
+      { "name": "status",       "type": "string",  "required": true },
+      { "name": "statusText",   "type": "string",  "required": false },
+      { "name": "affectedFrom", "type": "datetime","required": false },
+      { "name": "affectedTo",   "type": "datetime","required": false }
+    ]
+  },
+  {
+    "name": "SubwayTrain",
+    "description": "Individual MTA train positions: current/next stop, direction, status, delay, and lat/lon for map display.",
+    "category": "datastore",
+    "order": 5,
+    "fields": [
+      { "name": "id",          "type": "number",  "isId": true, "required": true },
+      { "name": "trainId",     "type": "string",  "required": true },
+      { "name": "lineId",      "type": "string",  "required": true },
+      { "name": "direction",   "type": "string",  "required": true },
+      { "name": "currentStop", "type": "string",  "required": true },
+      { "name": "nextStop",    "type": "string",  "required": true },
+      { "name": "status",      "type": "string",  "required": true },
+      { "name": "delay",       "type": "number",  "required": false },
+      { "name": "lat",         "type": "number",  "required": false },
+      { "name": "lon",         "type": "number",  "required": false }
+    ]
+  },
+  {
+    "name": "WatchlistItem",
+    "description": "User-saved tracking items across all transport modes (flights, bike stations, subway lines, airports).",
+    "category": "datastore",
+    "order": 6,
+    "fields": [
+      { "name": "id",       "type": "number",  "isId": true, "required": true },
+      { "name": "type",     "type": "string",  "required": true },
+      { "name": "label",    "type": "string",  "required": true },
+      { "name": "refId",    "type": "string",  "required": true },
+      { "name": "notes",    "type": "string",  "required": false },
+      { "name": "flightId", "type": "number",  "required": false }
+    ]
+  },
+  {
+    "name": "Alert",
+    "description": "System and user alerts: flight delays/diversions/cancellations, low bike availability, subway suspensions.",
+    "category": "datastore",
+    "order": 7,
+    "fields": [
+      { "name": "id",              "type": "number",  "isId": true, "required": true },
+      { "name": "type",            "type": "string",  "required": true },
+      { "name": "severity",        "type": "string",  "required": true },
+      { "name": "title",           "type": "string",  "required": true },
+      { "name": "body",            "type": "string",  "required": true },
+      { "name": "read",            "type": "boolean", "required": false },
+      { "name": "flightId",        "type": "number",  "required": false },
+      { "name": "watchlistItemId", "type": "number",  "required": false }
+    ]
+  },
+  {
+    "name": "OpenSky Aircraft State",
+    "description": "Real-time aircraft states from OpenSky Network REST API (/api/states/all). Returns icao24, callsign, lat, lon, altitude, velocity, heading, verticalRate, onGround.",
+    "category": "mock-api",
+    "order": 8,
+    "fields": [
+      { "name": "icao24",       "type": "string",  "required": true },
+      { "name": "callsign",     "type": "string",  "required": false },
+      { "name": "origin_country","type": "string", "required": false },
+      { "name": "latitude",     "type": "number",  "required": false },
+      { "name": "longitude",    "type": "number",  "required": false },
+      { "name": "baro_altitude","type": "number",  "required": false },
+      { "name": "velocity",     "type": "number",  "required": false },
+      { "name": "true_track",   "type": "number",  "required": false },
+      { "name": "vertical_rate","type": "number",  "required": false },
+      { "name": "on_ground",    "type": "boolean", "required": false },
+      { "name": "squawk",       "type": "string",  "required": false }
+    ]
+  },
+  {
+    "name": "Citi Bike GBFS Station Status",
+    "description": "Live bike station status from Citi Bike GBFS feed (gbfs.citibikenyc.com). Returns num_bikes_available, num_docks_available, is_renting, is_returning per station.",
+    "category": "mock-api",
+    "order": 9,
+    "fields": [
+      { "name": "station_id",           "type": "string",  "required": true },
+      { "name": "num_bikes_available",   "type": "number",  "required": true },
+      { "name": "num_docks_available",   "type": "number",  "required": true },
+      { "name": "is_installed",          "type": "number",  "required": false },
+      { "name": "is_renting",            "type": "number",  "required": false },
+      { "name": "is_returning",          "type": "number",  "required": false },
+      { "name": "last_reported",         "type": "number",  "required": false }
+    ]
+  }
+]

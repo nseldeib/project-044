@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "FlightTable - Empty",
+    "description": null,
+    "componentName": "FlightTable",
+    "componentPath": "app/components/FlightTable.tsx",
+    "url": "/isolated-components/FlightTable?s=Empty",
+    "type": null,
+    "screenshotPath": "screenshots/eecbe243-ade1-4b24-b9c7-ce5289701445.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/eecbe243-ade1-4b24-b9c7-ce5289701445.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-04T17:06:35.364Z",
+    "updatedAt": "2026-04-04T17:06:35.364Z"
+  }
+}

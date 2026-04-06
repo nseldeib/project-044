@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "EmptyState - ErrorState",
+    "description": null,
+    "componentName": "EmptyState",
+    "componentPath": "app/components/EmptyState.tsx",
+    "url": "/isolated-components/EmptyState?s=ErrorState",
+    "type": null,
+    "screenshotPath": "screenshots/8833298b-2d9b-416e-ac35-de592f2b4b66.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/8833298b-2d9b-416e-ac35-de592f2b4b66.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-04T17:07:30.149Z",
+    "updatedAt": "2026-04-04T17:07:30.149Z"
+  }
+}

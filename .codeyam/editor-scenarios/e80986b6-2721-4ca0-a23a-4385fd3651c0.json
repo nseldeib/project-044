@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "WatchlistItemCard - FlightItem",
+    "description": null,
+    "componentName": "WatchlistItemCard",
+    "componentPath": "app/components/WatchlistItemCard.tsx",
+    "url": "/isolated-components/WatchlistItemCard?s=FlightItem",
+    "type": null,
+    "screenshotPath": "screenshots/e80986b6-2721-4ca0-a23a-4385fd3651c0.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/e80986b6-2721-4ca0-a23a-4385fd3651c0.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-04T17:07:34.026Z",
+    "updatedAt": "2026-04-04T17:07:34.026Z"
+  }
+}

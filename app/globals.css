@@ -1,26 +1,220 @@
 @import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* ────────────────────────────────────────────────────
+   VECTOR — Mission Control Design System
+   Dark cockpit / NASA HUD aesthetic
+──────────────────────────────────────────────────── */
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Backgrounds */
+    --bg-base:     #03060f;
+    --bg-surface:  #080d1a;
+    --bg-elevated: #0d1525;
+    --bg-overlay:  #111b2e;
+    --bg-border:   #1a2540;
+
+    /* Amber HUD (primary accent) */
+    --accent-amber:      #f59e0b;
+    --accent-amber-dim:  #b45309;
+    --accent-amber-glow: rgba(245, 158, 11, 0.12);
+    --accent-amber-a:    rgba(245, 158, 11, 0.8);
+
+    /* Electric Blue (data/nav) */
+    --accent-blue:     #38bdf8;
+    --accent-blue-dim: #0284c7;
+    --accent-blue-glow: rgba(56, 189, 248, 0.10);
+
+    /* Mission Green (status/online) */
+    --accent-green:     #4ade80;
+    --accent-green-dim: #16a34a;
+    --accent-green-glow: rgba(74, 222, 128, 0.10);
+
+    /* Status */
+    --status-critical: #ef4444;
+    --status-warning:  #f59e0b;
+    --status-nominal:  #4ade80;
+    --status-info:     #38bdf8;
+    --status-neutral:  #64748b;
+
+    /* Text */
+    --text-primary:   #e2e8f0;
+    --text-secondary: #94a3b8;
+    --text-muted:     #475569;
+    --text-accent:    #f59e0b;
+    --text-inverse:   #03060f;
+
+    /* Fonts */
+    --font-sans: 'Inter', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+
+    /* Type Scale */
+    --text-2xs:  10px;
+    --text-xs:   12px;
+    --text-sm:   13px;
+    --text-base: 14px;
+    --text-md:   15px;
+    --text-lg:   16px;
+    --text-xl:   18px;
+    --text-2xl:  22px;
+    --text-3xl:  28px;
+    --text-4xl:  36px;
+
+    /* Font Weights */
+    --font-weight-normal:    400;
+    --font-weight-medium:    500;
+    --font-weight-semibold:  600;
+    --font-weight-bold:      700;
+    --font-weight-black:     800;
+
+    /* Letter Spacing */
+    --tracking-tight:   -0.02em;
+    --tracking-normal:  0;
+    --tracking-wide:    0.04em;
+    --tracking-wider:   0.08em;
+    --tracking-widest:  0.12em;
+
+    /* Spacing */
+    --spacing-1:  4px;
+    --spacing-2:  8px;
+    --spacing-3:  12px;
+    --spacing-4:  16px;
+    --spacing-5:  20px;
+    --spacing-6:  24px;
+    --spacing-8:  32px;
+    --spacing-10: 40px;
+    --spacing-12: 48px;
+    --spacing-16: 64px;
+
+    /* Border Radius */
+    --radius-none: 0px;
+    --radius-sm:   2px;
+    --radius-md:   4px;
+    --radius-lg:   6px;
+    --radius-xl:   8px;
+    --radius-full: 9999px;
+
+    /* Shadows */
+    --shadow-sm:    0 1px 3px rgba(0,0,0,0.5);
+    --shadow-md:    0 4px 12px rgba(0,0,0,0.6);
+    --shadow-lg:    0 8px 32px rgba(0,0,0,0.7);
+    --shadow-amber: 0 0 20px rgba(245, 158, 11, 0.15);
+    --shadow-blue:  0 0 20px rgba(56, 189, 248, 0.12);
+    --shadow-green: 0 0 20px rgba(74, 222, 128, 0.12);
+
+    /* Borders */
+    --border-subtle:  1px solid #1a2540;
+    --border-default: 1px solid #243050;
+    --border-accent:  1px solid #f59e0b;
+    --border-blue:    1px solid #38bdf8;
+
+    /* Transitions */
+    --transition-fast: 100ms ease;
+    --transition-base: 200ms ease;
+    --transition-slow: 350ms ease;
+
+    /* shadcn/ui compatibility (space-separated RGB) */
+    --background:        3 6 15;
+    --foreground:        226 232 240;
+    --card:              8 13 26;
+    --card-foreground:   226 232 240;
+    --popover:           13 21 37;
+    --popover-foreground: 226 232 240;
+    --primary:           245 158 11;
+    --primary-foreground: 3 6 15;
+    --secondary:         17 27 46;
+    --secondary-foreground: 148 163 184;
+    --muted:             17 27 46;
+    --muted-foreground:  71 85 105;
+    --accent:            245 158 11;
+    --accent-foreground: 3 6 15;
+    --destructive:       239 68 68;
+    --destructive-foreground: 226 232 240;
+    --border:            26 37 64;
+    --input:             26 37 64;
+    --ring:              245 158 11;
+    --radius:            4px;
   }
 }
 
+@theme inline {
+  --color-background: var(--bg-base);
+  --color-foreground: var(--text-primary);
+}
+
+/* Global resets */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: var(--font-weight-normal);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-surface); }
+::-webkit-scrollbar-thumb { background: var(--bg-border); border-radius: var(--radius-full); }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-amber-dim); }
+
+/* Leaflet map reset — fix 0px height in flex containers */
+.leaflet-container {
+  min-height: 0;
+}
+.leaflet-container {
+  background: var(--bg-base) !important;
+  font-family: var(--font-sans) !important;
+}
+.leaflet-control-attribution {
+  display: none !important;
+}
+.leaflet-control-zoom a {
+  background: var(--bg-elevated) !important;
+  color: var(--text-primary) !important;
+  border: var(--border-subtle) !important;
+}
+.leaflet-popup-content-wrapper {
+  background: var(--bg-elevated) !important;
+  color: var(--text-primary) !important;
+  border: var(--border-default) !important;
+  border-radius: var(--radius-md) !important;
+  box-shadow: var(--shadow-md) !important;
+}
+.leaflet-popup-tip {
+  background: var(--bg-elevated) !important;
+}
+
+/* Flight table row hover */
+.flight-row:hover {
+  background-color: var(--bg-overlay) !important;
+  cursor: pointer;
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.85); }
+}
+
+@keyframes radar-ring {
+  0% { transform: scale(0.5); opacity: 0.8; }
+  100% { transform: scale(2.5); opacity: 0; }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
 }

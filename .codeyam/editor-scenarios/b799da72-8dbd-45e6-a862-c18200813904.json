@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "SubwayLineCard - Suspended",
+    "description": null,
+    "componentName": "SubwayLineCard",
+    "componentPath": "app/components/SubwayLineCard.tsx",
+    "url": "/isolated-components/SubwayLineCard?s=Suspended",
+    "type": null,
+    "screenshotPath": "screenshots/b799da72-8dbd-45e6-a862-c18200813904.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/b799da72-8dbd-45e6-a862-c18200813904.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-04T17:06:59.918Z",
+    "updatedAt": "2026-04-04T17:06:59.918Z"
+  }
+}

@@ -1,0 +1,287 @@
+{
+  "efd1dd9f-3093-4f9c-83e1-a3da46ed4921": {
+    "scenarioName": "StatCard - Default",
+    "capturedAt": "2026-04-04T17:05:45.678Z",
+    "errors": []
+  },
+  "551395d7-157a-4c76-a678-0ddbcbc564ea": {
+    "scenarioName": "StatCard - Critical",
+    "capturedAt": "2026-04-04T17:05:49.651Z",
+    "errors": []
+  },
+  "e75ac8bb-b923-4d11-9bc5-449c9de086f7": {
+    "scenarioName": "StatCard - Nominal",
+    "capturedAt": "2026-04-04T17:05:53.469Z",
+    "errors": []
+  },
+  "db77b6a5-8908-4176-a427-5a67ab4609b5": {
+    "scenarioName": "StatCard - Zero",
+    "capturedAt": "2026-04-04T17:05:57.251Z",
+    "errors": []
+  },
+  "90167842-59c3-4797-b524-fe02a63d3a24": {
+    "scenarioName": "PanelHeader - Default",
+    "capturedAt": "2026-04-04T17:06:00.985Z",
+    "errors": []
+  },
+  "d022f4c1-2f91-48f3-ac6a-f0887c0ab4ff": {
+    "scenarioName": "PanelHeader - WithActions",
+    "capturedAt": "2026-04-04T17:06:04.769Z",
+    "errors": []
+  },
+  "844616e0-3c1e-49d2-8bf9-bf66c4b0f644": {
+    "scenarioName": "PanelHeader - TitleOnly",
+    "capturedAt": "2026-04-04T17:06:08.567Z",
+    "errors": []
+  },
+  "ebf1f1a2-1f68-4ae1-a3b8-27949844fc4a": {
+    "scenarioName": "FlightTableRow - EnRoute",
+    "capturedAt": "2026-04-04T17:06:12.285Z",
+    "errors": []
+  },
+  "e36f9e1b-4ca6-4440-bd8a-2e0f89218aef": {
+    "scenarioName": "FlightTableRow - Delayed",
+    "capturedAt": "2026-04-04T17:06:16.220Z",
+    "errors": []
+  },
+  "96c05d5a-93c2-46e3-9ede-7141c6103a29": {
+    "scenarioName": "FlightTableRow - Landed",
+    "capturedAt": "2026-04-04T17:06:19.971Z",
+    "errors": []
+  },
+  "a0abc857-b795-4ef1-9f45-5fec6dca118a": {
+    "scenarioName": "FlightTableRow - Cancelled",
+    "capturedAt": "2026-04-04T17:06:24.018Z",
+    "errors": []
+  },
+  "ce650116-0ba4-4f7d-a523-19bda39a7539": {
+    "scenarioName": "FlightTable - MultipleFlights",
+    "capturedAt": "2026-04-04T17:06:27.782Z",
+    "errors": []
+  },
+  "7294d1b7-6c0c-4dd7-abc2-89155091d6d8": {
+    "scenarioName": "FlightTable - SingleFlight",
+    "capturedAt": "2026-04-04T17:06:31.552Z",
+    "errors": []
+  },
+  "eecbe243-ade1-4b24-b9c7-ce5289701445": {
+    "scenarioName": "FlightTable - Empty",
+    "capturedAt": "2026-04-04T17:06:35.299Z",
+    "errors": []
+  },
+  "f45ec241-19ea-4438-83f9-0320eba5885e": {
+    "scenarioName": "SubwayLineBadge - AllSizes",
+    "capturedAt": "2026-04-04T17:06:39.433Z",
+    "errors": []
+  },
+  "61fe01b5-a814-452e-8d7f-e5bfbd602bec": {
+    "scenarioName": "SubwayLineBadge - RedLine",
+    "capturedAt": "2026-04-04T17:06:43.164Z",
+    "errors": []
+  },
+  "0f3569a3-a8cb-48c3-98a3-b8a6b2970674": {
+    "scenarioName": "SubwayLineBadge - BlueLine",
+    "capturedAt": "2026-04-04T17:06:46.863Z",
+    "errors": []
+  },
+  "5647ea6b-6f8a-45d8-bb15-ccc76cf9a06d": {
+    "scenarioName": "SubwayLineCard - GoodService",
+    "capturedAt": "2026-04-04T17:06:50.633Z",
+    "errors": []
+  },
+  "03509009-78ec-458b-9fe6-2441e0d7909c": {
+    "scenarioName": "SubwayLineCard - Delayed",
+    "capturedAt": "2026-04-04T17:06:56.101Z",
+    "errors": []
+  },
+  "b799da72-8dbd-45e6-a862-c18200813904": {
+    "scenarioName": "SubwayLineCard - Suspended",
+    "capturedAt": "2026-04-04T17:06:59.850Z",
+    "errors": []
+  },
+  "6cf9cd60-7ac9-43f8-868d-3ee8da8e7c68": {
+    "scenarioName": "SubwayLineCard - PlannedWork",
+    "capturedAt": "2026-04-04T17:07:03.668Z",
+    "errors": []
+  },
+  "d444f5c3-4f70-4aa2-a343-13d4dc81a427": {
+    "scenarioName": "BikeStationCard - Available",
+    "capturedAt": "2026-04-04T17:07:07.434Z",
+    "errors": []
+  },
+  "0d7a471e-eb3f-4b00-be9e-549985c07d1e": {
+    "scenarioName": "BikeStationCard - Low",
+    "capturedAt": "2026-04-04T17:07:11.149Z",
+    "errors": []
+  },
+  "ed7e2965-bb98-4593-a134-558abae2cc64": {
+    "scenarioName": "BikeStationCard - Empty",
+    "capturedAt": "2026-04-04T17:07:14.949Z",
+    "errors": []
+  },
+  "85cdf996-1cd2-48a7-a0f0-a3b7d5e5d971": {
+    "scenarioName": "BikeStationCard - Offline",
+    "capturedAt": "2026-04-04T17:07:18.717Z",
+    "errors": []
+  },
+  "afea4289-bd2d-4ab5-a57b-533c08709d87": {
+    "scenarioName": "EmptyState - Default",
+    "capturedAt": "2026-04-04T17:07:22.606Z",
+    "errors": []
+  },
+  "36b31f5e-8f6a-4d7b-94fe-faa3a61a7bb3": {
+    "scenarioName": "EmptyState - WithAction",
+    "capturedAt": "2026-04-04T17:07:26.348Z",
+    "errors": []
+  },
+  "8833298b-2d9b-416e-ac35-de592f2b4b66": {
+    "scenarioName": "EmptyState - ErrorState",
+    "capturedAt": "2026-04-04T17:07:30.083Z",
+    "errors": []
+  },
+  "e80986b6-2721-4ca0-a23a-4385fd3651c0": {
+    "scenarioName": "WatchlistItemCard - FlightItem",
+    "capturedAt": "2026-04-04T17:07:33.956Z",
+    "errors": []
+  },
+  "d52716ea-19a1-4c47-838c-4e0cba70c482": {
+    "scenarioName": "WatchlistItemCard - BikeItem",
+    "capturedAt": "2026-04-04T17:07:38.037Z",
+    "errors": []
+  },
+  "405afc59-cba2-4d70-afee-ddd7cf8a6e9f": {
+    "scenarioName": "WatchlistItemCard - SubwayItem",
+    "capturedAt": "2026-04-04T17:07:41.751Z",
+    "errors": []
+  },
+  "68184cf3-3168-48d5-a488-2fe2d45a8fd7": {
+    "scenarioName": "AlertPanel - MultipleAlerts",
+    "capturedAt": "2026-04-04T17:07:46.501Z",
+    "errors": []
+  },
+  "53d85eab-dab7-466f-9ffb-00dd837423b9": {
+    "scenarioName": "AlertPanel - SingleCritical",
+    "capturedAt": "2026-04-04T17:07:51.251Z",
+    "errors": []
+  },
+  "1c8ef9b0-ccff-497a-bc99-a3eaf4a18f15": {
+    "scenarioName": "AlertPanel - AllRead",
+    "capturedAt": "2026-04-04T17:07:55.015Z",
+    "errors": []
+  },
+  "008de67b-54b3-425c-9759-b77f6c79e051": {
+    "scenarioName": "AlertPanel - Empty",
+    "capturedAt": "2026-04-04T17:07:58.768Z",
+    "errors": []
+  },
+  "1fc6d74d-5c1c-41d7-a3b3-c5999a14a4a0": {
+    "scenarioName": "DataRow - Default",
+    "capturedAt": "2026-04-04T17:08:02.550Z",
+    "errors": []
+  },
+  "c9d612c6-e463-4278-9f19-5d575a400151": {
+    "scenarioName": "DataRow - Telemetry",
+    "capturedAt": "2026-04-04T17:08:06.259Z",
+    "errors": []
+  },
+  "6b2057e5-1616-49fb-8b82-63c08a0592f9": {
+    "scenarioName": "DataRow - AirportInfo",
+    "capturedAt": "2026-04-04T17:08:10.034Z",
+    "errors": []
+  },
+  "0c72c7f9-4423-4fea-8593-2ec207fd28b0": {
+    "scenarioName": "RouteProgressArc - MidFlight",
+    "capturedAt": "2026-04-04T17:08:13.863Z",
+    "errors": []
+  },
+  "3e907a13-8e74-4fab-ac7a-872e03e789bb": {
+    "scenarioName": "RouteProgressArc - EarlyFlight",
+    "capturedAt": "2026-04-04T17:08:17.618Z",
+    "errors": []
+  },
+  "0a7eb641-86c9-43da-b6bd-ce506ad4952e": {
+    "scenarioName": "RouteProgressArc - NearLanding",
+    "capturedAt": "2026-04-04T17:08:21.437Z",
+    "errors": []
+  },
+  "884cc4cf-2798-45b0-9fef-7d94ad07ef23": {
+    "scenarioName": "Command Center - NYC Rush Hour",
+    "capturedAt": "2026-04-06T14:58:04.265Z",
+    "errors": []
+  },
+  "c4be099b-c334-48f3-a1cb-c06f18c397f7": {
+    "scenarioName": "Command Center - Storm Chaos",
+    "capturedAt": "2026-04-06T14:58:12.215Z",
+    "errors": []
+  },
+  "597baa40-b4c1-47c0-8613-6d4e7954595a": {
+    "scenarioName": "Command Center - Ghost City (3AM)",
+    "capturedAt": "2026-04-06T14:58:20.409Z",
+    "errors": []
+  },
+  "5bf26139-c502-4956-a2b1-775bc5e6fe62": {
+    "scenarioName": "Air Traffic - Global Active",
+    "capturedAt": "2026-04-04T17:47:12.724Z",
+    "errors": []
+  },
+  "57e19847-91f9-4620-9210-d16a855baee5": {
+    "scenarioName": "Air Traffic - NYC Approach",
+    "capturedAt": "2026-04-04T17:47:19.414Z",
+    "errors": []
+  },
+  "0d08a954-274f-4ce4-b310-2ec79a0458b5": {
+    "scenarioName": "City Bikes - Rush Hour Crunch",
+    "capturedAt": "2026-04-04T17:47:28.997Z",
+    "errors": []
+  },
+  "df2bf431-1981-4ee3-ab46-bdd43d9970e8": {
+    "scenarioName": "City Bikes - Full Availability",
+    "capturedAt": "2026-04-04T17:47:35.180Z",
+    "errors": []
+  },
+  "28527429-15cb-4221-a987-e27eb22723e7": {
+    "scenarioName": "Subway - Normal Operations",
+    "capturedAt": "2026-04-06T15:01:47.360Z",
+    "errors": []
+  },
+  "0636408b-a871-452a-961f-d37287ad7345": {
+    "scenarioName": "Subway - Major Disruption",
+    "capturedAt": "2026-04-06T15:01:40.083Z",
+    "errors": []
+  },
+  "554bfa0a-dcee-4e84-8047-29829ef9f9ae": {
+    "scenarioName": "Flight Detail - Transatlantic En Route",
+    "capturedAt": "2026-04-06T15:01:30.073Z",
+    "errors": []
+  },
+  "6f10597b-175a-4445-ae8f-c8dfda167f65": {
+    "scenarioName": "Flight Detail - Delayed Arrival",
+    "capturedAt": "2026-04-06T15:01:10.675Z",
+    "errors": []
+  },
+  "a50fe6de-1c3d-493b-b95a-df17619d4827": {
+    "scenarioName": "Flight Detail - Diverted Emergency",
+    "capturedAt": "2026-04-06T15:01:19.478Z",
+    "errors": []
+  },
+  "69d1b534-23df-4d86-ac80-33d92c1de025": {
+    "scenarioName": "Airport Hub - JFK Busy Operations",
+    "capturedAt": "2026-04-06T15:00:55.871Z",
+    "errors": []
+  },
+  "92656700-e117-4551-8ce9-e4fce25c1fe7": {
+    "scenarioName": "Airport Hub - JFK Storm Delays",
+    "capturedAt": "2026-04-06T15:01:02.431Z",
+    "errors": []
+  },
+  "7f71c272-2383-4930-affe-6dbe44c5ff0d": {
+    "scenarioName": "Watchlist - Active Tracking",
+    "capturedAt": "2026-04-06T15:01:54.933Z",
+    "errors": []
+  },
+  "768e9b1a-5063-47e2-8b4c-1cc9db4db73b": {
+    "scenarioName": "Watchlist - Empty",
+    "capturedAt": "2026-04-06T15:02:03.450Z",
+    "errors": []
+  }
+}

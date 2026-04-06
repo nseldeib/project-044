@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "FlightTable - MultipleFlights",
+    "description": null,
+    "componentName": "FlightTable",
+    "componentPath": "app/components/FlightTable.tsx",
+    "url": "/isolated-components/FlightTable?s=MultipleFlights",
+    "type": null,
+    "screenshotPath": "screenshots/ce650116-0ba4-4f7d-a523-19bda39a7539.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/ce650116-0ba4-4f7d-a523-19bda39a7539.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-04T17:06:27.847Z",
+    "updatedAt": "2026-04-04T17:06:27.847Z"
+  }
+}

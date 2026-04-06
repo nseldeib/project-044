@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "FlightTableRow - Delayed",
+    "description": null,
+    "componentName": "FlightTableRow",
+    "componentPath": "app/components/FlightTableRow.tsx",
+    "url": "/isolated-components/FlightTableRow?s=Delayed",
+    "type": null,
+    "screenshotPath": "screenshots/e36f9e1b-4ca6-4440-bd8a-2e0f89218aef.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/e36f9e1b-4ca6-4440-bd8a-2e0f89218aef.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-04T17:06:16.287Z",
+    "updatedAt": "2026-04-04T17:06:16.287Z"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "SubwayLineBadge - RedLine",
+    "description": null,
+    "componentName": "SubwayLineBadge",
+    "componentPath": "app/components/SubwayLineBadge.tsx",
+    "url": "/isolated-components/SubwayLineBadge?s=RedLine",
+    "type": null,
+    "screenshotPath": "screenshots/61fe01b5-a814-452e-8d7f-e5bfbd602bec.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/61fe01b5-a814-452e-8d7f-e5bfbd602bec.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-04T17:06:43.228Z",
+    "updatedAt": "2026-04-04T17:06:43.228Z"
+  }
+}

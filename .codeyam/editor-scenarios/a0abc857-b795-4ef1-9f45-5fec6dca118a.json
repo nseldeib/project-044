@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "FlightTableRow - Cancelled",
+    "description": null,
+    "componentName": "FlightTableRow",
+    "componentPath": "app/components/FlightTableRow.tsx",
+    "url": "/isolated-components/FlightTableRow?s=Cancelled",
+    "type": null,
+    "screenshotPath": "screenshots/a0abc857-b795-4ef1-9f45-5fec6dca118a.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/a0abc857-b795-4ef1-9f45-5fec6dca118a.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-04T17:06:24.083Z",
+    "updatedAt": "2026-04-04T17:06:24.083Z"
+  }
+}

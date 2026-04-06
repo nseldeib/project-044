@@ -15,13 +15,145 @@ datasource db {
 }
 
 // ──────────────────────────────────────────────
-// Replace these placeholder models with your own.
-// After editing, run: npx prisma db push
+// VECTOR — Real-Time Movement Intelligence Platform
 // ──────────────────────────────────────────────
 
-model Todo {
+// Airport reference data
+model Airport {
   id        Int      @id @default(autoincrement())
+  iata      String   @unique  // e.g. "JFK"
+  icao      String   @unique  // e.g. "KJFK"
+  name      String
+  city      String
+  country   String
+  lat       Float
+  lon       Float
+  timezone  String
+  elevation Int      @default(0)  // feet
+  createdAt DateTime @default(now())
+
+  departures Flight[] @relation("DepartureAirport")
+  arrivals   Flight[] @relation("ArrivalAirport")
+}
+
+// Flight records (cached from OpenSky + enrichment)
+model Flight {
+  id            Int      @id @default(autoincrement())
+  callsign      String   @unique
+  airline       String
+  flightNumber  String
+  aircraftType  String
+  registration  String
+
+  originId      Int
+  destinationId Int
+  origin        Airport  @relation("DepartureAirport", fields: [originId], references: [id])
+  destination   Airport  @relation("ArrivalAirport",   fields: [destinationId], references: [id])
+
+  status        String   // EN_ROUTE | DELAYED | LANDED | DIVERTED | CANCELLED | BOARDING
+  departureTime DateTime
+  arrivalTime   DateTime
+  actualDep     DateTime?
+  actualArr     DateTime?
+  delayMinutes  Int      @default(0)
+  gate          String   @default("")
+  terminal      String   @default("")
+
+  // Live position (updated by poller)
+  lat           Float    @default(0)
+  lon           Float    @default(0)
+  altitude      Int      @default(0)     // feet
+  groundSpeed   Int      @default(0)     // knots
+  heading       Float    @default(0)     // degrees
+  verticalRate  Int      @default(0)     // ft/min
+  squawk        String   @default("")
+  onGround      Boolean  @default(false)
+
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  watchlistItems WatchlistItem[]
+  alerts         Alert[]
+}
+
+// Bike station (Citi Bike GBFS)
+model BikeStation {
+  id            Int      @id @default(autoincrement())
+  stationId     String   @unique
+  name          String
+  lat           Float
+  lon           Float
+  capacity      Int
+  bikesAvailable Int     @default(0)
+  docksAvailable Int     @default(0)
+  isInstalled   Boolean  @default(true)
+  isRenting     Boolean  @default(true)
+  isReturning   Boolean  @default(true)
+  lastUpdated   DateTime @default(now())
+  createdAt     DateTime @default(now())
+}
+
+// Subway line status (MTA)
+model SubwayLine {
+  id          Int      @id @default(autoincrement())
+  lineId      String   @unique  // "A", "1", "N", "LIRR", etc.
+  name        String
+  color       String   // hex color
+  status      String   // GOOD_SERVICE | DELAYS | PLANNED_WORK | SUSPENDED | SERVICE_CHANGE
+  statusText  String   @default("")
+  affectedFrom DateTime?
+  affectedTo   DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  trains SubwayTrain[]
+}
+
+// Individual subway train positions
+model SubwayTrain {
+  id          Int      @id @default(autoincrement())
+  trainId     String   @unique
+  lineId      String
+  line        SubwayLine @relation(fields: [lineId], references: [lineId])
+  direction   String   // N | S
+  currentStop String
+  nextStop    String
+  status      String   // IN_TRANSIT | AT_STATION | DELAYED
+  delay       Int      @default(0)  // minutes
+  lat         Float    @default(0)
+  lon         Float    @default(0)
+  updatedAt   DateTime @updatedAt
+  createdAt   DateTime @default(now())
+}
+
+// Watchlist — saved items across all modes
+model WatchlistItem {
+  id        Int      @id @default(autoincrement())
+  type      String   // FLIGHT | BIKE_STATION | SUBWAY_LINE | AIRPORT
+  label     String   // display name
+  refId     String   // external reference id
+  notes     String   @default("")
+
+  flightId  Int?
+  flight    Flight?  @relation(fields: [flightId], references: [id])
+
+  createdAt DateTime @default(now())
+  alerts    Alert[]
+}
+
+// Alert log
+model Alert {
+  id        Int      @id @default(autoincrement())
+  type      String   // DELAY | DIVERSION | CANCELLATION | LOW_BIKES | SUBWAY_SUSPENSION | CUSTOM
+  severity  String   // INFO | WARNING | CRITICAL
   title     String
-  completed Boolean  @default(false)
+  body      String
+  read      Boolean  @default(false)
+
+  flightId         Int?
+  flight           Flight?        @relation(fields: [flightId], references: [id])
+  watchlistItemId  Int?
+  watchlistItem    WatchlistItem? @relation(fields: [watchlistItemId], references: [id])
+
   createdAt DateTime @default(now())
 }

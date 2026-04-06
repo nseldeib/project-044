@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "DataRow - Telemetry",
+    "description": null,
+    "componentName": "DataRow",
+    "componentPath": "app/components/DataRow.tsx",
+    "url": "/isolated-components/DataRow?s=Telemetry",
+    "type": null,
+    "screenshotPath": "screenshots/c9d612c6-e463-4278-9f19-5d575a400151.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/c9d612c6-e463-4278-9f19-5d575a400151.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-04T17:08:06.329Z",
+    "updatedAt": "2026-04-04T17:08:06.329Z"
+  }
+}

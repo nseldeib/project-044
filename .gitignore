@@ -63,3 +63,5 @@ dev.db-journal
 .codeyam/tmp/
 .codeyam/rules/
 .codeyam/bin/
+.codeyam/claude-session-id.txt
+.codeyam/docs/

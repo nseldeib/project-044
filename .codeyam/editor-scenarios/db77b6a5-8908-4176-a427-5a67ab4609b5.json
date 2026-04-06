@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "StatCard - Zero",
+    "description": null,
+    "componentName": "StatCard",
+    "componentPath": "app/components/StatCard.tsx",
+    "url": "/isolated-components/StatCard?s=Zero",
+    "type": null,
+    "screenshotPath": "screenshots/db77b6a5-8908-4176-a427-5a67ab4609b5.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/db77b6a5-8908-4176-a427-5a67ab4609b5.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-04T17:05:57.316Z",
+    "updatedAt": "2026-04-04T17:05:57.316Z"
+  }
+}

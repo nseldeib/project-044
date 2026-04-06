@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "PanelHeader - Default",
+    "description": null,
+    "componentName": "PanelHeader",
+    "componentPath": "app/components/PanelHeader.tsx",
+    "url": "/isolated-components/PanelHeader?s=Default",
+    "type": null,
+    "screenshotPath": "screenshots/90167842-59c3-4797-b524-fe02a63d3a24.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/90167842-59c3-4797-b524-fe02a63d3a24.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-04T17:06:01.050Z",
+    "updatedAt": "2026-04-04T17:06:01.050Z"
+  }
+}

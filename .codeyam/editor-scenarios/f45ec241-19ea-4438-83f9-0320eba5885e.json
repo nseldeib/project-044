@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "SubwayLineBadge - AllSizes",
+    "description": null,
+    "componentName": "SubwayLineBadge",
+    "componentPath": "app/components/SubwayLineBadge.tsx",
+    "url": "/isolated-components/SubwayLineBadge?s=AllSizes",
+    "type": null,
+    "screenshotPath": "screenshots/f45ec241-19ea-4438-83f9-0320eba5885e.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/f45ec241-19ea-4438-83f9-0320eba5885e.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-04T17:06:39.500Z",
+    "updatedAt": "2026-04-04T17:06:39.500Z"
+  }
+}

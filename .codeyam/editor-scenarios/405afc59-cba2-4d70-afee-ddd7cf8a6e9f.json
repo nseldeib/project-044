@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "WatchlistItemCard - SubwayItem",
+    "description": null,
+    "componentName": "WatchlistItemCard",
+    "componentPath": "app/components/WatchlistItemCard.tsx",
+    "url": "/isolated-components/WatchlistItemCard?s=SubwayItem",
+    "type": null,
+    "screenshotPath": "screenshots/405afc59-cba2-4d70-afee-ddd7cf8a6e9f.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/405afc59-cba2-4d70-afee-ddd7cf8a6e9f.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-04T17:07:41.819Z",
+    "updatedAt": "2026-04-04T17:07:41.819Z"
+  }
+}

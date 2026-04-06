@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "WatchlistItemCard - BikeItem",
+    "description": null,
+    "componentName": "WatchlistItemCard",
+    "componentPath": "app/components/WatchlistItemCard.tsx",
+    "url": "/isolated-components/WatchlistItemCard?s=BikeItem",
+    "type": null,
+    "screenshotPath": "screenshots/d52716ea-19a1-4c47-838c-4e0cba70c482.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/d52716ea-19a1-4c47-838c-4e0cba70c482.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-04T17:07:38.101Z",
+    "updatedAt": "2026-04-04T17:07:38.101Z"
+  }
+}

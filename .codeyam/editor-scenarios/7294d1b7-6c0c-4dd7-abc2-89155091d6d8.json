@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "FlightTable - SingleFlight",
+    "description": null,
+    "componentName": "FlightTable",
+    "componentPath": "app/components/FlightTable.tsx",
+    "url": "/isolated-components/FlightTable?s=SingleFlight",
+    "type": null,
+    "screenshotPath": "screenshots/7294d1b7-6c0c-4dd7-abc2-89155091d6d8.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/7294d1b7-6c0c-4dd7-abc2-89155091d6d8.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-04T17:06:31.614Z",
+    "updatedAt": "2026-04-04T17:06:31.614Z"
+  }
+}

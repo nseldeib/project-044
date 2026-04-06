@@ -1,17 +1,6 @@
-// Example API route using Prisma.
-// Import prisma from the singleton — do NOT create a new PrismaClient here.
-
-import { prisma } from '@/app/lib/prisma';
+// Legacy route — replaced by VECTOR API routes
+import { NextResponse } from 'next/server';
 
 export async function GET() {
-  const todos = await prisma.todo.findMany({
-    orderBy: { createdAt: 'desc' },
-  });
-  return Response.json(todos);
-}
-
-export async function POST(request: Request) {
-  const { title } = await request.json();
-  const todo = await prisma.todo.create({ data: { title } });
-  return Response.json(todo);
+  return NextResponse.json([]);
 }

@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "DataRow - AirportInfo",
+    "description": null,
+    "componentName": "DataRow",
+    "componentPath": "app/components/DataRow.tsx",
+    "url": "/isolated-components/DataRow?s=AirportInfo",
+    "type": null,
+    "screenshotPath": "screenshots/6b2057e5-1616-49fb-8b82-63c08a0592f9.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/6b2057e5-1616-49fb-8b82-63c08a0592f9.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-04T17:08:10.100Z",
+    "updatedAt": "2026-04-04T17:08:10.100Z"
+  }
+}

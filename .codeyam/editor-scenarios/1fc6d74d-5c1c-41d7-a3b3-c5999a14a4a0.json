@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "DataRow - Default",
+    "description": null,
+    "componentName": "DataRow",
+    "componentPath": "app/components/DataRow.tsx",
+    "url": "/isolated-components/DataRow?s=Default",
+    "type": null,
+    "screenshotPath": "screenshots/1fc6d74d-5c1c-41d7-a3b3-c5999a14a4a0.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/1fc6d74d-5c1c-41d7-a3b3-c5999a14a4a0.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-04T17:08:02.615Z",
+    "updatedAt": "2026-04-04T17:08:02.615Z"
+  }
+}

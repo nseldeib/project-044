@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "RouteProgressArc - EarlyFlight",
+    "description": null,
+    "componentName": "RouteProgressArc",
+    "componentPath": "app/components/RouteProgressArc.tsx",
+    "url": "/isolated-components/RouteProgressArc?s=EarlyFlight",
+    "type": null,
+    "screenshotPath": "screenshots/3e907a13-8e74-4fab-ac7a-872e03e789bb.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/3e907a13-8e74-4fab-ac7a-872e03e789bb.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-04T17:08:17.684Z",
+    "updatedAt": "2026-04-04T17:08:17.684Z"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "BikeStationCard - Empty",
+    "description": null,
+    "componentName": "BikeStationCard",
+    "componentPath": "app/components/BikeStationCard.tsx",
+    "url": "/isolated-components/BikeStationCard?s=Empty",
+    "type": null,
+    "screenshotPath": "screenshots/ed7e2965-bb98-4593-a134-558abae2cc64.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/ed7e2965-bb98-4593-a134-558abae2cc64.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-04T17:07:15.015Z",
+    "updatedAt": "2026-04-04T17:07:15.015Z"
+  }
+}

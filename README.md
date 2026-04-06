@@ -1,6 +1,6 @@
-# Project Name
+# VECTOR — Movement Intelligence Platform
 
-Brief description of what this app does.
+Real-time multi-modal movement tracker for NYC and global air traffic. Track live aircraft positions (OpenSky Network), Citi Bike station availability, and NYC MTA subway status — all in a single tactical command interface with a NASA mission control aesthetic.
 
 ## Setup
 

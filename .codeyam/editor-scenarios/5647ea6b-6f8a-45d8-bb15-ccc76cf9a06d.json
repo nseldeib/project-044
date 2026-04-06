@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "SubwayLineCard - GoodService",
+    "description": null,
+    "componentName": "SubwayLineCard",
+    "componentPath": "app/components/SubwayLineCard.tsx",
+    "url": "/isolated-components/SubwayLineCard?s=GoodService",
+    "type": null,
+    "screenshotPath": "screenshots/5647ea6b-6f8a-45d8-bb15-ccc76cf9a06d.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/5647ea6b-6f8a-45d8-bb15-ccc76cf9a06d.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-04T17:06:50.697Z",
+    "updatedAt": "2026-04-04T17:06:50.697Z"
+  }
+}

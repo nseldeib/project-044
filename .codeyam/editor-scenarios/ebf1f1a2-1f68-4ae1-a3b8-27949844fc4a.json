@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "FlightTableRow - EnRoute",
+    "description": null,
+    "componentName": "FlightTableRow",
+    "componentPath": "app/components/FlightTableRow.tsx",
+    "url": "/isolated-components/FlightTableRow?s=EnRoute",
+    "type": null,
+    "screenshotPath": "screenshots/ebf1f1a2-1f68-4ae1-a3b8-27949844fc4a.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/ebf1f1a2-1f68-4ae1-a3b8-27949844fc4a.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-04T17:06:12.349Z",
+    "updatedAt": "2026-04-04T17:06:12.349Z"
+  }
+}

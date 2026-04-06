@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "AlertPanel - Empty",
+    "description": null,
+    "componentName": "AlertPanel",
+    "componentPath": "app/components/AlertPanel.tsx",
+    "url": "/isolated-components/AlertPanel?s=Empty",
+    "type": null,
+    "screenshotPath": "screenshots/008de67b-54b3-425c-9759-b77f6c79e051.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/008de67b-54b3-425c-9759-b77f6c79e051.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-04T17:07:58.837Z",
+    "updatedAt": "2026-04-04T17:07:58.837Z"
+  }
+}

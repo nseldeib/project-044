@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "AlertPanel - AllRead",
+    "description": null,
+    "componentName": "AlertPanel",
+    "componentPath": "app/components/AlertPanel.tsx",
+    "url": "/isolated-components/AlertPanel?s=AllRead",
+    "type": null,
+    "screenshotPath": "screenshots/1c8ef9b0-ccff-497a-bc99-a3eaf4a18f15.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/1c8ef9b0-ccff-497a-bc99-a3eaf4a18f15.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-04T17:07:55.079Z",
+    "updatedAt": "2026-04-04T17:07:55.079Z"
+  }
+}

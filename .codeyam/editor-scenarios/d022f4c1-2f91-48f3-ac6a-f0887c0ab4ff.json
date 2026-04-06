@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "PanelHeader - WithActions",
+    "description": null,
+    "componentName": "PanelHeader",
+    "componentPath": "app/components/PanelHeader.tsx",
+    "url": "/isolated-components/PanelHeader?s=WithActions",
+    "type": null,
+    "screenshotPath": "screenshots/d022f4c1-2f91-48f3-ac6a-f0887c0ab4ff.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/d022f4c1-2f91-48f3-ac6a-f0887c0ab4ff.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-04T17:06:04.837Z",
+    "updatedAt": "2026-04-04T17:06:04.837Z"
+  }
+}

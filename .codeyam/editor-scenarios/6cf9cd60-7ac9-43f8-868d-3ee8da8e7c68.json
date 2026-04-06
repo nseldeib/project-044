@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "SubwayLineCard - PlannedWork",
+    "description": null,
+    "componentName": "SubwayLineCard",
+    "componentPath": "app/components/SubwayLineCard.tsx",
+    "url": "/isolated-components/SubwayLineCard?s=PlannedWork",
+    "type": null,
+    "screenshotPath": "screenshots/6cf9cd60-7ac9-43f8-868d-3ee8da8e7c68.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/6cf9cd60-7ac9-43f8-868d-3ee8da8e7c68.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-04T17:07:03.733Z",
+    "updatedAt": "2026-04-04T17:07:03.733Z"
+  }
+}

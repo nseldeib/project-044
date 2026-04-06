@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "FlightTableRow - Landed",
+    "description": null,
+    "componentName": "FlightTableRow",
+    "componentPath": "app/components/FlightTableRow.tsx",
+    "url": "/isolated-components/FlightTableRow?s=Landed",
+    "type": null,
+    "screenshotPath": "screenshots/96c05d5a-93c2-46e3-9ede-7141c6103a29.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/96c05d5a-93c2-46e3-9ede-7141c6103a29.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-04T17:06:20.040Z",
+    "updatedAt": "2026-04-04T17:06:20.040Z"
+  }
+}

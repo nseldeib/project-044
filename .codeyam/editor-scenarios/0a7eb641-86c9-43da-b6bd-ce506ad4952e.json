@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "RouteProgressArc - NearLanding",
+    "description": null,
+    "componentName": "RouteProgressArc",
+    "componentPath": "app/components/RouteProgressArc.tsx",
+    "url": "/isolated-components/RouteProgressArc?s=NearLanding",
+    "type": null,
+    "screenshotPath": "screenshots/0a7eb641-86c9-43da-b6bd-ce506ad4952e.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/0a7eb641-86c9-43da-b6bd-ce506ad4952e.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-04T17:08:21.507Z",
+    "updatedAt": "2026-04-04T17:08:21.507Z"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "BikeStationCard - Offline",
+    "description": null,
+    "componentName": "BikeStationCard",
+    "componentPath": "app/components/BikeStationCard.tsx",
+    "url": "/isolated-components/BikeStationCard?s=Offline",
+    "type": null,
+    "screenshotPath": "screenshots/85cdf996-1cd2-48a7-a0f0-a3b7d5e5d971.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/85cdf996-1cd2-48a7-a0f0-a3b7d5e5d971.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-04T17:07:18.784Z",
+    "updatedAt": "2026-04-04T17:07:18.784Z"
+  }
+}

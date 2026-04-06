@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "SubwayLineBadge - BlueLine",
+    "description": null,
+    "componentName": "SubwayLineBadge",
+    "componentPath": "app/components/SubwayLineBadge.tsx",
+    "url": "/isolated-components/SubwayLineBadge?s=BlueLine",
+    "type": null,
+    "screenshotPath": "screenshots/0f3569a3-a8cb-48c3-98a3-b8a6b2970674.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/0f3569a3-a8cb-48c3-98a3-b8a6b2970674.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-04T17:06:46.929Z",
+    "updatedAt": "2026-04-04T17:06:46.929Z"
+  }
+}

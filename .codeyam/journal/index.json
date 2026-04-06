@@ -1,0 +1,1548 @@
+{
+  "entries": [
+    {
+      "date": "2026-04-06",
+      "time": "2026-04-06T15:02:41.401Z",
+      "title": "VECTOR: Global Movement Intelligence Platform",
+      "type": "feature",
+      "description": "Built VECTOR, a full-stack real-time movement tracking platform in Next.js 15 with Prisma + SQLite. The app tracks global air traffic, NYC Citi Bike stations, and MTA subway lines across 7 pages with a tactical dark UI aesthetic inspired by NASA cockpits. Implemented 12 isolated components with 41 component scenarios, 16 app-level scenarios, complete design token system (zero hardcoded values), TDD lib functions with 98 tests, and interactive Leaflet maps with live aircraft and bike station overlays.",
+      "scenarios": [
+        "StatCard - Default",
+        "StatCard - Critical",
+        "StatCard - Nominal",
+        "StatCard - Zero",
+        "PanelHeader - Default",
+        "PanelHeader - WithActions",
+        "PanelHeader - TitleOnly",
+        "FlightTableRow - EnRoute",
+        "FlightTableRow - Delayed",
+        "FlightTableRow - Landed",
+        "FlightTableRow - Cancelled",
+        "FlightTable - MultipleFlights",
+        "FlightTable - SingleFlight",
+        "FlightTable - Empty",
+        "SubwayLineBadge - AllSizes",
+        "SubwayLineBadge - RedLine",
+        "SubwayLineBadge - BlueLine",
+        "SubwayLineCard - GoodService",
+        "SubwayLineCard - Delayed",
+        "SubwayLineCard - Suspended",
+        "SubwayLineCard - PlannedWork",
+        "BikeStationCard - Available",
+        "BikeStationCard - Low",
+        "BikeStationCard - Empty",
+        "BikeStationCard - Offline",
+        "EmptyState - Default",
+        "EmptyState - WithAction",
+        "EmptyState - ErrorState",
+        "WatchlistItemCard - FlightItem",
+        "WatchlistItemCard - BikeItem",
+        "WatchlistItemCard - SubwayItem",
+        "AlertPanel - MultipleAlerts",
+        "AlertPanel - SingleCritical",
+        "AlertPanel - AllRead",
+        "AlertPanel - Empty",
+        "DataRow - Default",
+        "DataRow - Telemetry",
+        "DataRow - AirportInfo",
+        "RouteProgressArc - MidFlight",
+        "RouteProgressArc - EarlyFlight",
+        "RouteProgressArc - NearLanding",
+        "Command Center - NYC Rush Hour",
+        "Command Center - Storm Chaos",
+        "Command Center - Ghost City (3AM)",
+        "Air Traffic - Global Active",
+        "Air Traffic - NYC Approach",
+        "City Bikes - Rush Hour Crunch",
+        "City Bikes - Full Availability",
+        "Subway - Normal Operations",
+        "Subway - Major Disruption",
+        "Flight Detail - Transatlantic En Route",
+        "Flight Detail - Delayed Arrival",
+        "Flight Detail - Diverted Emergency",
+        "Airport Hub - JFK Busy Operations",
+        "Airport Hub - JFK Storm Delays",
+        "Watchlist - Active Tracking",
+        "Watchlist - Empty"
+      ],
+      "screenshot": null,
+      "scenarioScreenshots": [
+        {
+          "name": "StatCard - Default",
+          "path": "screenshots/2026-04-06T15-02-41_StatCard_-_Default.png",
+          "componentName": "StatCard",
+          "url": "/isolated-components/StatCard?s=Default"
+        },
+        {
+          "name": "StatCard - Critical",
+          "path": "screenshots/2026-04-06T15-02-41_StatCard_-_Critical.png",
+          "componentName": "StatCard",
+          "url": "/isolated-components/StatCard?s=Critical"
+        },
+        {
+          "name": "StatCard - Nominal",
+          "path": "screenshots/2026-04-06T15-02-41_StatCard_-_Nominal.png",
+          "componentName": "StatCard",
+          "url": "/isolated-components/StatCard?s=Nominal"
+        },
+        {
+          "name": "StatCard - Zero",
+          "path": "screenshots/2026-04-06T15-02-41_StatCard_-_Zero.png",
+          "componentName": "StatCard",
+          "url": "/isolated-components/StatCard?s=Zero"
+        },
+        {
+          "name": "PanelHeader - Default",
+          "path": "screenshots/2026-04-06T15-02-41_PanelHeader_-_Default.png",
+          "componentName": "PanelHeader",
+          "url": "/isolated-components/PanelHeader?s=Default"
+        },
+        {
+          "name": "PanelHeader - WithActions",
+          "path": "screenshots/2026-04-06T15-02-41_PanelHeader_-_WithActions.png",
+          "componentName": "PanelHeader",
+          "url": "/isolated-components/PanelHeader?s=WithActions"
+        },
+        {
+          "name": "PanelHeader - TitleOnly",
+          "path": "screenshots/2026-04-06T15-02-41_PanelHeader_-_TitleOnly.png",
+          "componentName": "PanelHeader",
+          "url": "/isolated-components/PanelHeader?s=TitleOnly"
+        },
+        {
+          "name": "FlightTableRow - EnRoute",
+          "path": "screenshots/2026-04-06T15-02-41_FlightTableRow_-_EnRoute.png",
+          "componentName": "FlightTableRow",
+          "url": "/isolated-components/FlightTableRow?s=EnRoute"
+        },
+        {
+          "name": "FlightTableRow - Delayed",
+          "path": "screenshots/2026-04-06T15-02-41_FlightTableRow_-_Delayed.png",
+          "componentName": "FlightTableRow",
+          "url": "/isolated-components/FlightTableRow?s=Delayed"
+        },
+        {
+          "name": "FlightTableRow - Landed",
+          "path": "screenshots/2026-04-06T15-02-41_FlightTableRow_-_Landed.png",
+          "componentName": "FlightTableRow",
+          "url": "/isolated-components/FlightTableRow?s=Landed"
+        },
+        {
+          "name": "FlightTableRow - Cancelled",
+          "path": "screenshots/2026-04-06T15-02-41_FlightTableRow_-_Cancelled.png",
+          "componentName": "FlightTableRow",
+          "url": "/isolated-components/FlightTableRow?s=Cancelled"
+        },
+        {
+          "name": "FlightTable - MultipleFlights",
+          "path": "screenshots/2026-04-06T15-02-41_FlightTable_-_MultipleFlights.png",
+          "componentName": "FlightTable",
+          "url": "/isolated-components/FlightTable?s=MultipleFlights"
+        },
+        {
+          "name": "FlightTable - SingleFlight",
+          "path": "screenshots/2026-04-06T15-02-41_FlightTable_-_SingleFlight.png",
+          "componentName": "FlightTable",
+          "url": "/isolated-components/FlightTable?s=SingleFlight"
+        },
+        {
+          "name": "FlightTable - Empty",
+          "path": "screenshots/2026-04-06T15-02-41_FlightTable_-_Empty.png",
+          "componentName": "FlightTable",
+          "url": "/isolated-components/FlightTable?s=Empty"
+        },
+        {
+          "name": "SubwayLineBadge - AllSizes",
+          "path": "screenshots/2026-04-06T15-02-41_SubwayLineBadge_-_AllSizes.png",
+          "componentName": "SubwayLineBadge",
+          "url": "/isolated-components/SubwayLineBadge?s=AllSizes"
+        },
+        {
+          "name": "SubwayLineBadge - RedLine",
+          "path": "screenshots/2026-04-06T15-02-41_SubwayLineBadge_-_RedLine.png",
+          "componentName": "SubwayLineBadge",
+          "url": "/isolated-components/SubwayLineBadge?s=RedLine"
+        },
+        {
+          "name": "SubwayLineBadge - BlueLine",
+          "path": "screenshots/2026-04-06T15-02-41_SubwayLineBadge_-_BlueLine.png",
+          "componentName": "SubwayLineBadge",
+          "url": "/isolated-components/SubwayLineBadge?s=BlueLine"
+        },
+        {
+          "name": "SubwayLineCard - GoodService",
+          "path": "screenshots/2026-04-06T15-02-41_SubwayLineCard_-_GoodService.png",
+          "componentName": "SubwayLineCard",
+          "url": "/isolated-components/SubwayLineCard?s=GoodService"
+        },
+        {
+          "name": "SubwayLineCard - Delayed",
+          "path": "screenshots/2026-04-06T15-02-41_SubwayLineCard_-_Delayed.png",
+          "componentName": "SubwayLineCard",
+          "url": "/isolated-components/SubwayLineCard?s=Delayed"
+        },
+        {
+          "name": "SubwayLineCard - Suspended",
+          "path": "screenshots/2026-04-06T15-02-41_SubwayLineCard_-_Suspended.png",
+          "componentName": "SubwayLineCard",
+          "url": "/isolated-components/SubwayLineCard?s=Suspended"
+        },
+        {
+          "name": "SubwayLineCard - PlannedWork",
+          "path": "screenshots/2026-04-06T15-02-41_SubwayLineCard_-_PlannedWork.png",
+          "componentName": "SubwayLineCard",
+          "url": "/isolated-components/SubwayLineCard?s=PlannedWork"
+        },
+        {
+          "name": "BikeStationCard - Available",
+          "path": "screenshots/2026-04-06T15-02-41_BikeStationCard_-_Available.png",
+          "componentName": "BikeStationCard",
+          "url": "/isolated-components/BikeStationCard?s=Available"
+        },
+        {
+          "name": "BikeStationCard - Low",
+          "path": "screenshots/2026-04-06T15-02-41_BikeStationCard_-_Low.png",
+          "componentName": "BikeStationCard",
+          "url": "/isolated-components/BikeStationCard?s=Low"
+        },
+        {
+          "name": "BikeStationCard - Empty",
+          "path": "screenshots/2026-04-06T15-02-41_BikeStationCard_-_Empty.png",
+          "componentName": "BikeStationCard",
+          "url": "/isolated-components/BikeStationCard?s=Empty"
+        },
+        {
+          "name": "BikeStationCard - Offline",
+          "path": "screenshots/2026-04-06T15-02-41_BikeStationCard_-_Offline.png",
+          "componentName": "BikeStationCard",
+          "url": "/isolated-components/BikeStationCard?s=Offline"
+        },
+        {
+          "name": "EmptyState - Default",
+          "path": "screenshots/2026-04-06T15-02-41_EmptyState_-_Default.png",
+          "componentName": "EmptyState",
+          "url": "/isolated-components/EmptyState?s=Default"
+        },
+        {
+          "name": "EmptyState - WithAction",
+          "path": "screenshots/2026-04-06T15-02-41_EmptyState_-_WithAction.png",
+          "componentName": "EmptyState",
+          "url": "/isolated-components/EmptyState?s=WithAction"
+        },
+        {
+          "name": "EmptyState - ErrorState",
+          "path": "screenshots/2026-04-06T15-02-41_EmptyState_-_ErrorState.png",
+          "componentName": "EmptyState",
+          "url": "/isolated-components/EmptyState?s=ErrorState"
+        },
+        {
+          "name": "WatchlistItemCard - FlightItem",
+          "path": "screenshots/2026-04-06T15-02-41_WatchlistItemCard_-_FlightItem.png",
+          "componentName": "WatchlistItemCard",
+          "url": "/isolated-components/WatchlistItemCard?s=FlightItem"
+        },
+        {
+          "name": "WatchlistItemCard - BikeItem",
+          "path": "screenshots/2026-04-06T15-02-41_WatchlistItemCard_-_BikeItem.png",
+          "componentName": "WatchlistItemCard",
+          "url": "/isolated-components/WatchlistItemCard?s=BikeItem"
+        },
+        {
+          "name": "WatchlistItemCard - SubwayItem",
+          "path": "screenshots/2026-04-06T15-02-41_WatchlistItemCard_-_SubwayItem.png",
+          "componentName": "WatchlistItemCard",
+          "url": "/isolated-components/WatchlistItemCard?s=SubwayItem"
+        },
+        {
+          "name": "AlertPanel - MultipleAlerts",
+          "path": "screenshots/2026-04-06T15-02-41_AlertPanel_-_MultipleAlerts.png",
+          "componentName": "AlertPanel",
+          "url": "/isolated-components/AlertPanel?s=MultipleAlerts"
+        },
+        {
+          "name": "AlertPanel - SingleCritical",
+          "path": "screenshots/2026-04-06T15-02-41_AlertPanel_-_SingleCritical.png",
+          "componentName": "AlertPanel",
+          "url": "/isolated-components/AlertPanel?s=SingleCritical"
+        },
+        {
+          "name": "AlertPanel - AllRead",
+          "path": "screenshots/2026-04-06T15-02-41_AlertPanel_-_AllRead.png",
+          "componentName": "AlertPanel",
+          "url": "/isolated-components/AlertPanel?s=AllRead"
+        },
+        {
+          "name": "AlertPanel - Empty",
+          "path": "screenshots/2026-04-06T15-02-41_AlertPanel_-_Empty.png",
+          "componentName": "AlertPanel",
+          "url": "/isolated-components/AlertPanel?s=Empty"
+        },
+        {
+          "name": "DataRow - Default",
+          "path": "screenshots/2026-04-06T15-02-41_DataRow_-_Default.png",
+          "componentName": "DataRow",
+          "url": "/isolated-components/DataRow?s=Default"
+        },
+        {
+          "name": "DataRow - Telemetry",
+          "path": "screenshots/2026-04-06T15-02-41_DataRow_-_Telemetry.png",
+          "componentName": "DataRow",
+          "url": "/isolated-components/DataRow?s=Telemetry"
+        },
+        {
+          "name": "DataRow - AirportInfo",
+          "path": "screenshots/2026-04-06T15-02-41_DataRow_-_AirportInfo.png",
+          "componentName": "DataRow",
+          "url": "/isolated-components/DataRow?s=AirportInfo"
+        },
+        {
+          "name": "RouteProgressArc - MidFlight",
+          "path": "screenshots/2026-04-06T15-02-41_RouteProgressArc_-_MidFlight.png",
+          "componentName": "RouteProgressArc",
+          "url": "/isolated-components/RouteProgressArc?s=MidFlight"
+        },
+        {
+          "name": "RouteProgressArc - EarlyFlight",
+          "path": "screenshots/2026-04-06T15-02-41_RouteProgressArc_-_EarlyFlight.png",
+          "componentName": "RouteProgressArc",
+          "url": "/isolated-components/RouteProgressArc?s=EarlyFlight"
+        },
+        {
+          "name": "RouteProgressArc - NearLanding",
+          "path": "screenshots/2026-04-06T15-02-41_RouteProgressArc_-_NearLanding.png",
+          "componentName": "RouteProgressArc",
+          "url": "/isolated-components/RouteProgressArc?s=NearLanding"
+        },
+        {
+          "name": "Command Center - NYC Rush Hour",
+          "path": "screenshots/2026-04-06T15-02-41_Command_Center_-_NYC_Rush_Hour.png",
+          "componentName": null,
+          "url": "/"
+        },
+        {
+          "name": "Command Center - Storm Chaos",
+          "path": "screenshots/2026-04-06T15-02-41_Command_Center_-_Storm_Chaos.png",
+          "componentName": null,
+          "url": "/"
+        },
+        {
+          "name": "Command Center - Ghost City (3AM)",
+          "path": "screenshots/2026-04-06T15-02-41_Command_Center_-_Ghost_City__3AM_.png",
+          "componentName": null,
+          "url": "/"
+        },
+        {
+          "name": "Air Traffic - Global Active",
+          "path": "screenshots/2026-04-06T15-02-41_Air_Traffic_-_Global_Active.png",
+          "componentName": null,
+          "url": "/air"
+        },
+        {
+          "name": "Air Traffic - NYC Approach",
+          "path": "screenshots/2026-04-06T15-02-41_Air_Traffic_-_NYC_Approach.png",
+          "componentName": null,
+          "url": "/air"
+        },
+        {
+          "name": "City Bikes - Rush Hour Crunch",
+          "path": "screenshots/2026-04-06T15-02-41_City_Bikes_-_Rush_Hour_Crunch.png",
+          "componentName": null,
+          "url": "/bikes"
+        },
+        {
+          "name": "City Bikes - Full Availability",
+          "path": "screenshots/2026-04-06T15-02-41_City_Bikes_-_Full_Availability.png",
+          "componentName": null,
+          "url": "/bikes"
+        },
+        {
+          "name": "Subway - Normal Operations",
+          "path": "screenshots/2026-04-06T15-02-41_Subway_-_Normal_Operations.png",
+          "componentName": null,
+          "url": "/transit"
+        },
+        {
+          "name": "Subway - Major Disruption",
+          "path": "screenshots/2026-04-06T15-02-41_Subway_-_Major_Disruption.png",
+          "componentName": null,
+          "url": "/transit"
+        },
+        {
+          "name": "Flight Detail - Transatlantic En Route",
+          "path": "screenshots/2026-04-06T15-02-41_Flight_Detail_-_Transatlantic_En_Route.png",
+          "componentName": null,
+          "url": "/flights/AAL100"
+        },
+        {
+          "name": "Flight Detail - Delayed Arrival",
+          "path": "screenshots/2026-04-06T15-02-41_Flight_Detail_-_Delayed_Arrival.png",
+          "componentName": null,
+          "url": "/flights/BAW112"
+        },
+        {
+          "name": "Flight Detail - Diverted Emergency",
+          "path": "screenshots/2026-04-06T15-02-41_Flight_Detail_-_Diverted_Emergency.png",
+          "componentName": null,
+          "url": "/flights/JAL006"
+        },
+        {
+          "name": "Airport Hub - JFK Busy Operations",
+          "path": "screenshots/2026-04-06T15-02-41_Airport_Hub_-_JFK_Busy_Operations.png",
+          "componentName": null,
+          "url": "/airport/JFK"
+        },
+        {
+          "name": "Airport Hub - JFK Storm Delays",
+          "path": "screenshots/2026-04-06T15-02-41_Airport_Hub_-_JFK_Storm_Delays.png",
+          "componentName": null,
+          "url": "/airport/JFK"
+        },
+        {
+          "name": "Watchlist - Active Tracking",
+          "path": "screenshots/2026-04-06T15-02-41_Watchlist_-_Active_Tracking.png",
+          "componentName": null,
+          "url": "/watchlist"
+        },
+        {
+          "name": "Watchlist - Empty",
+          "path": "screenshots/2026-04-06T15-02-41_Watchlist_-_Empty.png",
+          "componentName": null,
+          "url": "/watchlist"
+        }
+      ],
+      "commitSha": null,
+      "commitMessage": null,
+      "entityChangeStatus": {
+        "StatCard": {
+          "status": "new"
+        },
+        "PanelHeader": {
+          "status": "new"
+        },
+        "FlightTableRow": {
+          "status": "new"
+        },
+        "FlightTable": {
+          "status": "new"
+        },
+        "SubwayLineBadge": {
+          "status": "new"
+        },
+        "SubwayLineCard": {
+          "status": "new"
+        },
+        "BikeStationCard": {
+          "status": "new"
+        },
+        "EmptyState": {
+          "status": "new"
+        },
+        "WatchlistItemCard": {
+          "status": "new"
+        },
+        "AlertPanel": {
+          "status": "new"
+        },
+        "DataRow": {
+          "status": "new"
+        },
+        "RouteProgressArc": {
+          "status": "new"
+        },
+        "Home": {
+          "status": "new"
+        },
+        "Air": {
+          "status": "new"
+        },
+        "Bikes": {
+          "status": "new"
+        },
+        "Transit": {
+          "status": "new"
+        },
+        "Flights / [callsign]": {
+          "status": "new"
+        },
+        "Airport / [code]": {
+          "status": "new"
+        },
+        "Watchlist": {
+          "status": "new"
+        }
+      },
+      "featureName": "Flight Tracker",
+      "userPrompt": "A flight tracking application that's complex with multiple pages and many components. Top Gun + NASA cockpit aesthetic using shadcn/ui. Minimalist, modern, high data density. Should create a compelling CodeYam demo. Add features that make sense.",
+      "modifiedFiles": [
+        {
+          "path": ".codeyam/config.json",
+          "status": "modified"
+        },
+        {
+          "path": ".codeyam/editor-task-tracking.json",
+          "status": "modified"
+        },
+        {
+          "path": ".gitignore",
+          "status": "modified"
+        },
+        {
+          "path": "README.md",
+          "status": "modified"
+        },
+        {
+          "path": "app/api/todos/route.ts",
+          "status": "modified"
+        },
+        {
+          "path": "app/globals.css",
+          "status": "modified"
+        },
+        {
+          "path": "app/layout.tsx",
+          "status": "modified"
+        },
+        {
+          "path": "app/page.tsx",
+          "status": "modified"
+        },
+        {
+          "path": "package-lock.json",
+          "status": "modified"
+        },
+        {
+          "path": "package.json",
+          "status": "modified"
+        },
+        {
+          "path": "prisma/schema.prisma",
+          "status": "modified"
+        },
+        {
+          "path": "prisma/seed.ts",
+          "status": "modified"
+        },
+        {
+          "path": "tsconfig.json",
+          "status": "modified"
+        },
+        {
+          "path": ".codeyam/data-structure.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/008de67b-54b3-425c-9759-b77f6c79e051.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/03509009-78ec-458b-9fe6-2441e0d7909c.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/0636408b-a871-452a-961f-d37287ad7345.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/0636408b-a871-452a-961f-d37287ad7345.seed.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/0a7eb641-86c9-43da-b6bd-ce506ad4952e.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/0c72c7f9-4423-4fea-8593-2ec207fd28b0.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/0d08a954-274f-4ce4-b310-2ec79a0458b5.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/0d08a954-274f-4ce4-b310-2ec79a0458b5.seed.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/0d7a471e-eb3f-4b00-be9e-549985c07d1e.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/0f3569a3-a8cb-48c3-98a3-b8a6b2970674.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/1c8ef9b0-ccff-497a-bc99-a3eaf4a18f15.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/1fc6d74d-5c1c-41d7-a3b3-c5999a14a4a0.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/28527429-15cb-4221-a987-e27eb22723e7.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/28527429-15cb-4221-a987-e27eb22723e7.seed.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/36b31f5e-8f6a-4d7b-94fe-faa3a61a7bb3.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/3e907a13-8e74-4fab-ac7a-872e03e789bb.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/405afc59-cba2-4d70-afee-ddd7cf8a6e9f.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/53d85eab-dab7-466f-9ffb-00dd837423b9.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/551395d7-157a-4c76-a678-0ddbcbc564ea.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/554bfa0a-dcee-4e84-8047-29829ef9f9ae.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/554bfa0a-dcee-4e84-8047-29829ef9f9ae.seed.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/5647ea6b-6f8a-45d8-bb15-ccc76cf9a06d.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/57e19847-91f9-4620-9210-d16a855baee5.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/57e19847-91f9-4620-9210-d16a855baee5.seed.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/597baa40-b4c1-47c0-8613-6d4e7954595a.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/597baa40-b4c1-47c0-8613-6d4e7954595a.seed.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/5bf26139-c502-4956-a2b1-775bc5e6fe62.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/5bf26139-c502-4956-a2b1-775bc5e6fe62.seed.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/61fe01b5-a814-452e-8d7f-e5bfbd602bec.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/68184cf3-3168-48d5-a488-2fe2d45a8fd7.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/69d1b534-23df-4d86-ac80-33d92c1de025.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/69d1b534-23df-4d86-ac80-33d92c1de025.seed.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/6b2057e5-1616-49fb-8b82-63c08a0592f9.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/6cf9cd60-7ac9-43f8-868d-3ee8da8e7c68.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/6f10597b-175a-4445-ae8f-c8dfda167f65.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/6f10597b-175a-4445-ae8f-c8dfda167f65.seed.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/7294d1b7-6c0c-4dd7-abc2-89155091d6d8.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/768e9b1a-5063-47e2-8b4c-1cc9db4db73b.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/768e9b1a-5063-47e2-8b4c-1cc9db4db73b.seed.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/7f71c272-2383-4930-affe-6dbe44c5ff0d.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/7f71c272-2383-4930-affe-6dbe44c5ff0d.seed.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/844616e0-3c1e-49d2-8bf9-bf66c4b0f644.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/85cdf996-1cd2-48a7-a0f0-a3b7d5e5d971.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/8833298b-2d9b-416e-ac35-de592f2b4b66.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/884cc4cf-2798-45b0-9fef-7d94ad07ef23.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/884cc4cf-2798-45b0-9fef-7d94ad07ef23.seed.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/90167842-59c3-4797-b524-fe02a63d3a24.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/92656700-e117-4551-8ce9-e4fce25c1fe7.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/92656700-e117-4551-8ce9-e4fce25c1fe7.seed.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/96c05d5a-93c2-46e3-9ede-7141c6103a29.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/a0abc857-b795-4ef1-9f45-5fec6dca118a.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/a50fe6de-1c3d-493b-b95a-df17619d4827.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/a50fe6de-1c3d-493b-b95a-df17619d4827.seed.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/afea4289-bd2d-4ab5-a57b-533c08709d87.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/b799da72-8dbd-45e6-a862-c18200813904.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/c4be099b-c334-48f3-a1cb-c06f18c397f7.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/c4be099b-c334-48f3-a1cb-c06f18c397f7.seed.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/c9d612c6-e463-4278-9f19-5d575a400151.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/ce650116-0ba4-4f7d-a523-19bda39a7539.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/client-errors.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/d022f4c1-2f91-48f3-ac6a-f0887c0ab4ff.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/d444f5c3-4f70-4aa2-a343-13d4dc81a427.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/d52716ea-19a1-4c47-838c-4e0cba70c482.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/db77b6a5-8908-4176-a427-5a67ab4609b5.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/df2bf431-1981-4ee3-ab46-bdd43d9970e8.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/df2bf431-1981-4ee3-ab46-bdd43d9970e8.seed.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/e36f9e1b-4ca6-4440-bd8a-2e0f89218aef.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/e75ac8bb-b923-4d11-9bc5-449c9de086f7.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/e80986b6-2721-4ca0-a23a-4385fd3651c0.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/ebf1f1a2-1f68-4ae1-a3b8-27949844fc4a.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/ed7e2965-bb98-4593-a134-558abae2cc64.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/eecbe243-ade1-4b24-b9c7-ce5289701445.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/efd1dd9f-3093-4f9c-83e1-a3da46ed4921.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/f45ec241-19ea-4438-83f9-0320eba5885e.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/008de67b-54b3-425c-9759-b77f6c79e051.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/03509009-78ec-458b-9fe6-2441e0d7909c.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/0636408b-a871-452a-961f-d37287ad7345.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/0a7eb641-86c9-43da-b6bd-ce506ad4952e.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/0c72c7f9-4423-4fea-8593-2ec207fd28b0.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/0d08a954-274f-4ce4-b310-2ec79a0458b5.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/0d7a471e-eb3f-4b00-be9e-549985c07d1e.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/0f3569a3-a8cb-48c3-98a3-b8a6b2970674.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/1c8ef9b0-ccff-497a-bc99-a3eaf4a18f15.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/1fc6d74d-5c1c-41d7-a3b3-c5999a14a4a0.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/28527429-15cb-4221-a987-e27eb22723e7.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/36b31f5e-8f6a-4d7b-94fe-faa3a61a7bb3.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/3e907a13-8e74-4fab-ac7a-872e03e789bb.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/405afc59-cba2-4d70-afee-ddd7cf8a6e9f.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/53d85eab-dab7-466f-9ffb-00dd837423b9.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/551395d7-157a-4c76-a678-0ddbcbc564ea.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/554bfa0a-dcee-4e84-8047-29829ef9f9ae.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/5647ea6b-6f8a-45d8-bb15-ccc76cf9a06d.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/57e19847-91f9-4620-9210-d16a855baee5.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/597baa40-b4c1-47c0-8613-6d4e7954595a.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/5bf26139-c502-4956-a2b1-775bc5e6fe62.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/61fe01b5-a814-452e-8d7f-e5bfbd602bec.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/68184cf3-3168-48d5-a488-2fe2d45a8fd7.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/69d1b534-23df-4d86-ac80-33d92c1de025.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/6b2057e5-1616-49fb-8b82-63c08a0592f9.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/6cf9cd60-7ac9-43f8-868d-3ee8da8e7c68.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/6f10597b-175a-4445-ae8f-c8dfda167f65.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/7294d1b7-6c0c-4dd7-abc2-89155091d6d8.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/768e9b1a-5063-47e2-8b4c-1cc9db4db73b.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/7f71c272-2383-4930-affe-6dbe44c5ff0d.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/844616e0-3c1e-49d2-8bf9-bf66c4b0f644.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/85cdf996-1cd2-48a7-a0f0-a3b7d5e5d971.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/8833298b-2d9b-416e-ac35-de592f2b4b66.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/884cc4cf-2798-45b0-9fef-7d94ad07ef23.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/90167842-59c3-4797-b524-fe02a63d3a24.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/92656700-e117-4551-8ce9-e4fce25c1fe7.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/96c05d5a-93c2-46e3-9ede-7141c6103a29.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/a0abc857-b795-4ef1-9f45-5fec6dca118a.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/a50fe6de-1c3d-493b-b95a-df17619d4827.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/afea4289-bd2d-4ab5-a57b-533c08709d87.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/b799da72-8dbd-45e6-a862-c18200813904.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/c4be099b-c334-48f3-a1cb-c06f18c397f7.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/c9d612c6-e463-4278-9f19-5d575a400151.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/ce650116-0ba4-4f7d-a523-19bda39a7539.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/d022f4c1-2f91-48f3-ac6a-f0887c0ab4ff.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/d444f5c3-4f70-4aa2-a343-13d4dc81a427.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/d52716ea-19a1-4c47-838c-4e0cba70c482.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/db77b6a5-8908-4176-a427-5a67ab4609b5.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/df2bf431-1981-4ee3-ab46-bdd43d9970e8.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/e36f9e1b-4ca6-4440-bd8a-2e0f89218aef.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/e75ac8bb-b923-4d11-9bc5-449c9de086f7.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/e80986b6-2721-4ca0-a23a-4385fd3651c0.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/ebf1f1a2-1f68-4ae1-a3b8-27949844fc4a.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/ed7e2965-bb98-4593-a134-558abae2cc64.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/eecbe243-ade1-4b24-b9c7-ce5289701445.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/efd1dd9f-3093-4f9c-83e1-a3da46ed4921.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/f45ec241-19ea-4438-83f9-0320eba5885e.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/glossary.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_Air_Traffic_-_Global_Active.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_Air_Traffic_-_NYC_Approach.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_Airport_Hub_-_JFK_Busy_Operations.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_Airport_Hub_-_JFK_Storm_Delays.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_AlertPanel_-_AllRead.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_AlertPanel_-_Empty.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_AlertPanel_-_MultipleAlerts.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_AlertPanel_-_SingleCritical.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_BikeStationCard_-_Available.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_BikeStationCard_-_Empty.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_BikeStationCard_-_Low.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_BikeStationCard_-_Offline.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_City_Bikes_-_Full_Availability.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_City_Bikes_-_Rush_Hour_Crunch.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_Command_Center_-_Ghost_City__3AM_.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_Command_Center_-_NYC_Rush_Hour.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_Command_Center_-_Storm_Chaos.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_DataRow_-_AirportInfo.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_DataRow_-_Default.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_DataRow_-_Telemetry.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_EmptyState_-_Default.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_EmptyState_-_ErrorState.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_EmptyState_-_WithAction.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_FlightTableRow_-_Cancelled.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_FlightTableRow_-_Delayed.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_FlightTableRow_-_EnRoute.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_FlightTableRow_-_Landed.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_FlightTable_-_Empty.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_FlightTable_-_MultipleFlights.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_FlightTable_-_SingleFlight.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_Flight_Detail_-_Delayed_Arrival.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_Flight_Detail_-_Diverted_Emergency.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_Flight_Detail_-_Transatlantic_En_Route.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_PanelHeader_-_Default.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_PanelHeader_-_TitleOnly.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_PanelHeader_-_WithActions.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_RouteProgressArc_-_EarlyFlight.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_RouteProgressArc_-_MidFlight.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_RouteProgressArc_-_NearLanding.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_StatCard_-_Critical.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_StatCard_-_Default.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_StatCard_-_Nominal.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_StatCard_-_Zero.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_SubwayLineBadge_-_AllSizes.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_SubwayLineBadge_-_BlueLine.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_SubwayLineBadge_-_RedLine.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_SubwayLineCard_-_Delayed.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_SubwayLineCard_-_GoodService.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_SubwayLineCard_-_PlannedWork.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_SubwayLineCard_-_Suspended.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_Subway_-_Major_Disruption.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_Subway_-_Normal_Operations.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_WatchlistItemCard_-_BikeItem.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_WatchlistItemCard_-_FlightItem.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_WatchlistItemCard_-_SubwayItem.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_Watchlist_-_Active_Tracking.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-06T15-02-41_Watchlist_-_Empty.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/proxy-config.json",
+          "status": "untracked"
+        },
+        {
+          "path": "app/air/page.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/airport/[code]/page.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/api/airports/[code]/route.ts",
+          "status": "untracked"
+        },
+        {
+          "path": "app/api/airports/route.ts",
+          "status": "untracked"
+        },
+        {
+          "path": "app/api/alerts/route.ts",
+          "status": "untracked"
+        },
+        {
+          "path": "app/api/bikes/route.ts",
+          "status": "untracked"
+        },
+        {
+          "path": "app/api/flights/[callsign]/route.ts",
+          "status": "untracked"
+        },
+        {
+          "path": "app/api/flights/route.ts",
+          "status": "untracked"
+        },
+        {
+          "path": "app/api/tiles/route.ts",
+          "status": "untracked"
+        },
+        {
+          "path": "app/api/transit/route.ts",
+          "status": "untracked"
+        },
+        {
+          "path": "app/api/watchlist/[id]/route.ts",
+          "status": "untracked"
+        },
+        {
+          "path": "app/api/watchlist/route.ts",
+          "status": "untracked"
+        },
+        {
+          "path": "app/bikes/page.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/components/AlertPanel.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/components/BikeMap.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/components/BikeStationCard.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/components/DataRow.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/components/EmptyState.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/components/FlightMap.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/components/FlightTable.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/components/FlightTableRow.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/components/Navbar.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/components/OnboardingModal.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/components/PanelHeader.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/components/RouteProgressArc.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/components/StatCard.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/components/SubwayLineBadge.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/components/SubwayLineCard.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/components/WatchlistItemCard.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/components/ui/badge.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/components/ui/status-dot.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/error.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/flights/[callsign]/page.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/hooks/useAlertCount.ts",
+          "status": "untracked"
+        },
+        {
+          "path": "app/hooks/useAlerts.ts",
+          "status": "untracked"
+        },
+        {
+          "path": "app/hooks/useBikeStations.ts",
+          "status": "untracked"
+        },
+        {
+          "path": "app/hooks/useClock.ts",
+          "status": "untracked"
+        },
+        {
+          "path": "app/hooks/useFlights.ts",
+          "status": "untracked"
+        },
+        {
+          "path": "app/hooks/useWatchlist.ts",
+          "status": "untracked"
+        },
+        {
+          "path": "app/isolated-components/AlertPanel/page.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/isolated-components/BikeStationCard/page.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/isolated-components/DataRow/page.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/isolated-components/EmptyState/page.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/isolated-components/FlightTable/page.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/isolated-components/FlightTableRow/page.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/isolated-components/PanelHeader/page.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/isolated-components/RouteProgressArc/page.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/isolated-components/StatCard/page.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/isolated-components/SubwayLineBadge/page.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/isolated-components/SubwayLineCard/page.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/isolated-components/WatchlistItemCard/page.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/isolated-components/layout.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/lib/calculations.test.ts",
+          "status": "untracked"
+        },
+        {
+          "path": "app/lib/calculations.ts",
+          "status": "untracked"
+        },
+        {
+          "path": "app/lib/formatters.test.ts",
+          "status": "untracked"
+        },
+        {
+          "path": "app/lib/formatters.ts",
+          "status": "untracked"
+        },
+        {
+          "path": "app/lib/utils.ts",
+          "status": "untracked"
+        },
+        {
+          "path": "app/lib/variants.test.ts",
+          "status": "untracked"
+        },
+        {
+          "path": "app/lib/variants.ts",
+          "status": "untracked"
+        },
+        {
+          "path": "app/loading.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/not-found.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/transit/page.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/watchlist/page.tsx",
+          "status": "untracked"
+        }
+      ]
+    }
+  ]
+}

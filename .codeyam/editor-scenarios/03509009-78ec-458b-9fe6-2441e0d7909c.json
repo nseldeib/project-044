@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "SubwayLineCard - Delayed",
+    "description": null,
+    "componentName": "SubwayLineCard",
+    "componentPath": "app/components/SubwayLineCard.tsx",
+    "url": "/isolated-components/SubwayLineCard?s=Delayed",
+    "type": null,
+    "screenshotPath": "screenshots/03509009-78ec-458b-9fe6-2441e0d7909c.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/03509009-78ec-458b-9fe6-2441e0d7909c.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-04T17:06:56.176Z",
+    "updatedAt": "2026-04-04T17:06:56.176Z"
+  }
+}

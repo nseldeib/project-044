@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "AlertPanel - MultipleAlerts",
+    "description": null,
+    "componentName": "AlertPanel",
+    "componentPath": "app/components/AlertPanel.tsx",
+    "url": "/isolated-components/AlertPanel?s=MultipleAlerts",
+    "type": null,
+    "screenshotPath": "screenshots/68184cf3-3168-48d5-a488-2fe2d45a8fd7.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/68184cf3-3168-48d5-a488-2fe2d45a8fd7.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-04T17:07:46.567Z",
+    "updatedAt": "2026-04-04T17:07:46.567Z"
+  }
+}

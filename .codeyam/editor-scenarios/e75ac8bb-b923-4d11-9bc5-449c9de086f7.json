@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "StatCard - Nominal",
+    "description": null,
+    "componentName": "StatCard",
+    "componentPath": "app/components/StatCard.tsx",
+    "url": "/isolated-components/StatCard?s=Nominal",
+    "type": null,
+    "screenshotPath": "screenshots/e75ac8bb-b923-4d11-9bc5-449c9de086f7.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/e75ac8bb-b923-4d11-9bc5-449c9de086f7.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-04T17:05:53.534Z",
+    "updatedAt": "2026-04-04T17:05:53.534Z"
+  }
+}

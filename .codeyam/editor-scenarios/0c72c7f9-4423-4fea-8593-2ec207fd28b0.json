@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "RouteProgressArc - MidFlight",
+    "description": null,
+    "componentName": "RouteProgressArc",
+    "componentPath": "app/components/RouteProgressArc.tsx",
+    "url": "/isolated-components/RouteProgressArc?s=MidFlight",
+    "type": null,
+    "screenshotPath": "screenshots/0c72c7f9-4423-4fea-8593-2ec207fd28b0.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/0c72c7f9-4423-4fea-8593-2ec207fd28b0.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-04T17:08:13.933Z",
+    "updatedAt": "2026-04-04T17:08:13.933Z"
+  }
+}

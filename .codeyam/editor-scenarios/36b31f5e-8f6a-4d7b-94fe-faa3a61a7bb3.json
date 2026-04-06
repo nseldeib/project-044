@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "EmptyState - WithAction",
+    "description": null,
+    "componentName": "EmptyState",
+    "componentPath": "app/components/EmptyState.tsx",
+    "url": "/isolated-components/EmptyState?s=WithAction",
+    "type": null,
+    "screenshotPath": "screenshots/36b31f5e-8f6a-4d7b-94fe-faa3a61a7bb3.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/36b31f5e-8f6a-4d7b-94fe-faa3a61a7bb3.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-04T17:07:26.415Z",
+    "updatedAt": "2026-04-04T17:07:26.415Z"
+  }
+}
