@@ -20,79 +20,49 @@
   "createdAt": "2026-04-04T15:59:07.348Z",
   "provider": "claude",
   "handoff": {
-    "summary": "Step 10 complete. 16 app-level scenarios registered across all 7 pages: Command Center×3, Air Traffic×2, City Bikes×2, Subway×2, Flight Detail×3, Airport Hub×2, Watchlist×2. Glossary updated with 7 page entries. Scenario coverage: all fresh. Map tile warnings in Air Traffic and Bikes pages are sandbox network limitations (not code bugs). Ready for step 11: User Scenarios.",
+    "summary": "Step 12 complete. 174/174 tests passing. /air and /bikes pages: 0 client errors. Component screenshots captured cleanly for DarkTileLayer, FlightMarker, BikeStationMarker. Proceeding to step 13: Journal.",
     "lastProvider": "claude",
-    "lastStep": 17,
-    "lastUpdated": "2026-04-06T19:15:11.724Z",
+    "lastStep": 16,
+    "lastUpdated": "2026-04-07T01:49:07.068Z",
     "stepHistory": [
-      {
-        "step": 11,
-        "label": "User Scenarios",
-        "timestamp": "2026-04-04T17:30:32.614Z",
-        "scenarioCount": 58,
-        "glossaryComponentCount": 25,
-        "glossaryFunctionCount": 18,
-        "uncommittedFileCount": 36,
-        "journalEntryCount": 0
-      },
-      {
-        "step": 12,
-        "label": "Verify",
-        "timestamp": "2026-04-04T17:30:43.729Z",
-        "scenarioCount": 58,
-        "glossaryComponentCount": 25,
-        "glossaryFunctionCount": 18,
-        "uncommittedFileCount": 36,
-        "journalEntryCount": 0
-      },
       {
         "step": 13,
         "label": "Journal",
-        "timestamp": "2026-04-06T15:02:14.486Z",
-        "scenarioCount": 58,
-        "glossaryComponentCount": 25,
-        "glossaryFunctionCount": 18,
-        "uncommittedFileCount": 37,
-        "journalEntryCount": 0
+        "timestamp": "2026-04-07T01:45:17.213Z",
+        "scenarioCount": 68,
+        "glossaryComponentCount": 22,
+        "glossaryFunctionCount": 33,
+        "uncommittedFileCount": 17,
+        "journalEntryCount": 1
       },
       {
         "step": 14,
         "label": "Review",
-        "timestamp": "2026-04-06T15:02:45.609Z",
-        "scenarioCount": 58,
-        "glossaryComponentCount": 25,
-        "glossaryFunctionCount": 18,
-        "uncommittedFileCount": 37,
+        "timestamp": "2026-04-07T01:47:49.932Z",
+        "scenarioCount": 68,
+        "glossaryComponentCount": 22,
+        "glossaryFunctionCount": 33,
+        "uncommittedFileCount": 17,
         "journalEntryCount": 1
       },
       {
         "step": 15,
         "label": "Present",
-        "timestamp": "2026-04-06T15:03:30.249Z",
-        "scenarioCount": 58,
-        "glossaryComponentCount": 25,
-        "glossaryFunctionCount": 18,
-        "uncommittedFileCount": 37,
+        "timestamp": "2026-04-07T01:48:27.602Z",
+        "scenarioCount": 68,
+        "glossaryComponentCount": 22,
+        "glossaryFunctionCount": 33,
+        "uncommittedFileCount": 17,
         "journalEntryCount": 1
       },
       {
         "step": 16,
         "label": "Commit",
-        "timestamp": "2026-04-06T19:14:42.912Z",
-        "scenarioCount": 58,
-        "glossaryComponentCount": 25,
-        "glossaryFunctionCount": 18,
-        "uncommittedFileCount": 37,
-        "journalEntryCount": 1
-      },
-      {
-        "step": 17,
-        "label": "Finalize",
-        "timestamp": "2026-04-06T19:15:11.724Z",
-        "scenarioCount": 58,
-        "glossaryComponentCount": 25,
-        "glossaryFunctionCount": 18,
-        "uncommittedFileCount": 0,
+        "timestamp": "2026-04-07T01:49:07.068Z",
+        "scenarioCount": 68,
+        "glossaryComponentCount": 22,
+        "glossaryFunctionCount": 33,
+        "uncommittedFileCount": 17,
         "journalEntryCount": 1
       }
     ]
@@ -113,6 +83,20 @@
     }
   },
   "projectTitle": "VECTOR",
-  "projectDescription": "Real-time global movement intelligence — track aircraft, city bikes, and subway trains on a single tactical command platform",
-  "branchId": "051324f9-bc31-42be-9c59-d63ee8327db7"
+  "projectDescription": "Global Movement Intelligence Platform — real-time air traffic, NYC Citi Bike stations, and MTA subway lines with a tactical dark UI aesthetic",
+  "branchId": "051324f9-bc31-42be-9c59-d63ee8327db7",
+  "techStack": {
+    "services": [
+      {
+        "name": "OpenSky Network",
+        "url": "https://opensky-network.org",
+        "description": "Free real-time flight tracking API — aircraft positions worldwide, no API key required"
+      },
+      {
+        "name": "Citi Bike GBFS",
+        "url": "https://gbfs.citibikenyc.com/gbfs/en/station_status.json",
+        "description": "Free NYC Citi Bike real-time station feed (GBFS), no API key required"
+      }
+    ]
+  }
 }

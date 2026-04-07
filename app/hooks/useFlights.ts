@@ -29,16 +29,18 @@ export interface Flight {
 }
 
 /**
- * Fetches /api/flights and returns { flights, loading, error }.
+ * Fetches /api/flights and returns { flights, loading, error, refresh }.
  */
 export function useFlights(): {
   flights: Flight[];
   loading: boolean;
   error: string | null;
+  refresh: () => void;
 } {
   const [flights, setFlights] = useState<Flight[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [tick, setTick] = useState(0);
 
   useEffect(() => {
     fetch('/api/flights')
@@ -54,7 +56,9 @@ export function useFlights(): {
         setError(err.message ?? 'Failed to load flights');
         setLoading(false);
       });
-  }, []);
+  }, [tick]);
 
-  return { flights, loading, error };
+  const refresh = () => setTick((t) => t + 1);
+
+  return { flights, loading, error, refresh };
 }

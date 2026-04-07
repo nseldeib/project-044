@@ -760,5 +760,254 @@
     "description": "User watchlist showing tracked flights, bike stations, subway lines, and airports with alerts",
     "feature": "Flight Tracker",
     "createdAt": "2026-04-04T17:00:00.000Z"
+  },
+  {
+    "name": "mergeGbfsFeeds",
+    "filePath": "app/lib/gbfs.ts",
+    "description": "Merges GBFS station_information and station_status feeds into a unified MergedStation shape. Excludes status entries with no matching info.",
+    "parameters": [
+      {
+        "name": "infoStations",
+        "type": "GbfsStationInfo[]"
+      },
+      {
+        "name": "statusStations",
+        "type": "GbfsStationStatus[]"
+      }
+    ],
+    "returnType": "MergedStation[]",
+    "tags": [
+      "gbfs",
+      "bikes",
+      "data-transform"
+    ],
+    "testFile": "app/lib/gbfs.test.ts",
+    "feature": "Map Overhaul + Live APIs",
+    "createdAt": "2026-04-07T00:50:00.000Z"
+  },
+  {
+    "name": "isDataStale",
+    "filePath": "app/lib/gbfs.ts",
+    "description": "Returns true if lastUpdated is null or older than intervalMs. Used to decide whether to re-sync from GBFS.",
+    "parameters": [
+      {
+        "name": "lastUpdated",
+        "type": "Date | null"
+      },
+      {
+        "name": "intervalMs",
+        "type": "number"
+      }
+    ],
+    "returnType": "boolean",
+    "tags": [
+      "gbfs",
+      "caching"
+    ],
+    "testFile": "app/lib/gbfs.test.ts",
+    "feature": "Map Overhaul + Live APIs",
+    "createdAt": "2026-04-07T00:50:00.000Z"
+  },
+  {
+    "name": "computeBikesSummary",
+    "filePath": "app/lib/gbfs.ts",
+    "description": "Aggregates bike station stats: total bikes, docks, low-inventory stations, and empty-but-renting stations.",
+    "parameters": [
+      {
+        "name": "stations",
+        "type": "{ bikesAvailable: number; docksAvailable: number; isRenting: boolean }[]"
+      }
+    ],
+    "returnType": "BikesSummary",
+    "tags": [
+      "gbfs",
+      "bikes",
+      "aggregation"
+    ],
+    "testFile": "app/lib/gbfs.test.ts",
+    "feature": "Map Overhaul + Live APIs",
+    "createdAt": "2026-04-07T00:50:00.000Z"
+  },
+  {
+    "name": "getBikeStationStatus",
+    "filePath": "app/lib/gbfs.ts",
+    "description": "Derives the operational status label for a bike station: OFFLINE, NOT RENTING, or OPERATIONAL.",
+    "parameters": [
+      {
+        "name": "station",
+        "type": "{ isInstalled: boolean; isRenting: boolean }"
+      }
+    ],
+    "returnType": "string",
+    "tags": [
+      "gbfs",
+      "bikes",
+      "status"
+    ],
+    "testFile": "app/lib/gbfs.test.ts",
+    "feature": "Map Overhaul + Live APIs",
+    "createdAt": "2026-04-07T00:50:00.000Z"
+  },
+  {
+    "name": "extractOpenSkyCallsign",
+    "filePath": "app/lib/opensky.ts",
+    "description": "Extracts and normalizes a callsign from an OpenSky state vector: trims whitespace and uppercases. Returns empty string for missing/blank callsigns.",
+    "parameters": [
+      {
+        "name": "state",
+        "type": "StateVector"
+      }
+    ],
+    "returnType": "string",
+    "tags": [
+      "opensky",
+      "flights",
+      "data-transform"
+    ],
+    "testFile": "app/lib/opensky.test.ts",
+    "feature": "Map Overhaul + Live APIs",
+    "createdAt": "2026-04-07T00:50:00.000Z"
+  },
+  {
+    "name": "isValidAirborneState",
+    "filePath": "app/lib/opensky.ts",
+    "description": "Returns true for an OpenSky state vector that is airborne (not on ground), has a known position, and matches a callsign in the provided set.",
+    "parameters": [
+      {
+        "name": "state",
+        "type": "StateVector"
+      },
+      {
+        "name": "knownCallsigns",
+        "type": "Set<string>"
+      }
+    ],
+    "returnType": "boolean",
+    "tags": [
+      "opensky",
+      "flights",
+      "validation"
+    ],
+    "testFile": "app/lib/opensky.test.ts",
+    "feature": "Map Overhaul + Live APIs",
+    "createdAt": "2026-04-07T00:50:00.000Z"
+  },
+  {
+    "name": "metersToFeet",
+    "filePath": "app/lib/opensky.ts",
+    "description": "Converts meters to feet (aviation standard). Returns 0 for null/zero input.",
+    "parameters": [
+      {
+        "name": "meters",
+        "type": "number | null"
+      }
+    ],
+    "returnType": "number",
+    "tags": [
+      "opensky",
+      "aviation",
+      "conversion"
+    ],
+    "testFile": "app/lib/opensky.test.ts",
+    "feature": "Map Overhaul + Live APIs",
+    "createdAt": "2026-04-07T00:50:00.000Z"
+  },
+  {
+    "name": "msToKnots",
+    "filePath": "app/lib/opensky.ts",
+    "description": "Converts meters-per-second to knots (aviation standard). Returns 0 for null/zero input.",
+    "parameters": [
+      {
+        "name": "ms",
+        "type": "number | null"
+      }
+    ],
+    "returnType": "number",
+    "tags": [
+      "opensky",
+      "aviation",
+      "conversion"
+    ],
+    "testFile": "app/lib/opensky.test.ts",
+    "feature": "Map Overhaul + Live APIs",
+    "createdAt": "2026-04-07T00:50:00.000Z"
+  },
+  {
+    "name": "openSkyStateToFlightUpdate",
+    "filePath": "app/lib/opensky.ts",
+    "description": "Maps a validated OpenSky state vector to a FlightPositionUpdate record ready for DB upsert. Converts units (m\u2192ft, m/s\u2192knots).",
+    "parameters": [
+      {
+        "name": "state",
+        "type": "StateVector"
+      },
+      {
+        "name": "idByCallsign",
+        "type": "Map<string, number>"
+      }
+    ],
+    "returnType": "FlightPositionUpdate",
+    "tags": [
+      "opensky",
+      "flights",
+      "data-transform"
+    ],
+    "testFile": "app/lib/opensky.test.ts",
+    "feature": "Map Overhaul + Live APIs",
+    "createdAt": "2026-04-07T00:50:00.000Z"
+  },
+  {
+    "name": "DarkTileLayer",
+    "filePath": "app/components/DarkTileLayer.tsx",
+    "description": "Shared Carto Dark Matter tile layer for Leaflet maps, served via the /api/tiles proxy. Reused by FlightMap and BikeMap.",
+    "parameters": [],
+    "returnType": "JSX.Element",
+    "tags": [
+      "map",
+      "leaflet",
+      "component"
+    ],
+    "feature": "Map Overhaul + Live APIs",
+    "createdAt": "2026-04-07T00:50:00.000Z"
+  },
+  {
+    "name": "FlightMarker",
+    "filePath": "app/components/FlightMarker.tsx",
+    "description": "Leaflet marker for a single in-flight aircraft: amber plane icon (rotated by heading), dark popup with callsign/telemetry, and optional dashed route polyline.",
+    "parameters": [
+      {
+        "name": "flight",
+        "type": "Flight"
+      }
+    ],
+    "returnType": "JSX.Element",
+    "tags": [
+      "map",
+      "leaflet",
+      "flights",
+      "component"
+    ],
+    "feature": "Map Overhaul + Live APIs",
+    "createdAt": "2026-04-07T00:50:00.000Z"
+  },
+  {
+    "name": "BikeStationMarker",
+    "filePath": "app/components/BikeStationMarker.tsx",
+    "description": "Leaflet circle marker for a Citi Bike station: color-coded by availability (green/amber/red/gray), dark popup with name, counts, and operational status.",
+    "parameters": [
+      {
+        "name": "station",
+        "type": "BikeStation"
+      }
+    ],
+    "returnType": "JSX.Element",
+    "tags": [
+      "map",
+      "leaflet",
+      "bikes",
+      "component"
+    ],
+    "feature": "Map Overhaul + Live APIs",
+    "createdAt": "2026-04-07T00:50:00.000Z"
   }
 ]

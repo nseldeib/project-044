@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "DarkTileLayer - WorldView",
+    "description": null,
+    "componentName": "DarkTileLayer",
+    "componentPath": "app/components/DarkTileLayer.tsx",
+    "url": "/isolated-components/DarkTileLayer?s=WorldView",
+    "type": null,
+    "screenshotPath": "screenshots/72f92609-c38f-4d02-8610-e059bc1a807a.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/72f92609-c38f-4d02-8610-e059bc1a807a.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-07T01:18:48.833Z",
+    "updatedAt": "2026-04-07T01:18:48.833Z"
+  }
+}

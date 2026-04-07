@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "DarkTileLayer - Atlantic",
+    "description": null,
+    "componentName": "DarkTileLayer",
+    "componentPath": "app/components/DarkTileLayer.tsx",
+    "url": "/isolated-components/DarkTileLayer?s=Atlantic",
+    "type": null,
+    "screenshotPath": "screenshots/074c25d4-d607-4377-a273-67bdffd1f7b4.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/074c25d4-d607-4377-a273-67bdffd1f7b4.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-07T01:18:57.642Z",
+    "updatedAt": "2026-04-07T01:18:57.642Z"
+  }
+}

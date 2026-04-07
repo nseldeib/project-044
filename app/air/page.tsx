@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useMemo, useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { StatusBadge } from '@/app/components/ui/badge';
@@ -14,7 +14,24 @@ const FlightMap = dynamic(() => import('@/app/components/FlightMap'), { ssr: fal
 type StatusFilter = 'ALL' | 'EN_ROUTE' | 'DELAYED' | 'BOARDING' | 'LANDED' | 'DIVERTED' | 'CANCELLED';
 
 export default function AirTrafficPage() {
-  const { flights, loading } = useFlights();
+  const { flights, loading, refresh } = useFlights();
+  const noMap = typeof window !== 'undefined' && new URLSearchParams(window.location.search).has('no-map');
+
+  // Sync live OpenSky positions on mount, then every 60s (fire-and-forget with 10s abort)
+  useEffect(() => {
+    if (noMap) return; // skip live sync in capture/no-map mode
+    const sync = () => {
+      const ctrl = new AbortController();
+      const timer = setTimeout(() => ctrl.abort(), 10_000);
+      fetch('/api/flights/sync', { method: 'POST', signal: ctrl.signal })
+        .then(() => refresh())
+        .catch(() => {})
+        .finally(() => clearTimeout(timer));
+    };
+    sync();
+    const interval = setInterval(sync, 60_000);
+    return () => clearInterval(interval);
+  }, [refresh, noMap]);
   const [search, setSearch] = useState('');
   const [statusFilter, setStatusFilter] = useState<StatusFilter>('ALL');
 
@@ -257,7 +274,31 @@ export default function AirTrafficPage() {
 
       {/* Map */}
       <div style={{ flex: 1, position: 'relative', minHeight: 0, height: '100%' }}>
-        <FlightMap flights={filtered} />
+        {noMap ? (
+          <div
+            style={{
+              width: '100%',
+              height: '100%',
+              background: 'var(--bg-base)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            <span
+              style={{
+                fontFamily: 'var(--font-mono)',
+                fontSize: 'var(--text-sm)',
+                color: 'var(--text-muted)',
+                letterSpacing: 'var(--tracking-wide)',
+              }}
+            >
+              MAP DISABLED
+            </span>
+          </div>
+        ) : (
+          <FlightMap flights={filtered} />
+        )}
       </div>
     </div>
   );

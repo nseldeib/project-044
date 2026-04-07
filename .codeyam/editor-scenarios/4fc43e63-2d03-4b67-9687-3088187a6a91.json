@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "FlightMarker - Pacific",
+    "description": null,
+    "componentName": "FlightMarker",
+    "componentPath": "app/components/FlightMarker.tsx",
+    "url": "/isolated-components/FlightMarker?s=Pacific",
+    "type": null,
+    "screenshotPath": "screenshots/4fc43e63-2d03-4b67-9687-3088187a6a91.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/4fc43e63-2d03-4b67-9687-3088187a6a91.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-07T01:19:06.457Z",
+    "updatedAt": "2026-04-07T01:19:06.457Z"
+  }
+}

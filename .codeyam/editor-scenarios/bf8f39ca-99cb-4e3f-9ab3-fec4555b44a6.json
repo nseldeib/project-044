@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "FlightMarker - NoRoute",
+    "description": null,
+    "componentName": "FlightMarker",
+    "componentPath": "app/components/FlightMarker.tsx",
+    "url": "/isolated-components/FlightMarker?s=NoRoute",
+    "type": null,
+    "screenshotPath": "screenshots/bf8f39ca-99cb-4e3f-9ab3-fec4555b44a6.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/bf8f39ca-99cb-4e3f-9ab3-fec4555b44a6.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-07T01:19:10.704Z",
+    "updatedAt": "2026-04-07T01:19:10.704Z"
+  }
+}

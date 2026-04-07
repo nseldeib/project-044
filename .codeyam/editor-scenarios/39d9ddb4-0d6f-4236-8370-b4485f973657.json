@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "FlightMarker - Transatlantic",
+    "description": null,
+    "componentName": "FlightMarker",
+    "componentPath": "app/components/FlightMarker.tsx",
+    "url": "/isolated-components/FlightMarker?s=Transatlantic",
+    "type": null,
+    "screenshotPath": "screenshots/39d9ddb4-0d6f-4236-8370-b4485f973657.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/39d9ddb4-0d6f-4236-8370-b4485f973657.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-07T01:19:01.933Z",
+    "updatedAt": "2026-04-07T01:19:01.933Z"
+  }
+}

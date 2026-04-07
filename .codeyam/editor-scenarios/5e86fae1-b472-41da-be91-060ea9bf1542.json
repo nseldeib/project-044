@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "BikeStationMarker - Offline",
+    "description": null,
+    "componentName": "BikeStationMarker",
+    "componentPath": "app/components/BikeStationMarker.tsx",
+    "url": "/isolated-components/BikeStationMarker?s=Offline",
+    "type": null,
+    "screenshotPath": "screenshots/5e86fae1-b472-41da-be91-060ea9bf1542.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/5e86fae1-b472-41da-be91-060ea9bf1542.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-07T01:19:28.554Z",
+    "updatedAt": "2026-04-07T01:19:28.554Z"
+  }
+}

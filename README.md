@@ -20,6 +20,17 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
 
+## Live Data Sources
+
+VECTOR integrates two free public APIs — no API keys required:
+
+| Source | Data | Endpoint |
+|--------|------|----------|
+| [OpenSky Network](https://opensky-network.org) | Real-time global aircraft positions | `POST /api/flights/sync` (called automatically on the Air Traffic page) |
+| [Citi Bike GBFS](https://gbfs.citibikenyc.com) | NYC bike station availability | `GET /api/bikes` (syncs automatically, cached 60s) |
+
+Map tiles are served via Carto Dark Matter through a server-side tile proxy at `/api/tiles` to avoid CORS issues in screenshot capture.
+
 ## Using CodeYam Editor
 
 This project was built with [CodeYam](https://codeyam.com). To launch the editor:

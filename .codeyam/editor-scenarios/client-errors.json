@@ -221,12 +221,12 @@
   },
   "5bf26139-c502-4956-a2b1-775bc5e6fe62": {
     "scenarioName": "Air Traffic - Global Active",
-    "capturedAt": "2026-04-04T17:47:12.724Z",
+    "capturedAt": "2026-04-07T01:41:59.178Z",
     "errors": []
   },
   "57e19847-91f9-4620-9210-d16a855baee5": {
     "scenarioName": "Air Traffic - NYC Approach",
-    "capturedAt": "2026-04-04T17:47:19.414Z",
+    "capturedAt": "2026-04-07T01:42:06.216Z",
     "errors": []
   },
   "0d08a954-274f-4ce4-b310-2ec79a0458b5": {
@@ -282,6 +282,56 @@
   "768e9b1a-5063-47e2-8b4c-1cc9db4db73b": {
     "scenarioName": "Watchlist - Empty",
     "capturedAt": "2026-04-06T15:02:03.450Z",
+    "errors": []
+  },
+  "72f92609-c38f-4d02-8610-e059bc1a807a": {
+    "scenarioName": "DarkTileLayer - WorldView",
+    "capturedAt": "2026-04-07T01:18:48.732Z",
+    "errors": []
+  },
+  "b64714a7-6e93-456e-9d71-32363823d628": {
+    "scenarioName": "DarkTileLayer - NYC",
+    "capturedAt": "2026-04-07T01:18:53.197Z",
+    "errors": []
+  },
+  "074c25d4-d607-4377-a273-67bdffd1f7b4": {
+    "scenarioName": "DarkTileLayer - Atlantic",
+    "capturedAt": "2026-04-07T01:18:57.557Z",
+    "errors": []
+  },
+  "39d9ddb4-0d6f-4236-8370-b4485f973657": {
+    "scenarioName": "FlightMarker - Transatlantic",
+    "capturedAt": "2026-04-07T01:19:01.825Z",
+    "errors": []
+  },
+  "4fc43e63-2d03-4b67-9687-3088187a6a91": {
+    "scenarioName": "FlightMarker - Pacific",
+    "capturedAt": "2026-04-07T01:19:06.377Z",
+    "errors": []
+  },
+  "bf8f39ca-99cb-4e3f-9ab3-fec4555b44a6": {
+    "scenarioName": "FlightMarker - NoRoute",
+    "capturedAt": "2026-04-07T01:19:10.624Z",
+    "errors": []
+  },
+  "2057e144-9289-431d-8d07-9448adf8c0ca": {
+    "scenarioName": "BikeStationMarker - Available",
+    "capturedAt": "2026-04-07T01:19:14.891Z",
+    "errors": []
+  },
+  "01063c3b-cdbb-4dae-8bb3-88e85fe0ef93": {
+    "scenarioName": "BikeStationMarker - Low",
+    "capturedAt": "2026-04-07T01:19:19.191Z",
+    "errors": []
+  },
+  "bd56dd33-dcb1-4216-8d93-9f59b776414d": {
+    "scenarioName": "BikeStationMarker - Empty",
+    "capturedAt": "2026-04-07T01:19:23.543Z",
+    "errors": []
+  },
+  "5e86fae1-b472-41da-be91-060ea9bf1542": {
+    "scenarioName": "BikeStationMarker - Offline",
+    "capturedAt": "2026-04-07T01:19:28.442Z",
     "errors": []
   }
 }

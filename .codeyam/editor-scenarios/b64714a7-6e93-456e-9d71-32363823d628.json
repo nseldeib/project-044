@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "DarkTileLayer - NYC",
+    "description": null,
+    "componentName": "DarkTileLayer",
+    "componentPath": "app/components/DarkTileLayer.tsx",
+    "url": "/isolated-components/DarkTileLayer?s=NYC",
+    "type": null,
+    "screenshotPath": "screenshots/b64714a7-6e93-456e-9d71-32363823d628.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/b64714a7-6e93-456e-9d71-32363823d628.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-07T01:18:53.280Z",
+    "updatedAt": "2026-04-07T01:18:53.280Z"
+  }
+}

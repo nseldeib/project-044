@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "BikeStationMarker - Empty",
+    "description": null,
+    "componentName": "BikeStationMarker",
+    "componentPath": "app/components/BikeStationMarker.tsx",
+    "url": "/isolated-components/BikeStationMarker?s=Empty",
+    "type": null,
+    "screenshotPath": "screenshots/bd56dd33-dcb1-4216-8d93-9f59b776414d.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/bd56dd33-dcb1-4216-8d93-9f59b776414d.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-07T01:19:23.629Z",
+    "updatedAt": "2026-04-07T01:19:23.629Z"
+  }
+}

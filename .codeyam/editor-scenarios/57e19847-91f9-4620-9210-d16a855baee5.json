@@ -4,7 +4,7 @@
     "description": null,
     "componentName": null,
     "componentPath": null,
-    "url": "/air",
+    "url": "/air?no-map=1",
     "type": "application",
     "screenshotPath": "screenshots/57e19847-91f9-4620-9210-d16a855baee5.png",
     "viewportWidth": 1440,
@@ -16,8 +16,8 @@
       "Desktop": "screenshots/57e19847-91f9-4620-9210-d16a855baee5.png"
     },
     "pageFilePath": "app/air/page.tsx",
-    "createdAt": "2026-04-04T17:47:19.510Z",
-    "updatedAt": "2026-04-04T17:47:19.510Z"
+    "createdAt": "2026-04-07T01:42:06.306Z",
+    "updatedAt": "2026-04-07T01:42:06.306Z"
   },
   "type": "application",
   "seed": {

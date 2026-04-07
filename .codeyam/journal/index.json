@@ -1543,6 +1543,328 @@
           "status": "untracked"
         }
       ]
+    },
+    {
+      "date": "2026-04-07",
+      "time": "2026-04-07T01:47:33.146Z",
+      "title": "Map Overhaul + Live APIs",
+      "type": "feature",
+      "description": "Added Carto Dark Matter tile layer to FlightMap and BikeMap (both previously had no basemap). Integrated Citi Bike GBFS for live NYC station availability and OpenSky Network for real aircraft positions. Extracted DarkTileLayer, FlightMarker, BikeStationMarker components and gbfs.ts/opensky.ts lib functions with 41 tests.",
+      "scenarios": [
+        "DarkTileLayer - WorldView",
+        "DarkTileLayer - NYC",
+        "DarkTileLayer - Atlantic",
+        "FlightMarker - Transatlantic",
+        "FlightMarker - Pacific",
+        "FlightMarker - NoRoute",
+        "BikeStationMarker - Available",
+        "BikeStationMarker - Low",
+        "BikeStationMarker - Empty",
+        "BikeStationMarker - Offline"
+      ],
+      "screenshot": null,
+      "scenarioScreenshots": [
+        {
+          "name": "DarkTileLayer - WorldView",
+          "path": "screenshots/2026-04-07T01-47-33_DarkTileLayer_-_WorldView.png",
+          "componentName": "DarkTileLayer",
+          "url": "/isolated-components/DarkTileLayer?s=WorldView"
+        },
+        {
+          "name": "DarkTileLayer - NYC",
+          "path": "screenshots/2026-04-07T01-47-33_DarkTileLayer_-_NYC.png",
+          "componentName": "DarkTileLayer",
+          "url": "/isolated-components/DarkTileLayer?s=NYC"
+        },
+        {
+          "name": "DarkTileLayer - Atlantic",
+          "path": "screenshots/2026-04-07T01-47-33_DarkTileLayer_-_Atlantic.png",
+          "componentName": "DarkTileLayer",
+          "url": "/isolated-components/DarkTileLayer?s=Atlantic"
+        },
+        {
+          "name": "FlightMarker - Transatlantic",
+          "path": "screenshots/2026-04-07T01-47-33_FlightMarker_-_Transatlantic.png",
+          "componentName": "FlightMarker",
+          "url": "/isolated-components/FlightMarker?s=Transatlantic"
+        },
+        {
+          "name": "FlightMarker - Pacific",
+          "path": "screenshots/2026-04-07T01-47-33_FlightMarker_-_Pacific.png",
+          "componentName": "FlightMarker",
+          "url": "/isolated-components/FlightMarker?s=Pacific"
+        },
+        {
+          "name": "FlightMarker - NoRoute",
+          "path": "screenshots/2026-04-07T01-47-33_FlightMarker_-_NoRoute.png",
+          "componentName": "FlightMarker",
+          "url": "/isolated-components/FlightMarker?s=NoRoute"
+        },
+        {
+          "name": "BikeStationMarker - Available",
+          "path": "screenshots/2026-04-07T01-47-33_BikeStationMarker_-_Available.png",
+          "componentName": "BikeStationMarker",
+          "url": "/isolated-components/BikeStationMarker?s=Available"
+        },
+        {
+          "name": "BikeStationMarker - Low",
+          "path": "screenshots/2026-04-07T01-47-33_BikeStationMarker_-_Low.png",
+          "componentName": "BikeStationMarker",
+          "url": "/isolated-components/BikeStationMarker?s=Low"
+        },
+        {
+          "name": "BikeStationMarker - Empty",
+          "path": "screenshots/2026-04-07T01-47-33_BikeStationMarker_-_Empty.png",
+          "componentName": "BikeStationMarker",
+          "url": "/isolated-components/BikeStationMarker?s=Empty"
+        },
+        {
+          "name": "BikeStationMarker - Offline",
+          "path": "screenshots/2026-04-07T01-47-33_BikeStationMarker_-_Offline.png",
+          "componentName": "BikeStationMarker",
+          "url": "/isolated-components/BikeStationMarker?s=Offline"
+        }
+      ],
+      "commitSha": "25d0432",
+      "commitMessage": "feat: Map Overhaul + Live APIs",
+      "entityChangeStatus": {
+        "Air": {
+          "status": "edited"
+        },
+        "DarkTileLayer": {
+          "status": "new"
+        },
+        "FlightMarker": {
+          "status": "new"
+        },
+        "BikeStationMarker": {
+          "status": "new"
+        }
+      },
+      "featureName": "Map Overhaul + Live APIs",
+      "userPrompt": "improve the map views which are currently rough, and integrate with free APIs to enhance the map data",
+      "modifiedFiles": [
+        {
+          "path": ".codeyam/config.json",
+          "status": "modified"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/57e19847-91f9-4620-9210-d16a855baee5.json",
+          "status": "modified"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/5bf26139-c502-4956-a2b1-775bc5e6fe62.json",
+          "status": "modified"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/client-errors.json",
+          "status": "modified"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/57e19847-91f9-4620-9210-d16a855baee5.png",
+          "status": "modified"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/5bf26139-c502-4956-a2b1-775bc5e6fe62.png",
+          "status": "modified"
+        },
+        {
+          "path": ".codeyam/editor-task-tracking.json",
+          "status": "modified"
+        },
+        {
+          "path": ".codeyam/glossary.json",
+          "status": "modified"
+        },
+        {
+          "path": "README.md",
+          "status": "modified"
+        },
+        {
+          "path": "app/air/page.tsx",
+          "status": "modified"
+        },
+        {
+          "path": "app/api/bikes/route.ts",
+          "status": "modified"
+        },
+        {
+          "path": "app/components/BikeMap.tsx",
+          "status": "modified"
+        },
+        {
+          "path": "app/components/FlightMap.tsx",
+          "status": "modified"
+        },
+        {
+          "path": "app/hooks/useFlights.ts",
+          "status": "modified"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/01063c3b-cdbb-4dae-8bb3-88e85fe0ef93.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/074c25d4-d607-4377-a273-67bdffd1f7b4.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/2057e144-9289-431d-8d07-9448adf8c0ca.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/39d9ddb4-0d6f-4236-8370-b4485f973657.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/4fc43e63-2d03-4b67-9687-3088187a6a91.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/5e86fae1-b472-41da-be91-060ea9bf1542.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/72f92609-c38f-4d02-8610-e059bc1a807a.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/b64714a7-6e93-456e-9d71-32363823d628.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/bd56dd33-dcb1-4216-8d93-9f59b776414d.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/bf8f39ca-99cb-4e3f-9ab3-fec4555b44a6.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/01063c3b-cdbb-4dae-8bb3-88e85fe0ef93.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/074c25d4-d607-4377-a273-67bdffd1f7b4.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/2057e144-9289-431d-8d07-9448adf8c0ca.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/39d9ddb4-0d6f-4236-8370-b4485f973657.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/4fc43e63-2d03-4b67-9687-3088187a6a91.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/5e86fae1-b472-41da-be91-060ea9bf1542.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/72f92609-c38f-4d02-8610-e059bc1a807a.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/b64714a7-6e93-456e-9d71-32363823d628.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/bd56dd33-dcb1-4216-8d93-9f59b776414d.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/bf8f39ca-99cb-4e3f-9ab3-fec4555b44a6.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-07T01-47-33_BikeStationMarker_-_Available.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-07T01-47-33_BikeStationMarker_-_Empty.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-07T01-47-33_BikeStationMarker_-_Low.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-07T01-47-33_BikeStationMarker_-_Offline.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-07T01-47-33_DarkTileLayer_-_Atlantic.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-07T01-47-33_DarkTileLayer_-_NYC.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-07T01-47-33_DarkTileLayer_-_WorldView.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-07T01-47-33_FlightMarker_-_NoRoute.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-07T01-47-33_FlightMarker_-_Pacific.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-07T01-47-33_FlightMarker_-_Transatlantic.png",
+          "status": "untracked"
+        },
+        {
+          "path": "app/api/flights/sync/route.ts",
+          "status": "untracked"
+        },
+        {
+          "path": "app/components/BikeStationMarker.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/components/DarkTileLayer.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/components/FlightMarker.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/isolated-components/BikeStationMarker/page.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/isolated-components/DarkTileLayer/page.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/isolated-components/FlightMarker/page.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/lib/gbfs.test.ts",
+          "status": "untracked"
+        },
+        {
+          "path": "app/lib/gbfs.ts",
+          "status": "untracked"
+        },
+        {
+          "path": "app/lib/opensky.test.ts",
+          "status": "untracked"
+        },
+        {
+          "path": "app/lib/opensky.ts",
+          "status": "untracked"
+        }
+      ]
     }
   ]
 }
