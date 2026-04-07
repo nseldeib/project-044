@@ -196,6 +196,14 @@ body {
 .leaflet-popup-tip {
   background: var(--bg-elevated) !important;
 }
+.leaflet-div-icon,
+.leaflet-marker-icon,
+.train-marker-icon,
+.plane-marker-icon {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
 
 /* Flight table row hover */
 .flight-row:hover {

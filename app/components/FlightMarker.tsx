@@ -23,12 +23,12 @@ interface Flight {
 }
 
 function createPlaneIcon(heading: number) {
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="transform: rotate(${heading}deg)">
+  const svg = `<div style="background:transparent;border:none;line-height:0;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="transform: rotate(${heading}deg)">
     <polygon points="12,2 8,18 12,15 16,18" fill="#f59e0b" stroke="#b45309" stroke-width="1"/>
-  </svg>`;
+  </svg></div>`;
   return L.divIcon({
     html: svg,
-    className: '',
+    className: 'plane-marker-icon',
     iconSize: [24, 24],
     iconAnchor: [12, 12],
     popupAnchor: [0, -12],

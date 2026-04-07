@@ -708,36 +708,36 @@
           "title": "returns flights array on success",
           "fullName": "useFlights — fetch logic > returns flights array on success",
           "status": "passed",
-          "duration": 7.316125000000284
+          "duration": 2.7221250000000055
         },
         {
           "title": "returns empty array when response is not an array",
           "fullName": "useFlights — fetch logic > returns empty array when response is not an array",
           "status": "passed",
-          "duration": 9.643625000000156
+          "duration": 0.9487080000000105
         },
         {
           "title": "sets error on non-ok HTTP response",
           "fullName": "useFlights — fetch logic > sets error on non-ok HTTP response",
           "status": "passed",
-          "duration": 1.3234159999997246
+          "duration": 0.3282080000000178
         },
         {
           "title": "sets error on network failure",
           "fullName": "useFlights — fetch logic > sets error on network failure",
           "status": "passed",
-          "duration": 2.024417000000085
+          "duration": 0.3768749999999841
         },
         {
           "title": "handles multiple flights",
           "fullName": "useFlights — fetch logic > handles multiple flights",
           "status": "passed",
-          "duration": 15.463332999999693
+          "duration": 0.4527079999999728
         }
       ],
-      "sourceHash": "fe712e5ca61afe15b736c885a6bcd1477fff4e231009bd0dec46a71bdfc81e2c",
+      "sourceHash": "c801c3a59f50ce0bd207ace675f1d9257cc51ed7e18448c4828c63c6bb525f89",
       "testHash": "c9d0109c8fa0cecb12507e20e116690100da1e31940f7b8f0ad7ab969dc19e57",
-      "timestamp": "2026-04-06T19:19:16.898Z"
+      "timestamp": "2026-04-07T01:49:25.864Z"
     },
     "app/hooks/useBikeStations.test.ts": {
       "testFilePath": "app/hooks/useBikeStations.test.ts",
@@ -879,6 +879,270 @@
       "sourceHash": "c55e2e1e43d07e4af4b209497af6d2d7a25f854e7a1e0159725a51f5ea5bda40",
       "testHash": "f7207a3534f7eae41851713db26a3f15acec84dd200ff07c244fba3c8aa3470f",
       "timestamp": "2026-04-06T19:19:16.898Z"
+    },
+    "app/lib/gbfs.test.ts": {
+      "testFilePath": "app/lib/gbfs.test.ts",
+      "status": "passed",
+      "testCases": [
+        {
+          "title": "merges matching info and status records",
+          "fullName": "mergeGbfsFeeds > merges matching info and status records",
+          "status": "passed",
+          "duration": 2.7837920000000054
+        },
+        {
+          "title": "converts last_reported unix timestamp to Date",
+          "fullName": "mergeGbfsFeeds > converts last_reported unix timestamp to Date",
+          "status": "passed",
+          "duration": 0.41816599999998516
+        },
+        {
+          "title": "excludes status entries with no matching info",
+          "fullName": "mergeGbfsFeeds > excludes status entries with no matching info",
+          "status": "passed",
+          "duration": 0.19908400000002757
+        },
+        {
+          "title": "handles is_installed=0 as false",
+          "fullName": "mergeGbfsFeeds > handles is_installed=0 as false",
+          "status": "passed",
+          "duration": 0.10450000000003001
+        },
+        {
+          "title": "handles is_renting=0 as false",
+          "fullName": "mergeGbfsFeeds > handles is_renting=0 as false",
+          "status": "passed",
+          "duration": 0.09079200000002174
+        },
+        {
+          "title": "returns empty array for empty inputs",
+          "fullName": "mergeGbfsFeeds > returns empty array for empty inputs",
+          "status": "passed",
+          "duration": 0.16670799999997143
+        },
+        {
+          "title": "merges multiple stations correctly",
+          "fullName": "mergeGbfsFeeds > merges multiple stations correctly",
+          "status": "passed",
+          "duration": 0.20800000000002683
+        },
+        {
+          "title": "returns true when lastUpdated is null",
+          "fullName": "isDataStale > returns true when lastUpdated is null",
+          "status": "passed",
+          "duration": 0.09895900000003621
+        },
+        {
+          "title": "returns true when data is older than interval",
+          "fullName": "isDataStale > returns true when data is older than interval",
+          "status": "passed",
+          "duration": 0.27233300000000327
+        },
+        {
+          "title": "returns false when data is fresher than interval",
+          "fullName": "isDataStale > returns false when data is fresher than interval",
+          "status": "passed",
+          "duration": 0.11166599999995697
+        },
+        {
+          "title": "returns false exactly at boundary (age equals interval — not yet stale)",
+          "fullName": "isDataStale > returns false exactly at boundary (age equals interval — not yet stale)",
+          "status": "passed",
+          "duration": 0.07325000000003001
+        },
+        {
+          "title": "returns zeros for empty stations list",
+          "fullName": "computeBikesSummary > returns zeros for empty stations list",
+          "status": "passed",
+          "duration": 0.3275830000000042
+        },
+        {
+          "title": "sums bikes and docks correctly",
+          "fullName": "computeBikesSummary > sums bikes and docks correctly",
+          "status": "passed",
+          "duration": 0.14400000000000546
+        },
+        {
+          "title": "counts stationsLow for bikesAvailable < 3",
+          "fullName": "computeBikesSummary > counts stationsLow for bikesAvailable < 3",
+          "status": "passed",
+          "duration": 0.0684999999999718
+        },
+        {
+          "title": "counts stationsEmpty only for renting stations with 0 bikes",
+          "fullName": "computeBikesSummary > counts stationsEmpty only for renting stations with 0 bikes",
+          "status": "passed",
+          "duration": 0.06533300000000963
+        },
+        {
+          "title": "returns OFFLINE when not installed",
+          "fullName": "getBikeStationStatus > returns OFFLINE when not installed",
+          "status": "passed",
+          "duration": 0.07866699999999582
+        },
+        {
+          "title": "returns NOT RENTING when installed but not renting",
+          "fullName": "getBikeStationStatus > returns NOT RENTING when installed but not renting",
+          "status": "passed",
+          "duration": 0.05620800000002646
+        },
+        {
+          "title": "returns OPERATIONAL when installed and renting",
+          "fullName": "getBikeStationStatus > returns OPERATIONAL when installed and renting",
+          "status": "passed",
+          "duration": 0.053832999999997355
+        },
+        {
+          "title": "prioritizes OFFLINE over NOT RENTING",
+          "fullName": "getBikeStationStatus > prioritizes OFFLINE over NOT RENTING",
+          "status": "passed",
+          "duration": 0.05366700000001856
+        }
+      ],
+      "sourceHash": "e70ce3f2f8010b68aa3a63f43e1588d6cbdec9b4c1614dd2c73badde9e710b30",
+      "testHash": "a5f45e830fa4f4800438902f41bfd53d03124888b8418157c0d77147fc534666",
+      "timestamp": "2026-04-07T01:49:25.864Z"
+    },
+    "app/lib/opensky.test.ts": {
+      "testFilePath": "app/lib/opensky.test.ts",
+      "status": "passed",
+      "testCases": [
+        {
+          "title": "trims trailing spaces and uppercases the callsign",
+          "fullName": "extractOpenSkyCallsign > trims trailing spaces and uppercases the callsign",
+          "status": "passed",
+          "duration": 1.1509590000000003
+        },
+        {
+          "title": "returns empty string for null callsign",
+          "fullName": "extractOpenSkyCallsign > returns empty string for null callsign",
+          "status": "passed",
+          "duration": 0.32433400000002166
+        },
+        {
+          "title": "returns empty string for blank callsign",
+          "fullName": "extractOpenSkyCallsign > returns empty string for blank callsign",
+          "status": "passed",
+          "duration": 0.12762499999996635
+        },
+        {
+          "title": "handles already-uppercase callsign",
+          "fullName": "extractOpenSkyCallsign > handles already-uppercase callsign",
+          "status": "passed",
+          "duration": 0.09895900000003621
+        },
+        {
+          "title": "returns true for a valid airborne state with known callsign",
+          "fullName": "isValidAirborneState > returns true for a valid airborne state with known callsign",
+          "status": "passed",
+          "duration": 0.12745899999998755
+        },
+        {
+          "title": "returns false when callsign is not in known set",
+          "fullName": "isValidAirborneState > returns false when callsign is not in known set",
+          "status": "passed",
+          "duration": 0.11420800000001918
+        },
+        {
+          "title": "returns false when callsign is empty",
+          "fullName": "isValidAirborneState > returns false when callsign is empty",
+          "status": "passed",
+          "duration": 0.08741700000001629
+        },
+        {
+          "title": "returns false when latitude is null",
+          "fullName": "isValidAirborneState > returns false when latitude is null",
+          "status": "passed",
+          "duration": 0.07558300000005147
+        },
+        {
+          "title": "returns false when longitude is null",
+          "fullName": "isValidAirborneState > returns false when longitude is null",
+          "status": "passed",
+          "duration": 0.39150000000000773
+        },
+        {
+          "title": "returns false when aircraft is on ground",
+          "fullName": "isValidAirborneState > returns false when aircraft is on ground",
+          "status": "passed",
+          "duration": 0.18812500000001364
+        },
+        {
+          "title": "converts meters to feet correctly",
+          "fullName": "metersToFeet > converts meters to feet correctly",
+          "status": "passed",
+          "duration": 0.09650000000004866
+        },
+        {
+          "title": "returns 0 for null input",
+          "fullName": "metersToFeet > returns 0 for null input",
+          "status": "passed",
+          "duration": 0.06037500000002183
+        },
+        {
+          "title": "returns 0 for 0 input",
+          "fullName": "metersToFeet > returns 0 for 0 input",
+          "status": "passed",
+          "duration": 0.0523340000000303
+        },
+        {
+          "title": "rounds the result",
+          "fullName": "metersToFeet > rounds the result",
+          "status": "passed",
+          "duration": 0.051791999999977634
+        },
+        {
+          "title": "converts m/s to knots correctly",
+          "fullName": "msToKnots > converts m/s to knots correctly",
+          "status": "passed",
+          "duration": 0.06566700000001902
+        },
+        {
+          "title": "returns 0 for null input",
+          "fullName": "msToKnots > returns 0 for null input",
+          "status": "passed",
+          "duration": 0.04945899999995618
+        },
+        {
+          "title": "returns 0 for 0 input",
+          "fullName": "msToKnots > returns 0 for 0 input",
+          "status": "passed",
+          "duration": 0.04841700000002902
+        },
+        {
+          "title": "rounds the result",
+          "fullName": "msToKnots > rounds the result",
+          "status": "passed",
+          "duration": 0.04883399999999938
+        },
+        {
+          "title": "maps state vector to a flight position update",
+          "fullName": "openSkyStateToFlightUpdate > maps state vector to a flight position update",
+          "status": "passed",
+          "duration": 0.22279200000002675
+        },
+        {
+          "title": "uses heading of 0 when true_track is null",
+          "fullName": "openSkyStateToFlightUpdate > uses heading of 0 when true_track is null",
+          "status": "passed",
+          "duration": 0.07070899999996527
+        },
+        {
+          "title": "uses empty string for squawk when null",
+          "fullName": "openSkyStateToFlightUpdate > uses empty string for squawk when null",
+          "status": "passed",
+          "duration": 0.06733400000001666
+        },
+        {
+          "title": "converts vertical rate from m/s to feet/min equivalent",
+          "fullName": "openSkyStateToFlightUpdate > converts vertical rate from m/s to feet/min equivalent",
+          "status": "passed",
+          "duration": 0.06341700000001538
+        }
+      ],
+      "sourceHash": "7b5ff2fa46782fbde06223cf73a0f651e9c2b0bd047fd70071c50d9af2063788",
+      "testHash": "3680e4e62f0e05ebd8ff2de98f93608232622726b21e22b6d6731dd69a06f5c1",
+      "timestamp": "2026-04-07T01:49:25.864Z"
     }
   }
 }

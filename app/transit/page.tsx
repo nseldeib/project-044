@@ -1,331 +1,364 @@
-import { prisma } from '@/app/lib/prisma';
-import { StatusBadge } from '@/app/components/ui/badge';
-import { AlertTriangle, Train } from 'lucide-react';
-import SubwayLineCard from '@/app/components/SubwayLineCard';
-import PanelHeader from '@/app/components/PanelHeader';
+'use client';
 
-function trainStatusVariant(status: string): 'nominal' | 'warning' | 'critical' | 'info' | 'neutral' | 'blue' {
-  switch (status) {
-    case 'IN_TRANSIT': return 'nominal';
-    case 'AT_STATION':  return 'blue';
-    case 'DELAYED':     return 'warning';
-    default:            return 'neutral';
-  }
-}
+import { useState, useMemo, useEffect } from 'react';
+import dynamic from 'next/dynamic';
+import { AlertTriangle, Train, CheckCircle } from 'lucide-react';
+import { StatusDot } from '@/app/components/ui/status-dot';
+import { useTransit } from '@/app/hooks/useTransit';
 
-export default async function TransitPage() {
-  const lines = await prisma.subwayLine.findMany({
-    orderBy: { lineId: 'asc' },
-    include: {
-      trains: { orderBy: { updatedAt: 'desc' } },
-    },
-  });
+const SubwayMap = dynamic(() => import('@/app/components/SubwayMap'), { ssr: false });
+
+const STATUS_ORDER: Record<string, number> = {
+  SUSPENDED: 0,
+  DELAYS: 1,
+  PLANNED_WORK: 2,
+  SERVICE_CHANGE: 3,
+  GOOD_SERVICE: 4,
+};
+
+const STATUS_LABEL: Record<string, string> = {
+  GOOD_SERVICE: 'GOOD SERVICE',
+  DELAYS: 'DELAYS',
+  PLANNED_WORK: 'PLANNED WORK',
+  SERVICE_CHANGE: 'SERVICE CHANGE',
+  SUSPENDED: 'SUSPENDED',
+};
+
+const STATUS_COLOR: Record<string, string> = {
+  GOOD_SERVICE: 'var(--accent-green)',
+  DELAYS: 'var(--status-warning)',
+  PLANNED_WORK: 'var(--accent-amber)',
+  SERVICE_CHANGE: 'var(--accent-blue)',
+  SUSPENDED: 'var(--status-critical)',
+};
+
+export default function TransitPage() {
+  const { lines, summary, loading, refresh } = useTransit();
+  const [selectedLineId, setSelectedLineId] = useState<string | null>(null);
+
+  // Sync train positions every 15s: POST sync to move trains, then refresh data
+  useEffect(() => {
+    const sync = () => {
+      const ctrl = new AbortController();
+      const timer = setTimeout(() => ctrl.abort(), 8_000);
+      fetch('/api/transit/sync', { method: 'POST', signal: ctrl.signal })
+        .then(() => refresh())
+        .catch(() => {})
+        .finally(() => clearTimeout(timer));
+    };
+    sync();
+    const interval = setInterval(sync, 15_000);
+    return () => clearInterval(interval);
+  }, [refresh]);
+
+  const sortedLines = useMemo(
+    () => [...lines].sort((a, b) => (STATUS_ORDER[a.status] ?? 9) - (STATUS_ORDER[b.status] ?? 9)),
+    [lines]
+  );
 
   const disrupted = lines.filter((l) => l.status !== 'GOOD_SERVICE');
-  const suspended = lines.filter((l) => l.status === 'SUSPENDED');
-  const nominal = lines.filter((l) => l.status === 'GOOD_SERVICE');
-  const allTrains = lines.flatMap((l) => l.trains.map((t) => ({ ...t, line: l })));
+  const allTrains = useMemo(
+    () =>
+      lines
+        .flatMap((l) => l.trains.map((t) => ({ ...t, line: l })))
+        .filter((t) => t.lat !== 0 && t.lon !== 0),
+    [lines]
+  );
+
+  const visibleTrains = selectedLineId
+    ? allTrains.filter((t) => t.lineId === selectedLineId)
+    : allTrains;
 
   return (
-    <div style={{ padding: 'var(--spacing-6)', maxWidth: '1200px', margin: '0 auto' }}>
-      {/* Header */}
+    <div style={{ display: 'flex', height: 'calc(100vh - 56px)', overflow: 'hidden' }}>
+      {/* ── Left Panel ── */}
       <div
         style={{
+          width: '340px',
+          flexShrink: 0,
+          backgroundColor: 'var(--bg-surface)',
+          borderRight: 'var(--border-subtle)',
           display: 'flex',
-          alignItems: 'flex-end',
-          justifyContent: 'space-between',
-          marginBottom: 'var(--spacing-6)',
-          paddingBottom: 'var(--spacing-4)',
-          borderBottom: 'var(--border-subtle)',
+          flexDirection: 'column',
+          overflow: 'hidden',
         }}
       >
-        <div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--spacing-3)' }}>
-            <Train size={24} style={{ color: 'var(--accent-blue)' }} />
-            <h1
-              style={{
-                fontFamily: 'var(--font-mono)',
-                fontSize: 'var(--text-3xl)',
-                fontWeight: 'var(--font-weight-bold)',
-                letterSpacing: 'var(--tracking-widest)',
-                color: 'var(--text-primary)',
-                margin: 0,
-              }}
-            >
-              NYC MTA SUBWAY
-            </h1>
-          </div>
-          <p
-            style={{
-              fontFamily: 'var(--font-mono)',
-              fontSize: 'var(--text-xs)',
-              color: 'var(--text-muted)',
-              marginTop: 'var(--spacing-2)',
-              letterSpacing: 'var(--tracking-wide)',
-            }}
-          >
-            {nominal.length} lines nominal · {disrupted.length} with issues · {allTrains.length} active trains
-          </p>
-        </div>
-        <div style={{ display: 'flex', gap: 'var(--spacing-4)' }}>
-          <div style={{ textAlign: 'right' }}>
-            <div
-              style={{
-                fontFamily: 'var(--font-mono)',
-                fontSize: 'var(--text-2xl)',
-                fontWeight: 'var(--font-weight-bold)',
-                color: disrupted.length > 0 ? 'var(--status-warning)' : 'var(--accent-green)',
-              }}
-            >
-              {disrupted.length}
-            </div>
-            <div
-              style={{
-                fontFamily: 'var(--font-mono)',
-                fontSize: 'var(--text-2xs)',
-                color: 'var(--text-muted)',
-                letterSpacing: 'var(--tracking-wider)',
-              }}
-            >
-              DISRUPTED
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Critical Banners */}
-      {suspended.length > 0 && (
-        <div
-          style={{
-            backgroundColor: 'rgba(239, 68, 68, 0.1)',
-            border: '1px solid rgba(239, 68, 68, 0.3)',
-            borderRadius: 'var(--radius-lg)',
-            padding: 'var(--spacing-4)',
-            marginBottom: 'var(--spacing-4)',
-            display: 'flex',
-            alignItems: 'flex-start',
-            gap: 'var(--spacing-3)',
-          }}
-        >
-          <AlertTriangle size={18} style={{ color: 'var(--status-critical)', flexShrink: 0, marginTop: '2px' }} />
-          <div>
-            <div
+        {/* Header */}
+        <div style={{ padding: 'var(--spacing-4)', borderBottom: 'var(--border-subtle)' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--spacing-2)', marginBottom: 'var(--spacing-3)' }}>
+            <Train size={16} style={{ color: 'var(--accent-blue)' }} />
+            <span
               style={{
                 fontFamily: 'var(--font-mono)',
                 fontSize: 'var(--text-sm)',
                 fontWeight: 'var(--font-weight-semibold)',
-                color: 'var(--status-critical)',
                 letterSpacing: 'var(--tracking-wide)',
-                marginBottom: 'var(--spacing-2)',
+                color: 'var(--accent-blue)',
               }}
             >
-              SERVICE SUSPENSION IN EFFECT
-            </div>
-            {suspended.map((line) => (
+              NYC MTA SUBWAY
+            </span>
+          </div>
+
+          {/* Stats row */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 'var(--spacing-2)' }}>
+            {[
+              { label: 'LINES', value: summary?.totalLines ?? '—', color: 'var(--text-primary)' },
+              { label: 'DISRUPTED', value: summary?.linesWithIssues ?? '—', color: summary && summary.linesWithIssues > 0 ? 'var(--status-warning)' : 'var(--accent-green)' },
+              { label: 'TRAINS', value: summary?.totalTrains ?? '—', color: 'var(--accent-blue)' },
+            ].map((s) => (
               <div
-                key={line.id}
-                style={{ display: 'flex', alignItems: 'center', gap: 'var(--spacing-2)', marginBottom: 'var(--spacing-1)' }}
+                key={s.label}
+                style={{
+                  backgroundColor: 'var(--bg-elevated)',
+                  borderRadius: 'var(--radius-md)',
+                  padding: 'var(--spacing-2) var(--spacing-3)',
+                  textAlign: 'center',
+                }}
               >
-                <SubwayLineCard line={line} />
-                <span style={{ fontSize: 'var(--text-sm)', color: 'var(--text-secondary)' }}>
-                  {line.statusText}
-                </span>
+                <div style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-2xl)', fontWeight: 'var(--font-weight-bold)', color: s.color, lineHeight: 1 }}>
+                  {s.value}
+                </div>
+                <div style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-2xs)', color: 'var(--text-muted)', letterSpacing: 'var(--tracking-wider)', marginTop: '2px' }}>
+                  {s.label}
+                </div>
               </div>
             ))}
           </div>
         </div>
-      )}
 
-      {/* Disrupted Lines (non-suspended) */}
-      {disrupted.filter((l) => l.status !== 'SUSPENDED').length > 0 && (
-        <div
-          style={{
-            backgroundColor: 'var(--accent-amber-glow)',
-            border: '1px solid rgba(245, 158, 11, 0.25)',
-            borderRadius: 'var(--radius-lg)',
-            padding: 'var(--spacing-4)',
-            marginBottom: 'var(--spacing-4)',
-          }}
-        >
-          <div
-            style={{
-              fontFamily: 'var(--font-mono)',
-              fontSize: 'var(--text-sm)',
-              fontWeight: 'var(--font-weight-semibold)',
-              color: 'var(--accent-amber)',
-              letterSpacing: 'var(--tracking-wide)',
-              marginBottom: 'var(--spacing-3)',
-            }}
-          >
-            SERVICE ADVISORIES
-          </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-2)' }}>
-            {disrupted
-              .filter((l) => l.status !== 'SUSPENDED')
-              .map((line) => (
-                <div key={line.id} style={{ display: 'flex', alignItems: 'center', gap: 'var(--spacing-2)' }}>
-                  <SubwayLineCard line={line} />
-                  <StatusBadge variant="warning">{line.status.replace(/_/g, ' ')}</StatusBadge>
-                  <span style={{ fontSize: 'var(--text-sm)', color: 'var(--text-secondary)' }}>
-                    {line.statusText || line.name}
-                  </span>
+        {/* Disruption Banners */}
+        {disrupted.length > 0 && (
+          <div style={{ padding: 'var(--spacing-3) var(--spacing-4)', borderBottom: 'var(--border-subtle)', display: 'flex', flexDirection: 'column', gap: 'var(--spacing-2)' }}>
+            {disrupted.slice(0, 3).map((line) => (
+              <div
+                key={line.id}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 'var(--spacing-2)',
+                  padding: 'var(--spacing-2) var(--spacing-3)',
+                  borderRadius: 'var(--radius-md)',
+                  backgroundColor: line.status === 'SUSPENDED' ? 'rgba(239,68,68,0.08)' : 'rgba(245,158,11,0.08)',
+                  border: line.status === 'SUSPENDED' ? '1px solid rgba(239,68,68,0.25)' : '1px solid rgba(245,158,11,0.2)',
+                }}
+              >
+                <AlertTriangle size={12} style={{ color: STATUS_COLOR[line.status], flexShrink: 0 }} />
+                <span
+                  style={{
+                    width: '22px', height: '22px', borderRadius: '50%',
+                    background: line.color, display: 'inline-flex', alignItems: 'center',
+                    justifyContent: 'center', fontFamily: 'var(--font-mono)',
+                    fontSize: 'var(--text-2xs)', fontWeight: 'var(--font-weight-bold)',
+                    color: '#fff', flexShrink: 0,
+                  }}
+                >
+                  {line.lineId}
+                </span>
+                <div style={{ minWidth: 0 }}>
+                  <div style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-2xs)', color: STATUS_COLOR[line.status], letterSpacing: 'var(--tracking-wide)' }}>
+                    {STATUS_LABEL[line.status]}
+                  </div>
+                  {line.statusText && (
+                    <div style={{ fontSize: 'var(--text-2xs)', color: 'var(--text-muted)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                      {line.statusText}
+                    </div>
+                  )}
                 </div>
-              ))}
+              </div>
+            ))}
           </div>
-        </div>
-      )}
+        )}
 
-      {/* All Lines Grid */}
-      <div
-        style={{
-          backgroundColor: 'var(--bg-surface)',
-          border: 'var(--border-subtle)',
-          borderRadius: 'var(--radius-lg)',
-          overflow: 'hidden',
-          marginBottom: 'var(--spacing-6)',
-        }}
-      >
-        <PanelHeader title="ALL LINES — SERVICE STATUS" />
+        {/* Line List */}
+        <div style={{ overflowY: 'auto', flex: 1 }}>
+          {loading && (
+            <div style={{ padding: 'var(--spacing-8)', textAlign: 'center', color: 'var(--text-muted)', fontFamily: 'var(--font-mono)', fontSize: 'var(--text-sm)' }}>
+              Loading...
+            </div>
+          )}
+
+          {/* All clear banner */}
+          {!loading && disrupted.length === 0 && lines.length > 0 && (
+            <div
+              style={{
+                margin: 'var(--spacing-3) var(--spacing-4)',
+                padding: 'var(--spacing-2) var(--spacing-3)',
+                borderRadius: 'var(--radius-md)',
+                backgroundColor: 'rgba(74,222,128,0.08)',
+                border: '1px solid rgba(74,222,128,0.2)',
+                display: 'flex',
+                alignItems: 'center',
+                gap: 'var(--spacing-2)',
+              }}
+            >
+              <CheckCircle size={13} style={{ color: 'var(--accent-green)' }} />
+              <span style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-2xs)', color: 'var(--accent-green)', letterSpacing: 'var(--tracking-wide)' }}>
+                ALL LINES OPERATING NORMALLY
+              </span>
+            </div>
+          )}
+
+          {/* Line rows */}
+          {sortedLines.map((line) => {
+            const isSelected = selectedLineId === line.lineId;
+            return (
+              <button
+                key={line.id}
+                onClick={() => setSelectedLineId(isSelected ? null : line.lineId)}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 'var(--spacing-3)',
+                  width: '100%',
+                  padding: 'var(--spacing-3) var(--spacing-4)',
+                  borderBottom: 'var(--border-subtle)',
+                  background: isSelected ? 'var(--bg-elevated)' : 'transparent',
+                  border: 'none',
+                  borderLeft: isSelected ? `3px solid ${line.color}` : '3px solid transparent',
+                  cursor: 'pointer',
+                  textAlign: 'left',
+                  transition: 'background var(--transition-fast)',
+                }}
+              >
+                {/* Line dot */}
+                <span
+                  style={{
+                    width: '28px', height: '28px', borderRadius: '50%', background: line.color,
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    fontFamily: 'var(--font-mono)', fontSize: 'var(--text-xs)',
+                    fontWeight: 'var(--font-weight-bold)', color: '#fff', flexShrink: 0,
+                    boxShadow: isSelected ? `0 0 8px ${line.color}66` : 'none',
+                  }}
+                >
+                  {line.lineId}
+                </span>
+
+                <div style={{ flex: 1, minWidth: 0 }}>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 'var(--spacing-2)' }}>
+                    <span style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-sm)', color: 'var(--text-primary)', fontWeight: 'var(--font-weight-medium)' }}>
+                      {line.name}
+                    </span>
+                    <span
+                      style={{
+                        fontFamily: 'var(--font-mono)', fontSize: 'var(--text-2xs)',
+                        letterSpacing: 'var(--tracking-wide)',
+                        color: STATUS_COLOR[line.status],
+                        flexShrink: 0,
+                      }}
+                    >
+                      {line.status !== 'GOOD_SERVICE' ? STATUS_LABEL[line.status] : ''}
+                    </span>
+                  </div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--spacing-2)', marginTop: '2px' }}>
+                    {line.status === 'GOOD_SERVICE' ? (
+                      <StatusDot status="nominal" />
+                    ) : line.status === 'SUSPENDED' ? (
+                      <StatusDot status="critical" />
+                    ) : (
+                      <StatusDot status="warning" />
+                    )}
+                    <span style={{ fontSize: 'var(--text-2xs)', color: 'var(--text-muted)' }}>
+                      {line.trains.length} train{line.trains.length !== 1 ? 's' : ''} active
+                    </span>
+                  </div>
+                </div>
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Footer */}
         <div
           style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
-            gap: '1px',
-            backgroundColor: 'var(--bg-border)',
+            padding: 'var(--spacing-3) var(--spacing-4)',
+            borderTop: 'var(--border-subtle)',
+            display: 'flex',
+            alignItems: 'center',
+            gap: 'var(--spacing-2)',
           }}
         >
-          {lines.map((line) => (
-            <SubwayLineCard key={line.id} line={line} />
-          ))}
+          <StatusDot status="nominal" />
+          <span style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-2xs)', color: 'var(--text-muted)', letterSpacing: 'var(--tracking-wide)' }}>
+            {loading ? 'LOADING...' : `${visibleTrains.length} TRAINS ON MAP`}
+          </span>
+          {selectedLineId && (
+            <button
+              onClick={() => setSelectedLineId(null)}
+              style={{
+                marginLeft: 'auto', fontFamily: 'var(--font-mono)', fontSize: 'var(--text-2xs)',
+                color: 'var(--accent-amber)', background: 'none', border: 'none', cursor: 'pointer',
+                letterSpacing: 'var(--tracking-wide)',
+              }}
+            >
+              SHOW ALL
+            </button>
+          )}
         </div>
       </div>
 
-      {/* Active Trains Table */}
-      <div
-        style={{
-          backgroundColor: 'var(--bg-surface)',
-          border: 'var(--border-subtle)',
-          borderRadius: 'var(--radius-lg)',
-          overflow: 'hidden',
-        }}
-      >
-        <div style={{ padding: 'var(--spacing-4)', borderBottom: 'var(--border-subtle)' }}>
-          <span
+      {/* ── Map ── */}
+      <div style={{ flex: 1, position: 'relative', minHeight: 0, height: '100%' }}>
+        <SubwayMap lines={lines} selectedLineId={selectedLineId} />
+
+        {/* Train detail overlay — active trains for selected line */}
+        {selectedLineId && visibleTrains.length > 0 && (
+          <div
             style={{
-              fontFamily: 'var(--font-mono)',
-              fontSize: 'var(--text-sm)',
-              fontWeight: 'var(--font-weight-semibold)',
-              letterSpacing: 'var(--tracking-wide)',
-              color: 'var(--text-primary)',
+              position: 'absolute',
+              top: 'var(--spacing-4)',
+              right: 'var(--spacing-4)',
+              zIndex: 1000,
+              width: '260px',
+              backgroundColor: 'var(--bg-surface)',
+              border: 'var(--border-subtle)',
+              borderRadius: 'var(--radius-lg)',
+              overflow: 'hidden',
+              boxShadow: 'var(--shadow-lg)',
             }}
           >
-            ACTIVE TRAINS
-            <span style={{ marginLeft: 'var(--spacing-2)', fontSize: 'var(--text-2xs)', color: 'var(--text-muted)' }}>
-              {allTrains.length} total
-            </span>
-          </span>
-        </div>
-        <div style={{ overflowX: 'auto' }}>
-          <table style={{ width: '100%', borderCollapse: 'collapse' }}>
-            <thead>
-              <tr>
-                {['TRAIN ID', 'LINE', 'DIRECTION', 'CURRENT STOP', 'NEXT STOP', 'STATUS', 'DELAY'].map((h) => (
-                  <th
-                    key={h}
-                    style={{
-                      padding: 'var(--spacing-2) var(--spacing-4)',
-                      textAlign: 'left',
-                      fontFamily: 'var(--font-mono)',
-                      fontSize: 'var(--text-2xs)',
-                      color: 'var(--text-muted)',
-                      letterSpacing: 'var(--tracking-wider)',
-                      fontWeight: 'var(--font-weight-normal)',
-                      borderBottom: 'var(--border-subtle)',
-                    }}
-                  >
-                    {h}
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {allTrains.map((train) => (
-                <tr key={train.id} style={{ borderBottom: 'var(--border-subtle)' }}>
-                  <td
-                    style={{
-                      padding: 'var(--spacing-3) var(--spacing-4)',
-                      fontFamily: 'var(--font-mono)',
-                      fontSize: 'var(--text-sm)',
-                      color: 'var(--text-primary)',
-                    }}
-                  >
-                    {train.trainId}
-                  </td>
-                  <td style={{ padding: 'var(--spacing-3) var(--spacing-4)' }}>
-                    <span
-                      style={{
-                        width: '28px',
-                        height: '28px',
-                        borderRadius: '50%',
-                        backgroundColor: train.line.color,
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        fontFamily: 'var(--font-mono)',
-                        fontSize: 'var(--text-xs)',
-                        fontWeight: 'var(--font-weight-bold)',
-                        color: '#fff',
-                      }}
-                    >
-                      {train.lineId}
+            <div style={{ padding: 'var(--spacing-3) var(--spacing-4)', borderBottom: 'var(--border-subtle)' }}>
+              <span style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-2xs)', letterSpacing: 'var(--tracking-wider)', color: 'var(--text-muted)' }}>
+                ACTIVE TRAINS — {selectedLineId} LINE
+              </span>
+            </div>
+            <div style={{ maxHeight: '300px', overflowY: 'auto' }}>
+              {visibleTrains.map((train) => (
+                <div
+                  key={train.id}
+                  style={{
+                    padding: 'var(--spacing-3) var(--spacing-4)',
+                    borderBottom: 'var(--border-subtle)',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '2px',
+                  }}
+                >
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <span style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-sm)', color: 'var(--text-primary)', fontWeight: 'var(--font-weight-medium)' }}>
+                      {train.trainId}
                     </span>
-                  </td>
-                  <td
-                    style={{
-                      padding: 'var(--spacing-3) var(--spacing-4)',
-                      fontFamily: 'var(--font-mono)',
-                      fontSize: 'var(--text-sm)',
-                      color: 'var(--text-secondary)',
-                    }}
-                  >
-                    {train.direction === 'N' ? 'NORTHBOUND' : 'SOUTHBOUND'}
-                  </td>
-                  <td style={{ padding: 'var(--spacing-3) var(--spacing-4)', fontSize: 'var(--text-sm)', color: 'var(--text-primary)' }}>
-                    {train.currentStop}
-                  </td>
-                  <td style={{ padding: 'var(--spacing-3) var(--spacing-4)', fontSize: 'var(--text-sm)', color: 'var(--text-secondary)' }}>
-                    {train.nextStop}
-                  </td>
-                  <td style={{ padding: 'var(--spacing-3) var(--spacing-4)' }}>
-                    <StatusBadge variant={trainStatusVariant(train.status)}>
-                      {train.status.replace(/_/g, ' ')}
-                    </StatusBadge>
-                  </td>
-                  <td
-                    style={{
-                      padding: 'var(--spacing-3) var(--spacing-4)',
-                      fontFamily: 'var(--font-mono)',
-                      fontSize: 'var(--text-sm)',
-                      color: train.delay > 0 ? 'var(--status-warning)' : 'var(--text-muted)',
-                    }}
-                  >
-                    {train.delay > 0 ? `+${train.delay} min` : '—'}
-                  </td>
-                </tr>
+                    <span style={{
+                      fontFamily: 'var(--font-mono)', fontSize: 'var(--text-2xs)',
+                      color: train.status === 'DELAYED' ? 'var(--status-critical)' : train.status === 'AT_STATION' ? 'var(--accent-blue)' : 'var(--accent-green)',
+                      letterSpacing: 'var(--tracking-wide)',
+                    }}>
+                      {train.status.replace('_', ' ')}
+                    </span>
+                  </div>
+                  <div style={{ fontSize: 'var(--text-xs)', color: 'var(--text-secondary)' }}>
+                    {train.direction === 'N' ? '↑' : '↓'} {train.currentStop}
+                  </div>
+                  {train.delay > 0 && (
+                    <div style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-2xs)', color: 'var(--status-warning)' }}>
+                      +{train.delay} min
+                    </div>
+                  )}
+                </div>
               ))}
-              {allTrains.length === 0 && (
-                <tr>
-                  <td
-                    colSpan={7}
-                    style={{ padding: 'var(--spacing-8)', textAlign: 'center', color: 'var(--text-muted)', fontSize: 'var(--text-sm)' }}
-                  >
-                    No active trains
-                  </td>
-                </tr>
-              )}
-            </tbody>
-          </table>
-        </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

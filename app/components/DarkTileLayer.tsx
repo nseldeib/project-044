@@ -15,10 +15,9 @@ const EMPTY_TILE =
 export default function DarkTileLayer() {
   return (
     <TileLayer
-      url="/api/tiles?s={s}&z={z}&x={x}&y={y}"
-      subdomains={['a', 'b', 'c']}
-      attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
-      maxZoom={19}
+      url="/api/tiles?z={z}&x={x}&y={y}"
+      attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://stadiamaps.com/" target="_blank">Stadia Maps</a>'
+      maxZoom={20}
       errorTileUrl={EMPTY_TILE}
     />
   );
