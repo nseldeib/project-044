@@ -1865,6 +1865,200 @@
           "status": "untracked"
         }
       ]
+    },
+    {
+      "date": "2026-04-07",
+      "time": "2026-04-07T17:44:12.740Z",
+      "title": "Bike Icon Markers",
+      "type": "feature",
+      "description": "Replaced plain circle markers on the City Bikes map with custom SVG bicycle icons rendered as Leaflet DivIcons. Each icon is color-coded by station availability (green/amber/red/gray) with a matching glow effect. Markers scale responsively with zoom: 14px at city level (z≤13), 20px at neighborhood level (z14-15), and 26px with a station name label at street level (z≥16). Extracted getMarkerColor, getMarkerGlowColor, and getMarkerSize as tested pure functions in gbfs.ts, and split the popup content into a standalone BikeStationPopup component.",
+      "scenarios": [
+        "BikeStationPopup - Available",
+        "BikeStationPopup - Low",
+        "BikeStationPopup - Empty",
+        "BikeStationPopup - Offline"
+      ],
+      "screenshot": null,
+      "scenarioScreenshots": [
+        {
+          "name": "BikeStationPopup - Available",
+          "path": "screenshots/2026-04-07T17-44-12_BikeStationPopup_-_Available.png",
+          "componentName": "BikeStationPopup",
+          "url": "/isolated-components/BikeStationPopup?s=Available"
+        },
+        {
+          "name": "BikeStationPopup - Low",
+          "path": "screenshots/2026-04-07T17-44-12_BikeStationPopup_-_Low.png",
+          "componentName": "BikeStationPopup",
+          "url": "/isolated-components/BikeStationPopup?s=Low"
+        },
+        {
+          "name": "BikeStationPopup - Empty",
+          "path": "screenshots/2026-04-07T17-44-12_BikeStationPopup_-_Empty.png",
+          "componentName": "BikeStationPopup",
+          "url": "/isolated-components/BikeStationPopup?s=Empty"
+        },
+        {
+          "name": "BikeStationPopup - Offline",
+          "path": "screenshots/2026-04-07T17-44-12_BikeStationPopup_-_Offline.png",
+          "componentName": "BikeStationPopup",
+          "url": "/isolated-components/BikeStationPopup?s=Offline"
+        }
+      ],
+      "commitSha": "923e58b",
+      "commitMessage": "feat: Bike Icon Markers",
+      "entityChangeStatus": {
+        "BikeStationMarker": {
+          "status": "edited"
+        },
+        "BikeStationPopup": {
+          "status": "new"
+        }
+      },
+      "featureName": "Bike Icon Markers",
+      "userPrompt": "For the City Bikes tab, make the dots more clearly look like bikes (bike icon markers instead of plain dots), and clean up the UI at different zoom levels",
+      "modifiedFiles": [
+        {
+          "path": ".codeyam/config.json",
+          "status": "modified"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/01063c3b-cdbb-4dae-8bb3-88e85fe0ef93.json",
+          "status": "modified"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/0d08a954-274f-4ce4-b310-2ec79a0458b5.json",
+          "status": "modified"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/2057e144-9289-431d-8d07-9448adf8c0ca.json",
+          "status": "modified"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/5e86fae1-b472-41da-be91-060ea9bf1542.json",
+          "status": "modified"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/bd56dd33-dcb1-4216-8d93-9f59b776414d.json",
+          "status": "modified"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/client-errors.json",
+          "status": "modified"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/df2bf431-1981-4ee3-ab46-bdd43d9970e8.json",
+          "status": "modified"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/01063c3b-cdbb-4dae-8bb3-88e85fe0ef93.png",
+          "status": "modified"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/0d08a954-274f-4ce4-b310-2ec79a0458b5.png",
+          "status": "modified"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/2057e144-9289-431d-8d07-9448adf8c0ca.png",
+          "status": "modified"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/5e86fae1-b472-41da-be91-060ea9bf1542.png",
+          "status": "modified"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/bd56dd33-dcb1-4216-8d93-9f59b776414d.png",
+          "status": "modified"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/df2bf431-1981-4ee3-ab46-bdd43d9970e8.png",
+          "status": "modified"
+        },
+        {
+          "path": ".codeyam/editor-task-tracking.json",
+          "status": "modified"
+        },
+        {
+          "path": ".codeyam/glossary.json",
+          "status": "modified"
+        },
+        {
+          "path": "app/components/BikeMap.tsx",
+          "status": "modified"
+        },
+        {
+          "path": "app/components/BikeStationMarker.tsx",
+          "status": "modified"
+        },
+        {
+          "path": "app/isolated-components/BikeStationMarker/page.tsx",
+          "status": "modified"
+        },
+        {
+          "path": "app/lib/gbfs.test.ts",
+          "status": "modified"
+        },
+        {
+          "path": "app/lib/gbfs.ts",
+          "status": "modified"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/05c296a0-005f-4075-aa5a-0245c9052d49.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/64f43ebf-c132-487e-83cf-cb934e9e5230.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/df3b9549-c82a-4f5d-8b44-e169b4f84121.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/f666688c-27a5-497a-9ac9-7ffa907364f6.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/05c296a0-005f-4075-aa5a-0245c9052d49.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/64f43ebf-c132-487e-83cf-cb934e9e5230.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/df3b9549-c82a-4f5d-8b44-e169b4f84121.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/f666688c-27a5-497a-9ac9-7ffa907364f6.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-07T17-44-12_BikeStationPopup_-_Available.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-07T17-44-12_BikeStationPopup_-_Empty.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-07T17-44-12_BikeStationPopup_-_Low.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-07T17-44-12_BikeStationPopup_-_Offline.png",
+          "status": "untracked"
+        },
+        {
+          "path": "app/components/BikeStationPopup.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/isolated-components/BikeStationPopup/page.tsx",
+          "status": "untracked"
+        }
+      ]
     }
   ]
 }

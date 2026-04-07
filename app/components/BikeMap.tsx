@@ -1,6 +1,7 @@
 'use client';
 
-import { MapContainer } from 'react-leaflet';
+import { MapContainer, useMapEvents } from 'react-leaflet';
+import { useState } from 'react';
 import DarkTileLayer from './DarkTileLayer';
 import BikeStationMarker from './BikeStationMarker';
 
@@ -22,7 +23,16 @@ interface BikeMapProps {
   stations: BikeStation[];
 }
 
+function ZoomTracker({ onZoom }: { onZoom: (z: number) => void }) {
+  useMapEvents({
+    zoomend: (e) => onZoom(e.target.getZoom()),
+  });
+  return null;
+}
+
 export default function BikeMap({ stations }: BikeMapProps) {
+  const [zoom, setZoom] = useState(12);
+
   return (
     <MapContainer
       center={[40.7128, -74.006]}
@@ -30,8 +40,9 @@ export default function BikeMap({ stations }: BikeMapProps) {
       style={{ width: '100%', height: '100%', minHeight: 0 }}
     >
       <DarkTileLayer />
+      <ZoomTracker onZoom={setZoom} />
       {stations.map((station) => (
-        <BikeStationMarker key={station.id} station={station} />
+        <BikeStationMarker key={station.id} station={station} zoom={zoom} />
       ))}
     </MapContainer>
   );

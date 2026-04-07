@@ -1009,5 +1009,61 @@
     ],
     "feature": "Map Overhaul + Live APIs",
     "createdAt": "2026-04-07T00:50:00.000Z"
+  },
+  {
+    "name": "getMarkerColor",
+    "filePath": "app/lib/gbfs.ts",
+    "description": "Returns the hex color for a bike station marker based on availability percentage. Green >20%, amber 10-20%, red ≤10%, gray if offline/not renting.",
+    "parameters": [
+      { "name": "station", "type": "{ isInstalled: boolean; isRenting: boolean; capacity: number; bikesAvailable: number }" }
+    ],
+    "returnType": "string",
+    "tags": ["bike", "map", "color"],
+    "testFile": "app/lib/gbfs.test.ts",
+    "feature": "Bike Icon Markers",
+    "createdAt": "2026-04-07T17:00:00.000Z"
+  },
+  {
+    "name": "getMarkerGlowColor",
+    "filePath": "app/lib/gbfs.ts",
+    "description": "Returns a CSS rgba glow color string matching a bike marker hex color for use in drop-shadow filters.",
+    "parameters": [
+      { "name": "color", "type": "string" }
+    ],
+    "returnType": "string",
+    "tags": ["bike", "map", "color"],
+    "testFile": "app/lib/gbfs.test.ts",
+    "feature": "Bike Icon Markers",
+    "createdAt": "2026-04-07T17:00:00.000Z"
+  },
+  {
+    "name": "getMarkerSize",
+    "filePath": "app/lib/gbfs.ts",
+    "description": "Returns the pixel size for a bike marker icon based on map zoom level. 14px at z≤13, 20px at z14-15, 26px at z≥16.",
+    "parameters": [
+      { "name": "zoom", "type": "number" }
+    ],
+    "returnType": "number",
+    "tags": ["bike", "map", "zoom"],
+    "testFile": "app/lib/gbfs.test.ts",
+    "feature": "Bike Icon Markers",
+    "createdAt": "2026-04-07T17:00:00.000Z"
+  },
+  {
+    "name": "BikeStationPopup",
+    "filePath": "app/components/BikeStationPopup.tsx",
+    "description": "Renders the popup content for a bike station marker — station name, bikes/docks available, capacity, and operational status.",
+    "parameters": [
+      { "name": "name", "type": "string" },
+      { "name": "bikesAvailable", "type": "number" },
+      { "name": "docksAvailable", "type": "number" },
+      { "name": "capacity", "type": "number" },
+      { "name": "isInstalled", "type": "boolean" },
+      { "name": "isRenting", "type": "boolean" }
+    ],
+    "returnType": "JSX.Element",
+    "tags": ["bike", "map", "popup", "component"],
+    "feature": "Bike Icon Markers",
+    "createdAt": "2026-04-07T17:00:00.000Z"
   }
 ]

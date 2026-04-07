@@ -1,7 +1,7 @@
 'use client';
 
 import { use } from 'react';
-import { getBikeStationStatus } from '@/app/lib/gbfs';
+import { getBikeStationStatus, getMarkerColor, getMarkerGlowColor, getMarkerSize } from '@/app/lib/gbfs';
 
 const baseStation = {
   id: 1,
@@ -43,12 +43,17 @@ const scenarios = {
 
 type ScenarioName = keyof typeof scenarios;
 
-function markerColor(station: typeof scenarios.Available): string {
-  if (!station.isInstalled || !station.isRenting) return '#64748b';
-  const pct = station.capacity > 0 ? (station.bikesAvailable / station.capacity) * 100 : 0;
-  if (pct > 20) return '#4ade80';
-  if (pct > 10) return '#f59e0b';
-  return '#ef4444';
+function BikeSvg({ color, size }: { color: string; size: number }) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none">
+      <circle cx="6" cy="16" r="4.5" stroke={color} strokeWidth="2"/>
+      <circle cx="18" cy="16" r="4.5" stroke={color} strokeWidth="2"/>
+      <path d="M6 16 L10 8 L14 8 L18 16" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+      <path d="M10 8 L12 16" stroke={color} strokeWidth="1.5" strokeLinecap="round"/>
+      <path d="M14 8 L16 6 L19 6" stroke={color} strokeWidth="1.5" strokeLinecap="round"/>
+      <circle cx="12" cy="8" r="1.5" fill={color}/>
+    </svg>
+  );
 }
 
 export default function BikeStationMarkerIsolation({
@@ -59,7 +64,8 @@ export default function BikeStationMarkerIsolation({
   const params = use(searchParams);
   const name = (params.s ?? 'Available') as ScenarioName;
   const station = scenarios[name] ?? scenarios.Available;
-  const color = markerColor(station);
+  const color = getMarkerColor(station);
+  const glow = getMarkerGlowColor(color);
   const status = getBikeStationStatus(station);
 
   return (
@@ -73,29 +79,44 @@ export default function BikeStationMarkerIsolation({
         gap: 'var(--spacing-8)',
       }}
     >
-      <div id="codeyam-capture" style={{ display: 'flex', gap: 'var(--spacing-6)', alignItems: 'center' }}>
-        {/* Circle marker */}
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 'var(--spacing-2)' }}>
-          <div
-            style={{
-              width: 20,
-              height: 20,
-              borderRadius: '50%',
-              background: color,
-              border: `2px solid ${color}`,
-              opacity: 0.85,
-            }}
-          />
-          <span
-            style={{
-              fontFamily: 'var(--font-mono)',
-              fontSize: 'var(--text-2xs)',
-              color,
-              letterSpacing: 'var(--tracking-wider)',
-            }}
-          >
-            {status}
-          </span>
+      <div id="codeyam-capture" style={{ display: 'flex', gap: 'var(--spacing-8)', alignItems: 'center' }}>
+        {/* Zoom level previews */}
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 'var(--spacing-6)' }}>
+          <span style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-2xs)', color: 'var(--text-muted)', letterSpacing: 'var(--tracking-wide)', textTransform: 'uppercase' }}>Zoom levels</span>
+
+          {([13, 14, 16] as const).map((zoom) => {
+            const size = getMarkerSize(zoom);
+            const showLabel = zoom >= 16;
+            return (
+              <div key={zoom} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 'var(--spacing-1)' }}>
+                <div style={{ filter: `drop-shadow(0 0 4px ${glow})` }}>
+                  <BikeSvg color={color} size={size} />
+                </div>
+                {showLabel && (
+                  <div style={{
+                    fontFamily: 'var(--font-mono)',
+                    fontSize: '10px',
+                    fontWeight: 'var(--font-weight-semibold)',
+                    color,
+                    background: 'rgba(3,6,15,0.85)',
+                    border: `1px solid ${color}`,
+                    borderRadius: 'var(--radius-sm)',
+                    padding: '1px 4px',
+                    letterSpacing: 'var(--tracking-wide)',
+                    maxWidth: 140,
+                    whiteSpace: 'nowrap',
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis',
+                  }}>
+                    {station.name}
+                  </div>
+                )}
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-2xs)', color: 'var(--text-muted)' }}>
+                  {zoom <= 13 ? 'z≤13' : zoom <= 15 ? `z${zoom}` : 'z≥16'}
+                </span>
+              </div>
+            );
+          })}
         </div>
 
         {/* Popup card */}
@@ -112,22 +133,14 @@ export default function BikeStationMarkerIsolation({
             color: 'var(--text-primary)',
           }}
         >
-          <div
-            style={{
-              fontWeight: 'var(--font-weight-bold)',
-              color: 'var(--accent-blue)',
-              marginBottom: 'var(--spacing-1)',
-            }}
-          >
+          <div style={{ fontWeight: 'var(--font-weight-bold)', color: 'var(--accent-blue)', marginBottom: 'var(--spacing-1)' }}>
             {station.name}
           </div>
           <div style={{ marginBottom: 'var(--spacing-1)' }}>
-            Bikes available:{' '}
-            <span style={{ color: 'var(--accent-amber)' }}>{station.bikesAvailable}</span>
+            Bikes available: <span style={{ color: 'var(--accent-amber)' }}>{station.bikesAvailable}</span>
           </div>
           <div style={{ marginBottom: 'var(--spacing-1)' }}>
-            Docks available:{' '}
-            <span style={{ color: 'var(--text-secondary)' }}>{station.docksAvailable}</span>
+            Docks available: <span style={{ color: 'var(--text-secondary)' }}>{station.docksAvailable}</span>
           </div>
           <div style={{ marginBottom: 'var(--spacing-1)' }}>Capacity: {station.capacity}</div>
           <div style={{ marginTop: 'var(--spacing-1)', fontSize: 'var(--text-xs)', color: 'var(--text-muted)' }}>

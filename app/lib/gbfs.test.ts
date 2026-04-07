@@ -4,6 +4,9 @@ import {
   isDataStale,
   computeBikesSummary,
   getBikeStationStatus,
+  getMarkerColor,
+  getMarkerGlowColor,
+  getMarkerSize,
   type GbfsStationInfo,
   type GbfsStationStatus,
 } from './gbfs';
@@ -169,5 +172,91 @@ describe('getBikeStationStatus', () => {
 
   it('prioritizes OFFLINE over NOT RENTING', () => {
     expect(getBikeStationStatus({ isInstalled: false, isRenting: false })).toBe('OFFLINE');
+  });
+});
+
+// ── getMarkerColor ─────────────────────────────────────────────────────────
+
+describe('getMarkerColor', () => {
+  const base = { isInstalled: true, isRenting: true, capacity: 20 };
+
+  it('returns gray when station is not installed', () => {
+    expect(getMarkerColor({ ...base, isInstalled: false, bikesAvailable: 10 })).toBe('#64748b');
+  });
+
+  it('returns gray when station is not renting', () => {
+    expect(getMarkerColor({ ...base, isRenting: false, bikesAvailable: 10 })).toBe('#64748b');
+  });
+
+  it('returns green when availability > 20%', () => {
+    expect(getMarkerColor({ ...base, bikesAvailable: 10 })).toBe('#4ade80'); // 50%
+  });
+
+  it('returns amber when availability is between 10% and 20%', () => {
+    expect(getMarkerColor({ ...base, bikesAvailable: 3 })).toBe('#f59e0b'); // 15%
+  });
+
+  it('returns red when availability is <= 10%', () => {
+    expect(getMarkerColor({ ...base, bikesAvailable: 0 })).toBe('#ef4444'); // 0%
+  });
+
+  it('returns red when availability is exactly 10%', () => {
+    expect(getMarkerColor({ ...base, bikesAvailable: 2 })).toBe('#ef4444'); // exactly 10%
+  });
+
+  it('returns red when capacity is zero (guards against division by zero)', () => {
+    expect(getMarkerColor({ ...base, capacity: 0, bikesAvailable: 0 })).toBe('#ef4444');
+  });
+});
+
+// ── getMarkerGlowColor ────────────────────────────────────────────────────
+
+describe('getMarkerGlowColor', () => {
+  it('returns green glow for green marker', () => {
+    expect(getMarkerGlowColor('#4ade80')).toBe('rgba(74,222,128,0.35)');
+  });
+
+  it('returns amber glow for amber marker', () => {
+    expect(getMarkerGlowColor('#f59e0b')).toBe('rgba(245,158,11,0.35)');
+  });
+
+  it('returns red glow for red marker', () => {
+    expect(getMarkerGlowColor('#ef4444')).toBe('rgba(239,68,68,0.35)');
+  });
+
+  it('returns neutral glow for gray/unknown color', () => {
+    expect(getMarkerGlowColor('#64748b')).toBe('rgba(100,116,139,0.25)');
+  });
+
+  it('returns neutral glow for unrecognized color', () => {
+    expect(getMarkerGlowColor('#ffffff')).toBe('rgba(100,116,139,0.25)');
+  });
+});
+
+// ── getMarkerSize ─────────────────────────────────────────────────────────
+
+describe('getMarkerSize', () => {
+  it('returns 14 at zoom 12 (city view)', () => {
+    expect(getMarkerSize(12)).toBe(14);
+  });
+
+  it('returns 14 at zoom 13 (boundary)', () => {
+    expect(getMarkerSize(13)).toBe(14);
+  });
+
+  it('returns 20 at zoom 14', () => {
+    expect(getMarkerSize(14)).toBe(20);
+  });
+
+  it('returns 20 at zoom 15 (boundary)', () => {
+    expect(getMarkerSize(15)).toBe(20);
+  });
+
+  it('returns 26 at zoom 16 (street view)', () => {
+    expect(getMarkerSize(16)).toBe(26);
+  });
+
+  it('returns 26 at zoom 18 (max zoom)', () => {
+    expect(getMarkerSize(18)).toBe(26);
   });
 });

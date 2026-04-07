@@ -231,12 +231,12 @@
   },
   "0d08a954-274f-4ce4-b310-2ec79a0458b5": {
     "scenarioName": "City Bikes - Rush Hour Crunch",
-    "capturedAt": "2026-04-04T17:47:28.997Z",
+    "capturedAt": "2026-04-07T17:39:23.600Z",
     "errors": []
   },
   "df2bf431-1981-4ee3-ab46-bdd43d9970e8": {
     "scenarioName": "City Bikes - Full Availability",
-    "capturedAt": "2026-04-04T17:47:35.180Z",
+    "capturedAt": "2026-04-07T17:39:34.849Z",
     "errors": []
   },
   "28527429-15cb-4221-a987-e27eb22723e7": {
@@ -316,22 +316,42 @@
   },
   "2057e144-9289-431d-8d07-9448adf8c0ca": {
     "scenarioName": "BikeStationMarker - Available",
-    "capturedAt": "2026-04-07T01:19:14.891Z",
+    "capturedAt": "2026-04-07T17:23:01.017Z",
     "errors": []
   },
   "01063c3b-cdbb-4dae-8bb3-88e85fe0ef93": {
     "scenarioName": "BikeStationMarker - Low",
-    "capturedAt": "2026-04-07T01:19:19.191Z",
+    "capturedAt": "2026-04-07T17:23:05.598Z",
     "errors": []
   },
   "bd56dd33-dcb1-4216-8d93-9f59b776414d": {
     "scenarioName": "BikeStationMarker - Empty",
-    "capturedAt": "2026-04-07T01:19:23.543Z",
+    "capturedAt": "2026-04-07T17:23:09.847Z",
     "errors": []
   },
   "5e86fae1-b472-41da-be91-060ea9bf1542": {
     "scenarioName": "BikeStationMarker - Offline",
-    "capturedAt": "2026-04-07T01:19:28.442Z",
+    "capturedAt": "2026-04-07T17:23:14.147Z",
+    "errors": []
+  },
+  "f666688c-27a5-497a-9ac9-7ffa907364f6": {
+    "scenarioName": "BikeStationPopup - Available",
+    "capturedAt": "2026-04-07T17:23:19.071Z",
+    "errors": []
+  },
+  "df3b9549-c82a-4f5d-8b44-e169b4f84121": {
+    "scenarioName": "BikeStationPopup - Low",
+    "capturedAt": "2026-04-07T17:23:23.372Z",
+    "errors": []
+  },
+  "64f43ebf-c132-487e-83cf-cb934e9e5230": {
+    "scenarioName": "BikeStationPopup - Empty",
+    "capturedAt": "2026-04-07T17:23:27.587Z",
+    "errors": []
+  },
+  "05c296a0-005f-4075-aa5a-0245c9052d49": {
+    "scenarioName": "BikeStationPopup - Offline",
+    "capturedAt": "2026-04-07T17:23:31.821Z",
     "errors": []
   }
 }

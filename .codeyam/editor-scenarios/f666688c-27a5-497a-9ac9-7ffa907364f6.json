@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "BikeStationPopup - Available",
+    "description": null,
+    "componentName": "BikeStationPopup",
+    "componentPath": "app/components/BikeStationPopup.tsx",
+    "url": "/isolated-components/BikeStationPopup?s=Available",
+    "type": null,
+    "screenshotPath": "screenshots/f666688c-27a5-497a-9ac9-7ffa907364f6.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/f666688c-27a5-497a-9ac9-7ffa907364f6.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-07T17:23:19.176Z",
+    "updatedAt": "2026-04-07T17:23:19.176Z"
+  }
+}
