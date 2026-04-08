@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "FlightRouteSection - EarlyFlight",
+    "description": null,
+    "componentName": "FlightRouteSection",
+    "componentPath": "app/components/FlightRouteSection.tsx",
+    "url": "/isolated-components/FlightRouteSection?s=EarlyFlight",
+    "type": null,
+    "screenshotPath": "screenshots/4b223731-3e5a-4368-bd40-4c584743b764.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/4b223731-3e5a-4368-bd40-4c584743b764.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-08T01:06:55.961Z",
+    "updatedAt": "2026-04-08T01:06:55.961Z"
+  }
+}

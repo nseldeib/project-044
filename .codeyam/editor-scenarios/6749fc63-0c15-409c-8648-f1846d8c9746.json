@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "FlightRouteSection - NearLanding",
+    "description": null,
+    "componentName": "FlightRouteSection",
+    "componentPath": "app/components/FlightRouteSection.tsx",
+    "url": "/isolated-components/FlightRouteSection?s=NearLanding",
+    "type": null,
+    "screenshotPath": "screenshots/6749fc63-0c15-409c-8648-f1846d8c9746.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/6749fc63-0c15-409c-8648-f1846d8c9746.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-08T01:07:04.752Z",
+    "updatedAt": "2026-04-08T01:07:04.752Z"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "FlightRouteSection - MidFlight",
+    "description": null,
+    "componentName": "FlightRouteSection",
+    "componentPath": "app/components/FlightRouteSection.tsx",
+    "url": "/isolated-components/FlightRouteSection?s=MidFlight",
+    "type": null,
+    "screenshotPath": "screenshots/d8dd14a7-ef9f-403a-8659-211620533d5f.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/d8dd14a7-ef9f-403a-8659-211620533d5f.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-08T01:07:00.381Z",
+    "updatedAt": "2026-04-08T01:07:00.381Z"
+  }
+}

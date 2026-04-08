@@ -7,6 +7,7 @@ import {
   formatAltitude,
   formatSpeed,
   formatDelay,
+  getFlightKpis,
 } from './formatters';
 
 describe('timeAgo', () => {
@@ -178,5 +179,37 @@ describe('formatDelay', () => {
 
   it('formats large delay', () => {
     expect(formatDelay(120)).toBe('+120 min');
+  });
+});
+
+describe('getFlightKpis', () => {
+  it('returns an array of 3 KPI items', () => {
+    const kpis = getFlightKpis(35000, 487, 270);
+    expect(kpis).toHaveLength(3);
+  });
+
+  it('first KPI is ALTITUDE with formatted value', () => {
+    const kpis = getFlightKpis(35000, 487, 270);
+    expect(kpis[0].label).toBe('ALTITUDE');
+    expect(kpis[0].value).toBe(formatAltitude(35000));
+  });
+
+  it('second KPI is SPEED with formatted value', () => {
+    const kpis = getFlightKpis(35000, 487, 270);
+    expect(kpis[1].label).toBe('SPEED');
+    expect(kpis[1].value).toBe(formatSpeed(487));
+  });
+
+  it('third KPI is HEADING with degree symbol', () => {
+    const kpis = getFlightKpis(35000, 487, 270);
+    expect(kpis[2].label).toBe('HEADING');
+    expect(kpis[2].value).toBe('270°');
+  });
+
+  it('handles zero altitude and speed', () => {
+    const kpis = getFlightKpis(0, 0, 0);
+    expect(kpis[0].value).toBe(formatAltitude(0));
+    expect(kpis[1].value).toBe(formatSpeed(0));
+    expect(kpis[2].value).toBe('0°');
   });
 });

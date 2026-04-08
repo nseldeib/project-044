@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "FlightKpiGrid - Descending",
+    "description": null,
+    "componentName": "FlightKpiGrid",
+    "componentPath": "app/components/FlightKpiGrid.tsx",
+    "url": "/isolated-components/FlightKpiGrid?s=Descending",
+    "type": null,
+    "screenshotPath": "screenshots/4d3d03f2-82d3-4d4b-8de4-1960ea6e5c7a.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/4d3d03f2-82d3-4d4b-8de4-1960ea6e5c7a.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-08T01:07:14.777Z",
+    "updatedAt": "2026-04-08T01:07:14.777Z"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "FlightPanelHeader - LongCallsign",
+    "description": null,
+    "componentName": "FlightPanelHeader",
+    "componentPath": "app/components/FlightPanelHeader.tsx",
+    "url": "/isolated-components/FlightPanelHeader?s=LongCallsign",
+    "type": null,
+    "screenshotPath": "screenshots/71e426e9-e2bc-4419-a23b-1ccfb1b94924.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/71e426e9-e2bc-4419-a23b-1ccfb1b94924.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-08T01:06:50.731Z",
+    "updatedAt": "2026-04-08T01:06:50.731Z"
+  }
+}

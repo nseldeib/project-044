@@ -888,120 +888,228 @@
           "title": "merges matching info and status records",
           "fullName": "mergeGbfsFeeds > merges matching info and status records",
           "status": "passed",
-          "duration": 2.7837920000000054
+          "duration": 44.3927079999994
         },
         {
           "title": "converts last_reported unix timestamp to Date",
           "fullName": "mergeGbfsFeeds > converts last_reported unix timestamp to Date",
           "status": "passed",
-          "duration": 0.41816599999998516
+          "duration": 39.08666699999958
         },
         {
           "title": "excludes status entries with no matching info",
           "fullName": "mergeGbfsFeeds > excludes status entries with no matching info",
           "status": "passed",
-          "duration": 0.19908400000002757
+          "duration": 0.6510000000016589
         },
         {
           "title": "handles is_installed=0 as false",
           "fullName": "mergeGbfsFeeds > handles is_installed=0 as false",
           "status": "passed",
-          "duration": 0.10450000000003001
+          "duration": 0.4718749999992724
         },
         {
           "title": "handles is_renting=0 as false",
           "fullName": "mergeGbfsFeeds > handles is_renting=0 as false",
           "status": "passed",
-          "duration": 0.09079200000002174
+          "duration": 0.49029200000040873
         },
         {
           "title": "returns empty array for empty inputs",
           "fullName": "mergeGbfsFeeds > returns empty array for empty inputs",
           "status": "passed",
-          "duration": 0.16670799999997143
+          "duration": 0.5972919999985606
         },
         {
           "title": "merges multiple stations correctly",
           "fullName": "mergeGbfsFeeds > merges multiple stations correctly",
           "status": "passed",
-          "duration": 0.20800000000002683
+          "duration": 112.88016599999901
         },
         {
           "title": "returns true when lastUpdated is null",
           "fullName": "isDataStale > returns true when lastUpdated is null",
           "status": "passed",
-          "duration": 0.09895900000003621
+          "duration": 0.5038330000006681
         },
         {
           "title": "returns true when data is older than interval",
           "fullName": "isDataStale > returns true when data is older than interval",
           "status": "passed",
-          "duration": 0.27233300000000327
+          "duration": 18.08075000000099
         },
         {
           "title": "returns false when data is fresher than interval",
           "fullName": "isDataStale > returns false when data is fresher than interval",
           "status": "passed",
-          "duration": 0.11166599999995697
+          "duration": 0.6558749999985594
         },
         {
           "title": "returns false exactly at boundary (age equals interval — not yet stale)",
           "fullName": "isDataStale > returns false exactly at boundary (age equals interval — not yet stale)",
           "status": "passed",
-          "duration": 0.07325000000003001
+          "duration": 0.17316699999901175
         },
         {
           "title": "returns zeros for empty stations list",
           "fullName": "computeBikesSummary > returns zeros for empty stations list",
           "status": "passed",
-          "duration": 0.3275830000000042
+          "duration": 2.0128750000003492
         },
         {
           "title": "sums bikes and docks correctly",
           "fullName": "computeBikesSummary > sums bikes and docks correctly",
           "status": "passed",
-          "duration": 0.14400000000000546
+          "duration": 1.0130840000001626
         },
         {
           "title": "counts stationsLow for bikesAvailable < 3",
           "fullName": "computeBikesSummary > counts stationsLow for bikesAvailable < 3",
           "status": "passed",
-          "duration": 0.0684999999999718
+          "duration": 0.14662499999940337
         },
         {
           "title": "counts stationsEmpty only for renting stations with 0 bikes",
           "fullName": "computeBikesSummary > counts stationsEmpty only for renting stations with 0 bikes",
           "status": "passed",
-          "duration": 0.06533300000000963
+          "duration": 0.15212500000052387
         },
         {
           "title": "returns OFFLINE when not installed",
           "fullName": "getBikeStationStatus > returns OFFLINE when not installed",
           "status": "passed",
-          "duration": 0.07866699999999582
+          "duration": 0.30129200000010314
         },
         {
           "title": "returns NOT RENTING when installed but not renting",
           "fullName": "getBikeStationStatus > returns NOT RENTING when installed but not renting",
           "status": "passed",
-          "duration": 0.05620800000002646
+          "duration": 0.10525000000052387
         },
         {
           "title": "returns OPERATIONAL when installed and renting",
           "fullName": "getBikeStationStatus > returns OPERATIONAL when installed and renting",
           "status": "passed",
-          "duration": 0.053832999999997355
+          "duration": 0.0952499999984866
         },
         {
           "title": "prioritizes OFFLINE over NOT RENTING",
           "fullName": "getBikeStationStatus > prioritizes OFFLINE over NOT RENTING",
           "status": "passed",
-          "duration": 0.05366700000001856
+          "duration": 0.09354100000018661
+        },
+        {
+          "title": "returns gray when station is not installed",
+          "fullName": "getMarkerColor > returns gray when station is not installed",
+          "status": "passed",
+          "duration": 0.9753330000003189
+        },
+        {
+          "title": "returns gray when station is not renting",
+          "fullName": "getMarkerColor > returns gray when station is not renting",
+          "status": "passed",
+          "duration": 2.9457910000000993
+        },
+        {
+          "title": "returns green when availability > 20%",
+          "fullName": "getMarkerColor > returns green when availability > 20%",
+          "status": "passed",
+          "duration": 0.29470799999944575
+        },
+        {
+          "title": "returns amber when availability is between 10% and 20%",
+          "fullName": "getMarkerColor > returns amber when availability is between 10% and 20%",
+          "status": "passed",
+          "duration": 0.8074590000014723
+        },
+        {
+          "title": "returns red when availability is <= 10%",
+          "fullName": "getMarkerColor > returns red when availability is <= 10%",
+          "status": "passed",
+          "duration": 0.712083000000348
+        },
+        {
+          "title": "returns red when availability is exactly 10%",
+          "fullName": "getMarkerColor > returns red when availability is exactly 10%",
+          "status": "passed",
+          "duration": 64.62637499999983
+        },
+        {
+          "title": "returns red when capacity is zero (guards against division by zero)",
+          "fullName": "getMarkerColor > returns red when capacity is zero (guards against division by zero)",
+          "status": "passed",
+          "duration": 1.6216659999990952
+        },
+        {
+          "title": "returns green glow for green marker",
+          "fullName": "getMarkerGlowColor > returns green glow for green marker",
+          "status": "passed",
+          "duration": 0.21466599999985192
+        },
+        {
+          "title": "returns amber glow for amber marker",
+          "fullName": "getMarkerGlowColor > returns amber glow for amber marker",
+          "status": "passed",
+          "duration": 0.09483299999919836
+        },
+        {
+          "title": "returns red glow for red marker",
+          "fullName": "getMarkerGlowColor > returns red glow for red marker",
+          "status": "passed",
+          "duration": 0.4343749999989086
+        },
+        {
+          "title": "returns neutral glow for gray/unknown color",
+          "fullName": "getMarkerGlowColor > returns neutral glow for gray/unknown color",
+          "status": "passed",
+          "duration": 0.3956670000006852
+        },
+        {
+          "title": "returns neutral glow for unrecognized color",
+          "fullName": "getMarkerGlowColor > returns neutral glow for unrecognized color",
+          "status": "passed",
+          "duration": 0.10904200000004494
+        },
+        {
+          "title": "returns 14 at zoom 12 (city view)",
+          "fullName": "getMarkerSize > returns 14 at zoom 12 (city view)",
+          "status": "passed",
+          "duration": 0.14291600000069593
+        },
+        {
+          "title": "returns 14 at zoom 13 (boundary)",
+          "fullName": "getMarkerSize > returns 14 at zoom 13 (boundary)",
+          "status": "passed",
+          "duration": 0.0959579999998823
+        },
+        {
+          "title": "returns 20 at zoom 14",
+          "fullName": "getMarkerSize > returns 20 at zoom 14",
+          "status": "passed",
+          "duration": 0.2196670000012091
+        },
+        {
+          "title": "returns 20 at zoom 15 (boundary)",
+          "fullName": "getMarkerSize > returns 20 at zoom 15 (boundary)",
+          "status": "passed",
+          "duration": 0.13425000000097498
+        },
+        {
+          "title": "returns 26 at zoom 16 (street view)",
+          "fullName": "getMarkerSize > returns 26 at zoom 16 (street view)",
+          "status": "passed",
+          "duration": 0.1572089999990567
+        },
+        {
+          "title": "returns 26 at zoom 18 (max zoom)",
+          "fullName": "getMarkerSize > returns 26 at zoom 18 (max zoom)",
+          "status": "passed",
+          "duration": 0.0880829999987327
         }
       ],
-      "sourceHash": "e70ce3f2f8010b68aa3a63f43e1588d6cbdec9b4c1614dd2c73badde9e710b30",
-      "testHash": "a5f45e830fa4f4800438902f41bfd53d03124888b8418157c0d77147fc534666",
-      "timestamp": "2026-04-07T01:49:25.864Z"
+      "sourceHash": "93e9e0ab1148f9384cf647f6087b2f534f69ec56b76b6d8952324f4326b53c1b",
+      "testHash": "091b9853bb2c0a505a3a4edd6c81d28cce53e40da7475e1b6f24f0c5382962fe",
+      "timestamp": "2026-04-07T17:50:25.861Z"
     },
     "app/lib/opensky.test.ts": {
       "testFilePath": "app/lib/opensky.test.ts",

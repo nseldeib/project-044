@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "FlightPanelHeader - Delayed",
+    "description": null,
+    "componentName": "FlightPanelHeader",
+    "componentPath": "app/components/FlightPanelHeader.tsx",
+    "url": "/isolated-components/FlightPanelHeader?s=Delayed",
+    "type": null,
+    "screenshotPath": "screenshots/db2d577c-82dc-46b2-be28-a4b8a27b272c.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/db2d577c-82dc-46b2-be28-a4b8a27b272c.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-08T01:06:46.240Z",
+    "updatedAt": "2026-04-08T01:06:46.240Z"
+  }
+}

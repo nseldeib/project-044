@@ -2059,6 +2059,467 @@
           "status": "untracked"
         }
       ]
+    },
+    {
+      "date": "2026-04-08",
+      "time": "2026-04-08T01:11:18.528Z",
+      "title": "Flight Track Panel",
+      "type": "feature",
+      "description": "Added a cinematic click-to-track flight panel to the Air Traffic map. Clicking any flight marker triggers a slide-in detail panel showing the callsign with amber glow, animated live status badge, route arc with progress indicator, KPI grid (altitude/speed/heading), and DMS coordinates. Selected markers display a tactical reticle crosshair; all other markers dim to 10% opacity. Extracted 5 sub-components (FlightPanelHeader, FlightRouteSection, FlightKpiGrid, FlightPositionRow, FlightDetailPanel) and 2 pure functions (hasRouteData, getFlightKpis) with 10 new tests.",
+      "scenarios": [
+        "FlightPanelHeader - EnRoute",
+        "FlightPanelHeader - Delayed",
+        "FlightPanelHeader - LongCallsign",
+        "FlightRouteSection - EarlyFlight",
+        "FlightRouteSection - MidFlight",
+        "FlightRouteSection - NearLanding",
+        "FlightKpiGrid - Cruising",
+        "FlightKpiGrid - Descending",
+        "FlightKpiGrid - TakingOff",
+        "FlightKpiGrid - Zeroes",
+        "FlightPositionRow - NorthAtlantic",
+        "FlightPositionRow - NearJFK",
+        "FlightPositionRow - SouthernHemisphere",
+        "FlightDetailPanel - TransatlanticEnRoute",
+        "FlightDetailPanel - DomesticDelayed",
+        "FlightDetailPanel - NoRouteData",
+        "FlightDetailPanel - NearLanding"
+      ],
+      "screenshot": null,
+      "scenarioScreenshots": [
+        {
+          "name": "FlightPanelHeader - EnRoute",
+          "path": "screenshots/2026-04-08T01-11-18_FlightPanelHeader_-_EnRoute.png",
+          "componentName": "FlightPanelHeader",
+          "url": "/isolated-components/FlightPanelHeader?s=EnRoute"
+        },
+        {
+          "name": "FlightPanelHeader - Delayed",
+          "path": "screenshots/2026-04-08T01-11-18_FlightPanelHeader_-_Delayed.png",
+          "componentName": "FlightPanelHeader",
+          "url": "/isolated-components/FlightPanelHeader?s=Delayed"
+        },
+        {
+          "name": "FlightPanelHeader - LongCallsign",
+          "path": "screenshots/2026-04-08T01-11-18_FlightPanelHeader_-_LongCallsign.png",
+          "componentName": "FlightPanelHeader",
+          "url": "/isolated-components/FlightPanelHeader?s=LongCallsign"
+        },
+        {
+          "name": "FlightRouteSection - EarlyFlight",
+          "path": "screenshots/2026-04-08T01-11-18_FlightRouteSection_-_EarlyFlight.png",
+          "componentName": "FlightRouteSection",
+          "url": "/isolated-components/FlightRouteSection?s=EarlyFlight"
+        },
+        {
+          "name": "FlightRouteSection - MidFlight",
+          "path": "screenshots/2026-04-08T01-11-18_FlightRouteSection_-_MidFlight.png",
+          "componentName": "FlightRouteSection",
+          "url": "/isolated-components/FlightRouteSection?s=MidFlight"
+        },
+        {
+          "name": "FlightRouteSection - NearLanding",
+          "path": "screenshots/2026-04-08T01-11-18_FlightRouteSection_-_NearLanding.png",
+          "componentName": "FlightRouteSection",
+          "url": "/isolated-components/FlightRouteSection?s=NearLanding"
+        },
+        {
+          "name": "FlightKpiGrid - Cruising",
+          "path": "screenshots/2026-04-08T01-11-18_FlightKpiGrid_-_Cruising.png",
+          "componentName": "FlightKpiGrid",
+          "url": "/isolated-components/FlightKpiGrid?s=Cruising"
+        },
+        {
+          "name": "FlightKpiGrid - Descending",
+          "path": "screenshots/2026-04-08T01-11-18_FlightKpiGrid_-_Descending.png",
+          "componentName": "FlightKpiGrid",
+          "url": "/isolated-components/FlightKpiGrid?s=Descending"
+        },
+        {
+          "name": "FlightKpiGrid - TakingOff",
+          "path": "screenshots/2026-04-08T01-11-18_FlightKpiGrid_-_TakingOff.png",
+          "componentName": "FlightKpiGrid",
+          "url": "/isolated-components/FlightKpiGrid?s=TakingOff"
+        },
+        {
+          "name": "FlightKpiGrid - Zeroes",
+          "path": "screenshots/2026-04-08T01-11-18_FlightKpiGrid_-_Zeroes.png",
+          "componentName": "FlightKpiGrid",
+          "url": "/isolated-components/FlightKpiGrid?s=Zeroes"
+        },
+        {
+          "name": "FlightPositionRow - NorthAtlantic",
+          "path": "screenshots/2026-04-08T01-11-18_FlightPositionRow_-_NorthAtlantic.png",
+          "componentName": "FlightPositionRow",
+          "url": "/isolated-components/FlightPositionRow?s=NorthAtlantic"
+        },
+        {
+          "name": "FlightPositionRow - NearJFK",
+          "path": "screenshots/2026-04-08T01-11-18_FlightPositionRow_-_NearJFK.png",
+          "componentName": "FlightPositionRow",
+          "url": "/isolated-components/FlightPositionRow?s=NearJFK"
+        },
+        {
+          "name": "FlightPositionRow - SouthernHemisphere",
+          "path": "screenshots/2026-04-08T01-11-18_FlightPositionRow_-_SouthernHemisphere.png",
+          "componentName": "FlightPositionRow",
+          "url": "/isolated-components/FlightPositionRow?s=SouthernHemisphere"
+        },
+        {
+          "name": "FlightDetailPanel - TransatlanticEnRoute",
+          "path": "screenshots/2026-04-08T01-11-18_FlightDetailPanel_-_TransatlanticEnRoute.png",
+          "componentName": "FlightDetailPanel",
+          "url": "/isolated-components/FlightDetailPanel?s=TransatlanticEnRoute"
+        },
+        {
+          "name": "FlightDetailPanel - DomesticDelayed",
+          "path": "screenshots/2026-04-08T01-11-18_FlightDetailPanel_-_DomesticDelayed.png",
+          "componentName": "FlightDetailPanel",
+          "url": "/isolated-components/FlightDetailPanel?s=DomesticDelayed"
+        },
+        {
+          "name": "FlightDetailPanel - NoRouteData",
+          "path": "screenshots/2026-04-08T01-11-18_FlightDetailPanel_-_NoRouteData.png",
+          "componentName": "FlightDetailPanel",
+          "url": "/isolated-components/FlightDetailPanel?s=NoRouteData"
+        },
+        {
+          "name": "FlightDetailPanel - NearLanding",
+          "path": "screenshots/2026-04-08T01-11-18_FlightDetailPanel_-_NearLanding.png",
+          "componentName": "FlightDetailPanel",
+          "url": "/isolated-components/FlightDetailPanel?s=NearLanding"
+        }
+      ],
+      "commitSha": "04eb117",
+      "commitMessage": "feat: Flight Track Panel",
+      "entityChangeStatus": {
+        "FlightMarker": {
+          "status": "edited"
+        },
+        "FlightPanelHeader": {
+          "status": "new"
+        },
+        "FlightRouteSection": {
+          "status": "new"
+        },
+        "FlightKpiGrid": {
+          "status": "new"
+        },
+        "FlightPositionRow": {
+          "status": "new"
+        },
+        "FlightDetailPanel": {
+          "status": "new"
+        }
+      },
+      "featureName": "Flight Track Panel",
+      "userPrompt": "Click-to-track a flight: select any aircraft on the flight map and get a detail panel showing route arc, altitude/speed data, live status, airline info, and origin/destination. Creates an interactive moment for demos.",
+      "modifiedFiles": [
+        {
+          "path": ".codeyam/config.json",
+          "status": "modified"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/39d9ddb4-0d6f-4236-8370-b4485f973657.json",
+          "status": "modified"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/4fc43e63-2d03-4b67-9687-3088187a6a91.json",
+          "status": "modified"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/bf8f39ca-99cb-4e3f-9ab3-fec4555b44a6.json",
+          "status": "modified"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/client-errors.json",
+          "status": "modified"
+        },
+        {
+          "path": ".codeyam/editor-task-tracking.json",
+          "status": "modified"
+        },
+        {
+          "path": ".codeyam/glossary.json",
+          "status": "modified"
+        },
+        {
+          "path": ".codeyam/test-results.json",
+          "status": "modified"
+        },
+        {
+          "path": "app/components/FlightMap.tsx",
+          "status": "modified"
+        },
+        {
+          "path": "app/components/FlightMarker.tsx",
+          "status": "modified"
+        },
+        {
+          "path": "app/globals.css",
+          "status": "modified"
+        },
+        {
+          "path": "app/lib/calculations.test.ts",
+          "status": "modified"
+        },
+        {
+          "path": "app/lib/calculations.ts",
+          "status": "modified"
+        },
+        {
+          "path": "app/lib/formatters.test.ts",
+          "status": "modified"
+        },
+        {
+          "path": "app/lib/formatters.ts",
+          "status": "modified"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/2706111e-0fdb-4081-9af4-d1ef70f48d78.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/31af68e9-fbc4-4a70-bd63-469db11b7954.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/3a1d0f4c-1196-4ce4-aa44-fe7bafba1c2a.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/45b1dfa5-1785-412f-920a-bb2a0127b505.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/4b223731-3e5a-4368-bd40-4c584743b764.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/4d3d03f2-82d3-4d4b-8de4-1960ea6e5c7a.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/561b3a6a-4058-4509-8b98-8ba4b4276f61.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/65b39983-dc0d-43f6-9961-e2ac7f72ac76.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/6749fc63-0c15-409c-8648-f1846d8c9746.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/693ee9f9-b16b-48ba-b1e6-5e946959bd88.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/71e426e9-e2bc-4419-a23b-1ccfb1b94924.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/b3c3a16a-eb22-4186-8479-032f26922969.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/bee62407-9cae-4540-9864-59cee01338f6.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/ca1e78da-22f5-436e-b21a-2f1cf459756c.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/cedc81fc-d5ce-4fa5-a287-8e02b157a0d8.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/d8dd14a7-ef9f-403a-8659-211620533d5f.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/db2d577c-82dc-46b2-be28-a4b8a27b272c.json",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/2706111e-0fdb-4081-9af4-d1ef70f48d78.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/31af68e9-fbc4-4a70-bd63-469db11b7954.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/3a1d0f4c-1196-4ce4-aa44-fe7bafba1c2a.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/45b1dfa5-1785-412f-920a-bb2a0127b505.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/4b223731-3e5a-4368-bd40-4c584743b764.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/4d3d03f2-82d3-4d4b-8de4-1960ea6e5c7a.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/561b3a6a-4058-4509-8b98-8ba4b4276f61.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/65b39983-dc0d-43f6-9961-e2ac7f72ac76.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/6749fc63-0c15-409c-8648-f1846d8c9746.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/693ee9f9-b16b-48ba-b1e6-5e946959bd88.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/71e426e9-e2bc-4419-a23b-1ccfb1b94924.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/b3c3a16a-eb22-4186-8479-032f26922969.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/bee62407-9cae-4540-9864-59cee01338f6.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/ca1e78da-22f5-436e-b21a-2f1cf459756c.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/cedc81fc-d5ce-4fa5-a287-8e02b157a0d8.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/d8dd14a7-ef9f-403a-8659-211620533d5f.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/editor-scenarios/screenshots/db2d577c-82dc-46b2-be28-a4b8a27b272c.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-08T01-11-18_FlightDetailPanel_-_DomesticDelayed.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-08T01-11-18_FlightDetailPanel_-_NearLanding.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-08T01-11-18_FlightDetailPanel_-_NoRouteData.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-08T01-11-18_FlightDetailPanel_-_TransatlanticEnRoute.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-08T01-11-18_FlightKpiGrid_-_Cruising.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-08T01-11-18_FlightKpiGrid_-_Descending.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-08T01-11-18_FlightKpiGrid_-_TakingOff.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-08T01-11-18_FlightKpiGrid_-_Zeroes.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-08T01-11-18_FlightPanelHeader_-_Delayed.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-08T01-11-18_FlightPanelHeader_-_EnRoute.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-08T01-11-18_FlightPanelHeader_-_LongCallsign.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-08T01-11-18_FlightPositionRow_-_NearJFK.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-08T01-11-18_FlightPositionRow_-_NorthAtlantic.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-08T01-11-18_FlightPositionRow_-_SouthernHemisphere.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-08T01-11-18_FlightRouteSection_-_EarlyFlight.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-08T01-11-18_FlightRouteSection_-_MidFlight.png",
+          "status": "untracked"
+        },
+        {
+          "path": ".codeyam/journal/screenshots/2026-04-08T01-11-18_FlightRouteSection_-_NearLanding.png",
+          "status": "untracked"
+        },
+        {
+          "path": "app/components/FlightDetailPanel.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/components/FlightKpiGrid.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/components/FlightPanelHeader.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/components/FlightPositionRow.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/components/FlightRouteSection.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/isolated-components/FlightDetailPanel/page.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/isolated-components/FlightKpiGrid/page.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/isolated-components/FlightPanelHeader/page.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/isolated-components/FlightPositionRow/page.tsx",
+          "status": "untracked"
+        },
+        {
+          "path": "app/isolated-components/FlightRouteSection/page.tsx",
+          "status": "untracked"
+        }
+      ]
     }
   ]
 }

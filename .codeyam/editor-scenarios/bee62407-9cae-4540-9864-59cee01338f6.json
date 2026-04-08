@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "FlightKpiGrid - Zeroes",
+    "description": null,
+    "componentName": "FlightKpiGrid",
+    "componentPath": "app/components/FlightKpiGrid.tsx",
+    "url": "/isolated-components/FlightKpiGrid?s=Zeroes",
+    "type": null,
+    "screenshotPath": "screenshots/bee62407-9cae-4540-9864-59cee01338f6.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/bee62407-9cae-4540-9864-59cee01338f6.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-08T01:07:23.758Z",
+    "updatedAt": "2026-04-08T01:07:23.758Z"
+  }
+}

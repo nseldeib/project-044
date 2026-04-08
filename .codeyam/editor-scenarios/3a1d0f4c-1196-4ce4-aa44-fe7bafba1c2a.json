@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "FlightDetailPanel - NoRouteData",
+    "description": null,
+    "componentName": "FlightDetailPanel",
+    "componentPath": "app/components/FlightDetailPanel.tsx",
+    "url": "/isolated-components/FlightDetailPanel?s=NoRouteData",
+    "type": null,
+    "screenshotPath": "screenshots/3a1d0f4c-1196-4ce4-aa44-fe7bafba1c2a.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/3a1d0f4c-1196-4ce4-aa44-fe7bafba1c2a.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-08T01:08:06.589Z",
+    "updatedAt": "2026-04-08T01:08:06.589Z"
+  }
+}

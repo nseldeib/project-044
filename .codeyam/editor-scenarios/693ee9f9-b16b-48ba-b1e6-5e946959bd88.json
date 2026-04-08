@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "FlightKpiGrid - Cruising",
+    "description": null,
+    "componentName": "FlightKpiGrid",
+    "componentPath": "app/components/FlightKpiGrid.tsx",
+    "url": "/isolated-components/FlightKpiGrid?s=Cruising",
+    "type": null,
+    "screenshotPath": "screenshots/693ee9f9-b16b-48ba-b1e6-5e946959bd88.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/693ee9f9-b16b-48ba-b1e6-5e946959bd88.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-08T01:07:10.182Z",
+    "updatedAt": "2026-04-08T01:07:10.182Z"
+  }
+}

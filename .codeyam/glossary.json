@@ -1065,5 +1065,103 @@
     "tags": ["bike", "map", "popup", "component"],
     "feature": "Bike Icon Markers",
     "createdAt": "2026-04-07T17:00:00.000Z"
+  },
+  {
+    "name": "hasRouteData",
+    "filePath": "app/lib/calculations.ts",
+    "description": "Returns true if both origin and destination airports have valid lat coordinates, indicating route data is available for progress calculations.",
+    "parameters": [
+      { "name": "origin", "type": "{ lat?: number | null }" },
+      { "name": "destination", "type": "{ lat?: number | null }" }
+    ],
+    "returnType": "boolean",
+    "tags": ["flight", "route", "validation"],
+    "testFile": "app/lib/calculations.test.ts",
+    "feature": "Flight Track Panel",
+    "createdAt": "2026-04-07T18:00:00.000Z"
+  },
+  {
+    "name": "getFlightKpis",
+    "filePath": "app/lib/formatters.ts",
+    "description": "Returns an array of formatted KPI objects (label + value) for altitude, ground speed, and heading — used to drive the FlightKpiGrid component.",
+    "parameters": [
+      { "name": "altitude", "type": "number" },
+      { "name": "groundSpeed", "type": "number" },
+      { "name": "heading", "type": "number" }
+    ],
+    "returnType": "{ label: string; value: string }[]",
+    "tags": ["flight", "formatting", "kpi"],
+    "testFile": "app/lib/formatters.test.ts",
+    "feature": "Flight Track Panel",
+    "createdAt": "2026-04-07T18:00:00.000Z"
+  },
+  {
+    "name": "FlightDetailPanel",
+    "filePath": "app/components/FlightDetailPanel.tsx",
+    "description": "Slide-in right panel showing full detail for a selected flight. Computes route progress and conditionally renders route section. Composed of FlightPanelHeader, FlightRouteSection, FlightKpiGrid, FlightPositionRow.",
+    "parameters": [
+      { "name": "flight", "type": "Flight" },
+      { "name": "onClose", "type": "() => void" }
+    ],
+    "returnType": "JSX.Element",
+    "tags": ["flight", "panel", "component", "map"],
+    "feature": "Flight Track Panel",
+    "createdAt": "2026-04-07T18:00:00.000Z"
+  },
+  {
+    "name": "FlightPanelHeader",
+    "filePath": "app/components/FlightPanelHeader.tsx",
+    "description": "Header section of the flight detail panel. Displays callsign (amber glow), airline, animated live status badge, and close button.",
+    "parameters": [
+      { "name": "callsign", "type": "string" },
+      { "name": "airline", "type": "string" },
+      { "name": "status", "type": "string" },
+      { "name": "onClose", "type": "() => void" }
+    ],
+    "returnType": "JSX.Element",
+    "tags": ["flight", "panel", "header", "component"],
+    "feature": "Flight Track Panel",
+    "createdAt": "2026-04-07T18:00:00.000Z"
+  },
+  {
+    "name": "FlightRouteSection",
+    "filePath": "app/components/FlightRouteSection.tsx",
+    "description": "Displays origin/destination IATA codes with amber arrow separator and a RouteProgressArc SVG. Only rendered when route data exists.",
+    "parameters": [
+      { "name": "origin", "type": "Airport" },
+      { "name": "destination", "type": "Airport" },
+      { "name": "progress", "type": "number" }
+    ],
+    "returnType": "JSX.Element",
+    "tags": ["flight", "route", "panel", "component"],
+    "feature": "Flight Track Panel",
+    "createdAt": "2026-04-07T18:00:00.000Z"
+  },
+  {
+    "name": "FlightKpiGrid",
+    "filePath": "app/components/FlightKpiGrid.tsx",
+    "description": "3-column grid of KPI cards showing altitude, speed, and heading. Uses getFlightKpis() for formatted values with amber glow styling.",
+    "parameters": [
+      { "name": "altitude", "type": "number" },
+      { "name": "groundSpeed", "type": "number" },
+      { "name": "heading", "type": "number" }
+    ],
+    "returnType": "JSX.Element",
+    "tags": ["flight", "kpi", "panel", "component"],
+    "feature": "Flight Track Panel",
+    "createdAt": "2026-04-07T18:00:00.000Z"
+  },
+  {
+    "name": "FlightPositionRow",
+    "filePath": "app/components/FlightPositionRow.tsx",
+    "description": "Displays the current DMS (degrees-minutes-seconds) coordinates of a flight in a styled blue monospace readout.",
+    "parameters": [
+      { "name": "lat", "type": "number" },
+      { "name": "lon", "type": "number" }
+    ],
+    "returnType": "JSX.Element",
+    "tags": ["flight", "position", "panel", "component"],
+    "feature": "Flight Track Panel",
+    "createdAt": "2026-04-07T18:00:00.000Z"
   }
 ]

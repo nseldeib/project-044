@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "FlightPositionRow - SouthernHemisphere",
+    "description": null,
+    "componentName": "FlightPositionRow",
+    "componentPath": "app/components/FlightPositionRow.tsx",
+    "url": "/isolated-components/FlightPositionRow?s=SouthernHemisphere",
+    "type": null,
+    "screenshotPath": "screenshots/561b3a6a-4058-4509-8b98-8ba4b4276f61.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/561b3a6a-4058-4509-8b98-8ba4b4276f61.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-08T01:07:37.822Z",
+    "updatedAt": "2026-04-08T01:07:37.822Z"
+  }
+}

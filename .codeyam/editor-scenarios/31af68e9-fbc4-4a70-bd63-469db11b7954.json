@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "FlightDetailPanel - DomesticDelayed",
+    "description": null,
+    "componentName": "FlightDetailPanel",
+    "componentPath": "app/components/FlightDetailPanel.tsx",
+    "url": "/isolated-components/FlightDetailPanel?s=DomesticDelayed",
+    "type": null,
+    "screenshotPath": "screenshots/31af68e9-fbc4-4a70-bd63-469db11b7954.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/31af68e9-fbc4-4a70-bd63-469db11b7954.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-08T01:07:57.000Z",
+    "updatedAt": "2026-04-08T01:07:57.000Z"
+  }
+}

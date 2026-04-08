@@ -60,6 +60,16 @@ export function haversineKm(
 }
 
 /**
+ * Returns true when both origin and destination have non-zero lat coordinates.
+ */
+export function hasRouteData(
+  origin: { lat?: number | null },
+  destination: { lat?: number | null },
+): boolean {
+  return !!(origin?.lat && destination?.lat);
+}
+
+/**
  * Returns "40.6413°N, 73.7781°W" from decimal degrees.
  */
 export function latLonToString(lat: number, lon: number): string {

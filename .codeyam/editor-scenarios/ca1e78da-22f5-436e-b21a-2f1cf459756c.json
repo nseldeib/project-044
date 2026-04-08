@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "FlightDetailPanel - TransatlanticEnRoute",
+    "description": null,
+    "componentName": "FlightDetailPanel",
+    "componentPath": "app/components/FlightDetailPanel.tsx",
+    "url": "/isolated-components/FlightDetailPanel?s=TransatlanticEnRoute",
+    "type": null,
+    "screenshotPath": "screenshots/ca1e78da-22f5-436e-b21a-2f1cf459756c.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/ca1e78da-22f5-436e-b21a-2f1cf459756c.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-08T01:07:47.330Z",
+    "updatedAt": "2026-04-08T01:07:47.330Z"
+  }
+}

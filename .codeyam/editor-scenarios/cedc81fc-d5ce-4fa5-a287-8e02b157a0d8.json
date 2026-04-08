@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "FlightPanelHeader - EnRoute",
+    "description": null,
+    "componentName": "FlightPanelHeader",
+    "componentPath": "app/components/FlightPanelHeader.tsx",
+    "url": "/isolated-components/FlightPanelHeader?s=EnRoute",
+    "type": null,
+    "screenshotPath": "screenshots/cedc81fc-d5ce-4fa5-a287-8e02b157a0d8.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/cedc81fc-d5ce-4fa5-a287-8e02b157a0d8.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-08T01:06:41.775Z",
+    "updatedAt": "2026-04-08T01:06:41.775Z"
+  }
+}

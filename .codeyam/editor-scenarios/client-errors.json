@@ -353,5 +353,90 @@
     "scenarioName": "BikeStationPopup - Offline",
     "capturedAt": "2026-04-07T17:23:31.821Z",
     "errors": []
+  },
+  "cedc81fc-d5ce-4fa5-a287-8e02b157a0d8": {
+    "scenarioName": "FlightPanelHeader - EnRoute",
+    "capturedAt": "2026-04-08T01:06:41.692Z",
+    "errors": []
+  },
+  "db2d577c-82dc-46b2-be28-a4b8a27b272c": {
+    "scenarioName": "FlightPanelHeader - Delayed",
+    "capturedAt": "2026-04-08T01:06:46.161Z",
+    "errors": []
+  },
+  "71e426e9-e2bc-4419-a23b-1ccfb1b94924": {
+    "scenarioName": "FlightPanelHeader - LongCallsign",
+    "capturedAt": "2026-04-08T01:06:50.629Z",
+    "errors": []
+  },
+  "4b223731-3e5a-4368-bd40-4c584743b764": {
+    "scenarioName": "FlightRouteSection - EarlyFlight",
+    "capturedAt": "2026-04-08T01:06:55.868Z",
+    "errors": []
+  },
+  "d8dd14a7-ef9f-403a-8659-211620533d5f": {
+    "scenarioName": "FlightRouteSection - MidFlight",
+    "capturedAt": "2026-04-08T01:07:00.279Z",
+    "errors": []
+  },
+  "6749fc63-0c15-409c-8648-f1846d8c9746": {
+    "scenarioName": "FlightRouteSection - NearLanding",
+    "capturedAt": "2026-04-08T01:07:04.673Z",
+    "errors": []
+  },
+  "693ee9f9-b16b-48ba-b1e6-5e946959bd88": {
+    "scenarioName": "FlightKpiGrid - Cruising",
+    "capturedAt": "2026-04-08T01:07:10.084Z",
+    "errors": []
+  },
+  "4d3d03f2-82d3-4d4b-8de4-1960ea6e5c7a": {
+    "scenarioName": "FlightKpiGrid - Descending",
+    "capturedAt": "2026-04-08T01:07:14.680Z",
+    "errors": []
+  },
+  "65b39983-dc0d-43f6-9961-e2ac7f72ac76": {
+    "scenarioName": "FlightKpiGrid - TakingOff",
+    "capturedAt": "2026-04-08T01:07:19.104Z",
+    "errors": []
+  },
+  "bee62407-9cae-4540-9864-59cee01338f6": {
+    "scenarioName": "FlightKpiGrid - Zeroes",
+    "capturedAt": "2026-04-08T01:07:23.677Z",
+    "errors": []
+  },
+  "45b1dfa5-1785-412f-920a-bb2a0127b505": {
+    "scenarioName": "FlightPositionRow - NorthAtlantic",
+    "capturedAt": "2026-04-08T01:07:29.002Z",
+    "errors": []
+  },
+  "b3c3a16a-eb22-4186-8479-032f26922969": {
+    "scenarioName": "FlightPositionRow - NearJFK",
+    "capturedAt": "2026-04-08T01:07:33.363Z",
+    "errors": []
+  },
+  "561b3a6a-4058-4509-8b98-8ba4b4276f61": {
+    "scenarioName": "FlightPositionRow - SouthernHemisphere",
+    "capturedAt": "2026-04-08T01:07:37.743Z",
+    "errors": []
+  },
+  "ca1e78da-22f5-436e-b21a-2f1cf459756c": {
+    "scenarioName": "FlightDetailPanel - TransatlanticEnRoute",
+    "capturedAt": "2026-04-08T01:07:47.251Z",
+    "errors": []
+  },
+  "31af68e9-fbc4-4a70-bd63-469db11b7954": {
+    "scenarioName": "FlightDetailPanel - DomesticDelayed",
+    "capturedAt": "2026-04-08T01:07:56.884Z",
+    "errors": []
+  },
+  "3a1d0f4c-1196-4ce4-aa44-fe7bafba1c2a": {
+    "scenarioName": "FlightDetailPanel - NoRouteData",
+    "capturedAt": "2026-04-08T01:08:06.511Z",
+    "errors": []
+  },
+  "2706111e-0fdb-4081-9af4-d1ef70f48d78": {
+    "scenarioName": "FlightDetailPanel - NearLanding",
+    "capturedAt": "2026-04-08T01:08:16.020Z",
+    "errors": []
   }
 }

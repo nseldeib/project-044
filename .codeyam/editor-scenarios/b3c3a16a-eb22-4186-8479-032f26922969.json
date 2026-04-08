@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "FlightPositionRow - NearJFK",
+    "description": null,
+    "componentName": "FlightPositionRow",
+    "componentPath": "app/components/FlightPositionRow.tsx",
+    "url": "/isolated-components/FlightPositionRow?s=NearJFK",
+    "type": null,
+    "screenshotPath": "screenshots/b3c3a16a-eb22-4186-8479-032f26922969.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/b3c3a16a-eb22-4186-8479-032f26922969.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-08T01:07:33.462Z",
+    "updatedAt": "2026-04-08T01:07:33.462Z"
+  }
+}

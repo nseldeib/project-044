@@ -1,15 +1,18 @@
 'use client';
 
 import { MapContainer } from 'react-leaflet';
+import { useState } from 'react';
 import DarkTileLayer from './DarkTileLayer';
 import FlightMarker from './FlightMarker';
+import FlightDetailPanel from './FlightDetailPanel';
 
 interface Airport {
   id: number;
   iata: string;
+  name: string;
+  city: string;
   lat: number;
   lon: number;
-  name: string;
 }
 
 interface Flight {
@@ -36,19 +39,39 @@ function filterEnRouteFlights(flights: Flight[]): Flight[] {
 }
 
 export default function FlightMap({ flights }: FlightMapProps) {
+  const [selectedFlight, setSelectedFlight] = useState<Flight | null>(null);
   const enRoute = filterEnRouteFlights(flights);
 
+  function handleSelect(flight: Flight) {
+    setSelectedFlight((prev) => (prev?.id === flight.id ? null : flight));
+  }
+
+  function handleClose() {
+    setSelectedFlight(null);
+  }
+
   return (
-    <MapContainer
-      center={[30, -40]}
-      zoom={3}
-      style={{ width: '100%', height: '100%', minHeight: 0 }}
-      zoomControl={true}
-    >
-      <DarkTileLayer />
-      {enRoute.map((flight) => (
-        <FlightMarker key={flight.id} flight={flight} />
-      ))}
-    </MapContainer>
+    <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+      <MapContainer
+        center={[30, -40]}
+        zoom={3}
+        style={{ width: '100%', height: '100%', minHeight: 0 }}
+        zoomControl={true}
+      >
+        <DarkTileLayer />
+        {enRoute.map((flight) => (
+          <FlightMarker
+            key={flight.id}
+            flight={flight}
+            isSelected={selectedFlight?.id === flight.id}
+            isDimmed={selectedFlight !== null && selectedFlight.id !== flight.id}
+            onSelect={handleSelect}
+          />
+        ))}
+      </MapContainer>
+      {selectedFlight && (
+        <FlightDetailPanel flight={selectedFlight} onClose={handleClose} />
+      )}
+    </div>
   );
 }

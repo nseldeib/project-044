@@ -4,6 +4,7 @@ import {
   flightProgressPercent,
   haversineKm,
   latLonToString,
+  hasRouteData,
 } from './calculations';
 
 describe('bikeAvailabilityPercent', () => {
@@ -114,5 +115,30 @@ describe('latLonToString', () => {
 
   it('handles zero coordinates', () => {
     expect(latLonToString(0, 0)).toBe('0.0000°N, 0.0000°E');
+  });
+});
+
+describe('hasRouteData', () => {
+  const validOrigin = { iata: 'JFK', lat: 40.64, lon: -73.78, id: 1, name: 'JFK', city: 'New York' };
+  const validDest   = { iata: 'LAX', lat: 33.94, lon: -118.41, id: 2, name: 'LAX', city: 'Los Angeles' };
+
+  it('returns true when both origin and destination have coordinates', () => {
+    expect(hasRouteData(validOrigin, validDest)).toBe(true);
+  });
+
+  it('returns false when origin lat is 0', () => {
+    expect(hasRouteData({ ...validOrigin, lat: 0 }, validDest)).toBe(false);
+  });
+
+  it('returns false when destination lat is 0', () => {
+    expect(hasRouteData(validOrigin, { ...validDest, lat: 0 })).toBe(false);
+  });
+
+  it('returns false when origin is null-like (no lat)', () => {
+    expect(hasRouteData({ ...validOrigin, lat: undefined as unknown as number }, validDest)).toBe(false);
+  });
+
+  it('returns false when destination is null-like (no lat)', () => {
+    expect(hasRouteData(validOrigin, { ...validDest, lat: undefined as unknown as number })).toBe(false);
   });
 });

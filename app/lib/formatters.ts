@@ -79,6 +79,21 @@ export function formatSpeed(knots: number): string {
 }
 
 /**
+ * Returns the three KPI items for a flight detail panel: altitude, speed, and heading.
+ */
+export function getFlightKpis(
+  altitude: number,
+  groundSpeed: number,
+  heading: number,
+): { label: string; value: string }[] {
+  return [
+    { label: 'ALTITUDE', value: formatAltitude(altitude) },
+    { label: 'SPEED',    value: formatSpeed(groundSpeed) },
+    { label: 'HEADING',  value: `${heading}°` },
+  ];
+}
+
+/**
  * Returns "+25 min", "On Time" if 0, or "-5 min" if negative.
  */
 export function formatDelay(minutes: number): string {

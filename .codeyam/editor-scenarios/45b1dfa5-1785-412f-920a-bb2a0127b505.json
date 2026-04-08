@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "FlightPositionRow - NorthAtlantic",
+    "description": null,
+    "componentName": "FlightPositionRow",
+    "componentPath": "app/components/FlightPositionRow.tsx",
+    "url": "/isolated-components/FlightPositionRow?s=NorthAtlantic",
+    "type": null,
+    "screenshotPath": "screenshots/45b1dfa5-1785-412f-920a-bb2a0127b505.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/45b1dfa5-1785-412f-920a-bb2a0127b505.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-08T01:07:29.124Z",
+    "updatedAt": "2026-04-08T01:07:29.124Z"
+  }
+}

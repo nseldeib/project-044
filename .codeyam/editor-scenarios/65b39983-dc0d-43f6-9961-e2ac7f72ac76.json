@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "name": "FlightKpiGrid - TakingOff",
+    "description": null,
+    "componentName": "FlightKpiGrid",
+    "componentPath": "app/components/FlightKpiGrid.tsx",
+    "url": "/isolated-components/FlightKpiGrid?s=TakingOff",
+    "type": null,
+    "screenshotPath": "screenshots/65b39983-dc0d-43f6-9961-e2ac7f72ac76.png",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "dimensions": [
+      "Desktop"
+    ],
+    "screenshotPaths": {
+      "Desktop": "screenshots/65b39983-dc0d-43f6-9961-e2ac7f72ac76.png"
+    },
+    "pageFilePath": null,
+    "createdAt": "2026-04-08T01:07:19.252Z",
+    "updatedAt": "2026-04-08T01:07:19.252Z"
+  }
+}
